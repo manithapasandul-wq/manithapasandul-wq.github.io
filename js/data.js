@@ -127,27 +127,18 @@ const PORTFOLIO_DATA = {
   // Work / research / volunteer experience — timeline style.
   experience: [
     {
-      id: "temporary-instructor",
-      type: "Academic Experience",
-      position: "Temporary Instructor",
-      organisation: "Department of Mechanical Engineering, University of Moratuwa",
-      period: "July 2026 — Present",
-      summary: [
-        "I currently work full-time as a Temporary Instructor in the Department of Mechanical Engineering at the University of Moratuwa, supporting undergraduate teaching, practical sessions, tutorials, laboratory activities, student assessments, and technical guidance across core mechanical engineering subjects.",
-        "I am assigned to ME2024 – Manufacturing Processes, ME1823 – Basic Engineering Thermodynamics, ME2093 – Mechanics of Machines I, and ME4220 – Principles of Naval Architecture.",
-        "This experience has strengthened my technical knowledge, communication, teaching, and problem-solving skills while allowing me to guide students in applying theoretical engineering concepts to practical problems.",
-      ],
-      responsibilities: [
-        "Support undergraduate teaching, practical sessions, tutorials, laboratory activities, student assessments, and technical guidance.",
-        "Assigned modules: ME2024 Manufacturing Processes, ME1823 Basic Engineering Thermodynamics, ME2093 Mechanics of Machines I, and ME4220 Principles of Naval Architecture.",
-        "Guide students in applying theoretical engineering concepts to practical problems.",
-      ],
-      achievements: [
-        "Strengthened my technical communication, teaching, organisation, and engineering problem-solving skills.",
-      ],
-    },
-    {
       id: "srilankan-airlines",
+      images: [
+        { src: "assets/images/experience/srilankan/cockpit.webp", caption: "Airbus cockpit familiarisation" },
+        { src: "assets/images/experience/srilankan/engine-module.webp", caption: "Beside a turbofan engine" },
+        { src: "assets/images/experience/srilankan/trent-fan-work.webp", caption: "Trent 700 fan blades removed for replacement" },
+        { src: "assets/images/experience/srilankan/wheel-assembly.webp", caption: "Aircraft wheel assembly" },
+        { src: "assets/images/experience/srilankan/ndt-uv.webp", caption: "Fluorescent penetrant inspection under UV light" },
+        { src: "assets/images/experience/srilankan/composite-repair.webp", caption: "Vacuum-bagging a composite repair" },
+        { src: "assets/images/experience/srilankan/structural-doubler.webp", caption: "Fuselage skin repair pinned out with clecos" },
+        { src: "assets/images/experience/srilankan/hangar.webp", caption: "Wide-body base-maintenance hangar" },
+        { src: "assets/images/experience/srilankan/training-team.webp", caption: "Engineering training team" },
+      ],
       detailPage: "srilankan-airlines.html",
       detailPageLabel: "View Full Experience",
       type: "Industrial Training",
@@ -283,6 +274,17 @@ const PORTFOLIO_DATA = {
     },
     {
       id: "falcon-e-racing",
+      images: [
+        { src: "assets/images/experience/falcon/e2-night.webp", caption: "E2 with its completed aerodynamic package" },
+        { src: "assets/images/experience/falcon/e2-track.webp", caption: "E2 during track testing" },
+        { src: "assets/images/experience/falcon/wing-assembly.webp", caption: "Multi-element wing assembly with 3D-printed ribs" },
+        { src: "assets/images/experience/falcon/fibreglass-layup.webp", caption: "Fibreglass layup during mould fabrication" },
+        { src: "assets/images/experience/falcon/mould-team.webp", caption: "Aerodynamics team with the fibreglass moulds" },
+        { src: "assets/images/experience/falcon/carbon-body.webp", caption: "Carbon-composite body panel" },
+        { src: "assets/images/experience/falcon/aero-component.webp", caption: "Carbon-composite aerodynamic element" },
+        { src: "assets/images/experience/falcon/vehicle-launch.webp", caption: "E2 vehicle launch — Unleashed 2G" },
+        { src: "assets/images/experience/falcon/e2-display.webp", caption: "E2 on public display" },
+      ],
       detailPage: "falcon-e-racing.html",
       detailPageLabel: "View Full Experience",
       type: "Engineering Team",
@@ -327,6 +329,26 @@ const PORTFOLIO_DATA = {
             "This experience gave me responsibility for the complete aerodynamic development cycle: conceptual design, CAD modelling, CFD simulation, numerical optimisation, composite manufacturing, assembly, and vehicle integration. It strengthened my expertise in computational aerodynamics, ANSYS Fluent, CAD, composite fabrication, design optimisation, technical leadership, teamwork, and multidisciplinary engineering decision-making.",
           ],
         },
+      ],
+    },
+    {
+      id: "temporary-instructor",
+      type: "Academic Experience",
+      position: "Temporary Instructor",
+      organisation: "Department of Mechanical Engineering, University of Moratuwa",
+      period: "July 2026 — Present",
+      summary: [
+        "I currently work full-time as a Temporary Instructor in the Department of Mechanical Engineering at the University of Moratuwa, supporting undergraduate teaching, practical sessions, tutorials, laboratory activities, student assessments, and technical guidance across core mechanical engineering subjects.",
+        "I am assigned to ME2024 – Manufacturing Processes, ME1823 – Basic Engineering Thermodynamics, ME2093 – Mechanics of Machines I, and ME4220 – Principles of Naval Architecture.",
+        "This experience has strengthened my technical knowledge, communication, teaching, and problem-solving skills while allowing me to guide students in applying theoretical engineering concepts to practical problems.",
+      ],
+      responsibilities: [
+        "Support undergraduate teaching, practical sessions, tutorials, laboratory activities, student assessments, and technical guidance.",
+        "Assigned modules: ME2024 Manufacturing Processes, ME1823 Basic Engineering Thermodynamics, ME2093 Mechanics of Machines I, and ME4220 Principles of Naval Architecture.",
+        "Guide students in applying theoretical engineering concepts to practical problems.",
+      ],
+      achievements: [
+        "Strengthened my technical communication, teaching, organisation, and engineering problem-solving skills.",
       ],
     },
     {

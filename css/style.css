@@ -1605,3 +1605,161 @@ h1, h2, h3, h4 {
   .lightbox-overlay { padding: 12px; }
   .lightbox-nav { width: 38px; height: 38px; }
 }
+
+/* ==========================================================================
+   EXPERIENCE CARD GRID (image slideshow above, content below)
+   ========================================================================== */
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+
+.exp-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.exp-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary);
+  box-shadow: var(--shadow-md);
+}
+
+/* --- slideshow --- */
+.exp-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: var(--bg-alt);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.exp-slides { position: absolute; inset: 0; }
+
+.exp-slide {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+}
+
+.exp-slide.is-active { opacity: 1; pointer-events: auto; }
+
+.exp-slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.exp-slide figcaption {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 26px 14px 10px;
+  font-size: 0.78rem;
+  line-height: 1.35;
+  color: #fff;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0));
+}
+
+.exp-slide-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(0, 0, 0, 0.42);
+  color: #fff;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.25s ease, background 0.2s ease;
+  z-index: 2;
+}
+
+.exp-slide-nav .icon { width: 17px; height: 17px; }
+.exp-slide-nav.previous { left: 10px; }
+.exp-slide-nav.previous .icon { transform: rotate(180deg); }
+.exp-slide-nav.next { right: 10px; }
+.exp-slide-nav:hover { background: rgba(0, 0, 0, 0.7); }
+
+.exp-media:hover .exp-slide-nav,
+.exp-slide-nav:focus-visible { opacity: 1; }
+
+.exp-slide-dots {
+  position: absolute;
+  left: 0; right: 0; bottom: 8px;
+  display: flex; justify-content: center; gap: 6px;
+  z-index: 2;
+}
+
+.exp-dot {
+  width: 7px; height: 7px;
+  padding: 0;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.45);
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.exp-dot.is-active { background: #fff; transform: scale(1.35); }
+
+/* --- content --- */
+.exp-body {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.exp-body h4 { font-size: 1.08rem; margin: 10px 0 6px; }
+
+.exp-org { color: var(--primary); font-weight: 600; font-size: 0.92rem; }
+
+.exp-period {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  margin-bottom: 12px;
+}
+
+.exp-body p {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  margin-bottom: 12px;
+}
+
+.exp-list { list-style: none; margin: 0 0 16px; padding: 0; }
+
+.exp-list li {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.exp-list .icon {
+  width: 15px; height: 15px;
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--primary);
+}
+
+.exp-body .experience-page-link { margin-top: auto; }
+
+@media (max-width: 1080px) {
+  .experience-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 720px) {
+  .experience-grid { grid-template-columns: 1fr; }
+  .exp-slide-nav { opacity: 1; }
+}

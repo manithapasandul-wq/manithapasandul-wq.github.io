@@ -203,54 +203,132 @@
     $("#education-timeline").innerHTML = html;
   }
 
-  function renderExperienceTimeline() {
+  function renderExperienceCards() {
     const html = PORTFOLIO_DATA.experience
       .map((exp) => {
-        const summary =
-          Array.isArray(exp.summary) && exp.summary.length
-            ? exp.summary
-            : Array.isArray(exp.responsibilities)
-              ? exp.responsibilities
-              : [];
+        const paragraphs =
+          Array.isArray(exp.summary) && exp.summary.length ? exp.summary : [];
+        const bullets = Array.isArray(exp.responsibilities) ? exp.responsibilities : [];
+        const images = Array.isArray(exp.images) ? exp.images : [];
+
+        const media = images.length
+          ? `
+            <div class="exp-media" data-slideshow>
+              <div class="exp-slides">
+                ${images
+                  .map(
+                    (img, i) => `
+                  <figure class="exp-slide${i === 0 ? " is-active" : ""}" data-slide="${i}">
+                    <img src="${img.src}" alt="${img.caption}" loading="lazy" />
+                    <figcaption>${img.caption}</figcaption>
+                  </figure>`
+                  )
+                  .join("")}
+              </div>
+              ${
+                images.length > 1
+                  ? `
+                <button class="exp-slide-nav previous" type="button" data-slide-prev aria-label="Previous image">
+                  <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"/></svg>
+                </button>
+                <button class="exp-slide-nav next" type="button" data-slide-next aria-label="Next image">
+                  <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"/></svg>
+                </button>
+                <div class="exp-slide-dots" role="tablist">
+                  ${images
+                    .map(
+                      (img, i) =>
+                        `<button class="exp-dot${i === 0 ? " is-active" : ""}" type="button" data-slide-to="${i}" role="tab" aria-label="Image ${i + 1} of ${images.length}"></button>`
+                    )
+                    .join("")}
+                </div>`
+                  : ""
+              }
+            </div>`
+          : "";
 
         return `
-          <div class="timeline-item reveal">
-            <span class="timeline-dot">
-              <svg class="icon"><use href="#icon-briefcase"/></svg>
-            </span>
-
-            <article class="timeline-card experience-card">
+          <article class="exp-card reveal">
+            ${media}
+            <div class="exp-body">
               <span class="timeline-tag">${exp.type}</span>
+              <h4>${exp.position}</h4>
+              <div class="exp-org">${exp.organisation}</div>
+              <div class="exp-period">${exp.period}</div>
 
-              <div class="timeline-head">
-                <h4>${exp.position}</h4>
-                <span class="timeline-period">${exp.period}</span>
-              </div>
+              ${paragraphs.map((paragraph) => `<p>${paragraph}</p>`).join("")}
 
-              <div class="timeline-org">${exp.organisation}</div>
-
-              <div class="experience-summary">
-                ${summary.map((paragraph) => `<p>${paragraph}</p>`).join("")}
-              </div>
+              ${
+                bullets.length
+                  ? `<ul class="exp-list">
+                      ${bullets
+                        .map(
+                          (item) =>
+                            `<li><svg class="icon" aria-hidden="true"><use href="#icon-check"/></svg><span>${item}</span></li>`
+                        )
+                        .join("")}
+                    </ul>`
+                  : ""
+              }
 
               ${
                 exp.detailPage
-                  ? `
-                    <a class="experience-page-link" href="${exp.detailPage}">
+                  ? `<a class="experience-page-link" href="${exp.detailPage}">
                       <span>${exp.detailPageLabel || "View Full Experience"}</span>
-                      <svg class="icon" aria-hidden="true">
-                        <use href="#icon-arrow-right"/>
-                      </svg>
-                    </a>
-                  `
+                      <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"/></svg>
+                    </a>`
                   : ""
               }
-            </article>
-          </div>`;
+            </div>
+          </article>`;
       })
       .join("");
 
-    $("#experience-timeline").innerHTML = html;
+    $("#experience-grid").innerHTML = html;
+    initExperienceSlideshows();
+  }
+
+  /* ------------------------------------------------------------------ *
+   * EXPERIENCE CARD SLIDESHOWS
+   * ------------------------------------------------------------------ */
+  function initExperienceSlideshows() {
+    $$("[data-slideshow]").forEach((wrap) => {
+      const slides = $$(".exp-slide", wrap);
+      const dots = $$(".exp-dot", wrap);
+      if (slides.length < 2) return;
+
+      let index = 0;
+      let timer = null;
+
+      const show = (next) => {
+        index = (next + slides.length) % slides.length;
+        slides.forEach((slide, i) => slide.classList.toggle("is-active", i === index));
+        dots.forEach((dot, i) => dot.classList.toggle("is-active", i === index));
+      };
+
+      const start = () => {
+        stop();
+        timer = setInterval(() => show(index + 1), 4500);
+      };
+      const stop = () => {
+        if (timer) clearInterval(timer);
+        timer = null;
+      };
+
+      $("[data-slide-prev]", wrap).addEventListener("click", () => { show(index - 1); start(); });
+      $("[data-slide-next]", wrap).addEventListener("click", () => { show(index + 1); start(); });
+      dots.forEach((dot, i) => dot.addEventListener("click", () => { show(i); start(); }));
+
+      wrap.addEventListener("mouseenter", stop);
+      wrap.addEventListener("mouseleave", start);
+
+      // only run while the card is on screen
+      const observer = new IntersectionObserver(
+        (entries) => entries.forEach((entry) => (entry.isIntersecting ? start() : stop())),
+        { threshold: 0.25 }
+      );
+      observer.observe(wrap);
+    });
   }
 
   /* ------------------------------------------------------------------ *
@@ -629,7 +707,7 @@
     renderHero();
     renderAbout();
     renderEducationTimeline();
-    renderExperienceTimeline();
+    renderExperienceCards();
     renderSkills();
     renderProjects();
     renderGallery();
