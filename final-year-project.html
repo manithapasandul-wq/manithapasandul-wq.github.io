@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=9" />
+  <link rel="stylesheet" href="css/style.css?v=10" />
 
   <script>
     (function () {
@@ -58,6 +58,54 @@
       <div class="experience-tag-row"><span class="tag">Python</span><span class="tag">AVL</span><span class="tag">Flight Dynamics</span><span class="tag">ArduPilot</span><span class="tag">Arduino</span><span class="tag">Kalman Filter</span><span class="tag">FFT</span><span class="tag">Prony&rsquo;s Method</span></div>
     </section>
 
+
+      <div class="experience-gallery-wrap">
+        <button class="gallery-control previous" type="button" data-gallery-previous aria-label="Previous images">←</button>
+        <div class="experience-gallery" data-experience-gallery>
+          <figure>
+            <img src="assets/images/projects/fyp/uav-flight.webp" alt="The fabricated fixed-wing UAV in flight" loading="lazy" />
+            <figcaption>The fabricated UAV in flight</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/images/projects/fyp/uav-field.webp" alt="The completed 2.5 m span UAV on the test field" loading="lazy" />
+            <figcaption>Completed 2.5 m span airframe</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/images/projects/fyp/uav-front.webp" alt="Front view of the UAV before a test flight" loading="lazy" />
+            <figcaption>Pre-flight on the test field</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/images/projects/fyp/wing-ribs.webp" alt="Laser-cut plywood ribs threaded onto the carbon-fibre spar" loading="lazy" />
+            <figcaption>Wing rib and spar assembly</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/images/projects/fyp/printed-pod.webp" alt="3D-printed fuselage pod" loading="lazy" />
+            <figcaption>3D-printed fuselage pod</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/images/projects/fyp/printed-parts.webp" alt="3D-printed airframe components laid out" loading="lazy" />
+            <figcaption>Printed airframe components</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/images/projects/fyp/blubaby-flight.webp" alt="The Blu-Baby validation aircraft in flight" loading="lazy" />
+            <figcaption>Blu-Baby validation platform</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/images/projects/fyp/test-flight.webp" alt="Flight testing in progress" loading="lazy" />
+            <figcaption>Flight testing</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/images/projects/fyp/team-presentation.webp" alt="Project presentation with the UAV" loading="lazy" />
+            <figcaption>Project presentation</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/images/projects/fyp/poster.webp" alt="Final-year project research poster" loading="lazy" />
+            <figcaption>Research poster</figcaption>
+          </figure>
+        </div>
+        <button class="gallery-control next" type="button" data-gallery-next aria-label="Next images">→</button>
+      </div>
+
     <div class="full-experience-layout">
       <div class="full-experience-content">
 
@@ -93,6 +141,10 @@
     <li>Pitch, roll, and yaw moments of inertia</li>
     <li>Cruise velocity</li>
   </ul>
+  <div class="experience-media-pair">
+    <img src="assets/images/projects/fyp/poster.webp" alt="Final-year project research poster" loading="lazy" />
+    <img src="assets/images/projects/fyp/team-presentation.webp" alt="Project presentation with the UAV" loading="lazy" />
+  </div>
 
   <h3>Automated Procedure</h3>
   <p>
@@ -157,6 +209,12 @@
   <p>
     Before flight, control-surface directions, servo operation, motor response, radio range, centre of gravity position, structural connections, sensor calibration, and APM flight modes were checked, and taxi and low-speed tests confirmed directional control and propulsion performance.
   </p>
+  <div class="experience-media-pair">
+    <img src="assets/images/projects/fyp/wing-ribs.webp" alt="Laser-cut plywood ribs on the carbon-fibre spar" loading="lazy" />
+    <img src="assets/images/projects/fyp/printed-pod.webp" alt="3D-printed fuselage pod" loading="lazy" />
+    <img src="assets/images/projects/fyp/printed-parts.webp" alt="3D-printed airframe components" loading="lazy" />
+    <img src="assets/images/projects/fyp/uav-field.webp" alt="The completed UAV on the test field" loading="lazy" />
+  </div>
 </section>
 
 <section class="experience-section-card">
@@ -185,6 +243,11 @@
     Because of these conditions the measured response contained both the aircraft&rsquo;s natural motion and corrective pilot inputs, reducing the reliability of the modal-identification results.
   </p>
 
+  <div class="experience-media-pair">
+    <img src="assets/images/projects/fyp/uav-flight.webp" alt="The fabricated UAV in flight during testing" loading="lazy" />
+    <img src="assets/images/projects/fyp/test-flight.webp" alt="Flight testing in progress" loading="lazy" />
+  </div>
+
   <h3>Validation Using the Blu-Baby Aircraft</h3>
   <p>
     A Blu-Baby RC aircraft was selected as a secondary validation platform because of its more stable and predictable flight behaviour. Its geometry, mass properties, centre of gravity position, and operating condition were entered into the numerical framework, and the same Arduino data-acquisition system, IMU, Kalman filter, SD-card recording, and toggle-switch marking method were installed so the experimental procedure remained consistent. During testing the aircraft was brought to an approximately steady flight condition before an elevator doublet was applied, and the resulting pitch-angle and pitch-rate responses were recorded.
@@ -197,6 +260,11 @@
   <p>
     The Fast Fourier Transform identified the dominant frequency in the measured pitch response and allowed repeated flight tests to be compared, but because the recorded response was a short decaying transient, FFT gave limited frequency resolution and could not directly determine damping. Prony&rsquo;s method was therefore used to estimate both frequency and damping ratio, with a second-order Prony model applied to the pitch-angle and pitch-rate data to identify the dominant short-period pole pair. The pitch-rate signal was selected as the main validation signal because it represented the rapid rotational motion of the short-period mode more clearly than pitch angle.
   </p>
+
+  <div class="experience-media-pair">
+    <img src="assets/images/projects/fyp/blubaby-flight.webp" alt="The Blu-Baby validation aircraft in flight" loading="lazy" />
+    <img src="assets/images/projects/fyp/uav-front.webp" alt="UAV front view before a test flight" loading="lazy" />
+  </div>
 
   <h3>Comparison with the Numerical Model</h3>
   <p>
@@ -240,6 +308,6 @@
     </div>
   </footer>
 
-  <script src="js/detail-page.js?v=9"></script>
+  <script src="js/detail-page.js?v=10"></script>
 </body>
 </html>

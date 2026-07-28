@@ -7,9 +7,11 @@
    Profile text, education, experience, projects, awards, and interests are
    real, sourced from the project portfolio document.
 
-   Project card images reuse related photographs from the source document,
-   which contained no photographs of the projects themselves. Swap them for
-   real project photos or result plots when you have them.
+   Project images come from the supplied image set: the fabricated UAV and
+   its flight tests, the ANSYS Fluent S809 study, the Formula Student
+   front-wing CFD, and the SolidWorks propeller model. The gas turbine and
+   wing-stress cards still borrow a related photograph, as no images of
+   those rigs were supplied.
 
    >>> REPLACE-ME markers point to what is still outstanding: contact email
    >>> and phone, LinkedIn / Twitter / Instagram URLs, and the CV file.
@@ -359,7 +361,7 @@ const PORTFOLIO_DATA = {
           summary:
             "Final-year research connecting UAV geometric design to real flight-dynamic behaviour through parametric sensitivity analysis, fabrication, flight testing, and modal identification.",
           tools: ["Python", "AVL", "ArduPilot", "Arduino", "Prony\u2019s Method"],
-          image: "assets/images/experience/srilankan/fleet-sunset.webp",
+          image: "assets/images/projects/fyp/uav-flight.webp",
           detailPage: "final-year-project.html",
           detailPageLabel: "Read the full project",
           objectives: [
@@ -382,6 +384,16 @@ const PORTFOLIO_DATA = {
           ],
           outcomes:
             "Horizontal tail volume ratio proved the most effective short-period tuning parameter \u2014 a 1% increase raised short-period natural frequency by roughly 1.03% and damping ratio by roughly 0.68%. Wing dihedral dominated the spiral mode: increasing it from about 0\u00b0 to 8\u00b0 cut the spiral time constant from roughly 40.2 s to 3.0 s, a reduction greater than 92%. A 1% increase in wing aspect ratio raised phugoid natural frequency by about 0.2429%. The short-period response was successfully identified from the Blu-Baby flight data and compared against the numerical prediction, while the slower phugoid mode could not be reliably extracted within the available undisturbed flight time.",
+          gallery: [
+            "assets/images/projects/fyp/uav-field.webp",
+            "assets/images/projects/fyp/uav-front.webp",
+            "assets/images/projects/fyp/wing-ribs.webp",
+            "assets/images/projects/fyp/printed-pod.webp",
+            "assets/images/projects/fyp/printed-parts.webp",
+            "assets/images/projects/fyp/blubaby-flight.webp",
+            "assets/images/projects/fyp/team-presentation.webp",
+            "assets/images/projects/fyp/poster.webp",
+          ],
         },
       ],
     },
@@ -394,7 +406,7 @@ const PORTFOLIO_DATA = {
           summary:
             "Two-dimensional ANSYS Fluent study of the NREL S809 wind-turbine aerofoil from 0\u00b0 to 20\u00b0 angle of attack, validated against published research data.",
           tools: ["ANSYS Fluent", "CFD", "Structured Meshing"],
-          image: "assets/images/experience/falcon/cfd-tyre-domain.webp",
+          image: "assets/images/projects/cfd/velocity-contour.webp",
           objectives: [
             "Establish a validated baseline CFD model of the unslotted NREL S809 aerofoil that can later be extended to passive flow-control concepts.",
             "Evaluate lift, drag, lift-to-drag ratio, pressure distribution, and flow separation from 0\u00b0 to 20\u00b0 angle of attack.",
@@ -412,6 +424,17 @@ const PORTFOLIO_DATA = {
           ],
           outcomes:
             "Lift increased with angle of attack to a maximum coefficient of approximately 1.20 near 14\u00b0 before separation developed and the aerofoil entered stall, with the maximum lift-to-drag ratio occurring at approximately 6\u00b0. Lift predictions agreed well with the published reference across most of the tested range, while larger drag deviations appeared at some intermediate and high angles \u2014 attributed mainly to mesh distribution, near-wall treatment, turbulence modelling, and the limits of a steady-state model close to stall. The study recommended the k\u2013\u03c9 SST model with a finer near-wall mesh at y+ close to one, and rotating the aerofoil geometry rather than the inlet-velocity direction, for future work.",
+          gallery: [
+            "assets/images/projects/cfd/pressure-contour.webp",
+            "assets/images/projects/cfd/velocity-contour-high-aoa.webp",
+            "assets/images/projects/cfd/mesh-overview.webp",
+            "assets/images/projects/cfd/mesh-near-wall.webp",
+            "assets/images/projects/cfd/domain-boundary-conditions.webp",
+            "assets/images/projects/cfd/cl-convergence.webp",
+            "assets/images/projects/cfd/cd-convergence.webp",
+            "assets/images/projects/cfd/ld-convergence.webp",
+            "assets/images/projects/cfd/residuals.webp",
+          ],
         },
         {
           id: "fs-front-wing",
@@ -419,7 +442,7 @@ const PORTFOLIO_DATA = {
           summary:
             "CFD-driven aerodynamic design of a four-element front wing for Falcon E Racing\u2019s E2 vehicle, optimised using a Multi-Objective Genetic Algorithm.",
           tools: ["ANSYS Fluent", "MOGA", "CAD", "Carbon Fibre"],
-          image: "assets/images/experience/falcon/cfd-multi-element.webp",
+          image: "assets/images/projects/falcon-aero/cfd-multi-element.webp",
           detailPage: "falcon-e-racing.html",
           detailPageLabel: "View the full experience",
           objectives: [
@@ -440,10 +463,13 @@ const PORTFOLIO_DATA = {
           outcomes:
             "The simulation results supported data-driven decisions throughout front-wing development, and the wider aerodynamic package \u2014 front wing, rear wing, and aerodynamic body elements \u2014 was manufactured and integrated onto E2, the second vehicle built by Sri Lanka\u2019s first Formula Student car project.",
           gallery: [
-            "assets/images/experience/falcon/cfd-tyre-domain.webp",
-            "assets/images/experience/falcon/front-wing-cad.webp",
+            "assets/images/projects/falcon-aero/cfd-wing-tyre.webp",
+            "assets/images/projects/falcon-aero/cfd-wing-contour.webp",
+            "assets/images/projects/falcon-aero/cfd-tyre-domain.webp",
+            "assets/images/projects/falcon-aero/front-wing-cad.webp",
+            "assets/images/projects/falcon-aero/moga-design-table.webp",
+            "assets/images/projects/falcon-aero/downforce-convergence.webp",
             "assets/images/experience/falcon/wing-assembly.webp",
-            "assets/images/experience/falcon/e2-track.webp",
           ],
         },
       ],
@@ -457,7 +483,7 @@ const PORTFOLIO_DATA = {
           summary:
             "Design of a twin two-bladed propeller system for a 1,500 kg aircraft, sized with an iterative MATLAB Blade Element Theory model and modelled in SolidWorks.",
           tools: ["MATLAB", "Blade Element Theory", "SolidWorks"],
-          image: "assets/images/experience/srilankan/trent-fan-work.webp",
+          image: "assets/images/projects/propeller/propeller-render.webp",
           objectives: [
             "Size a twin two-bladed propeller system to take a 1,500 kg aircraft to a 220 km/h take-off speed within a 1 km sea-level runway.",
             "Determine blade chord, twist, thrust, torque, and efficiency distributions along the span.",
@@ -476,6 +502,9 @@ const PORTFOLIO_DATA = {
           ],
           outcomes:
             "The first blade element converged after 12 iterations and most others within 7 to 11. Each propeller produced approximately 4,134 N of thrust and 1,059 Nm of torque, giving about 8,264 N and 2,118 Nm for the pair \u2014 slightly above the 8.1 kN requirement. The design achieved an advance ratio of about 0.783, thrust coefficient 0.228, torque coefficient 0.0374, power coefficient 0.235, propeller efficiency of approximately 75.9%, and a required engine power of about 332.7 kW.",
+          gallery: [
+            "assets/images/projects/propeller/propeller-hub.webp",
+          ],
         },
         {
           id: "gas-turbine-biodiesel",
@@ -512,7 +541,7 @@ const PORTFOLIO_DATA = {
           summary:
             "Strain-gauge testing and ANSYS Static Structural modelling of a rectangular wing under front- and rear-spar tip loads, used to select a landing-gear mounting location.",
           tools: ["ANSYS Static Structural", "SolidWorks", "Strain Gauges"],
-          image: "assets/images/experience/srilankan/structural-repair.webp",
+          image: "assets/images/experience/srilankan/structural-doubler.webp",
           objectives: [
             "Compare how a concentrated landing-gear-type load transfers through the spars, ribs, and skin when applied at the front- versus rear-spar tip.",
             "Validate a finite element model of the wing against experimental strain measurements.",
@@ -536,56 +565,82 @@ const PORTFOLIO_DATA = {
     },
   ],
 
-  // Photo gallery — every photograph from the source document.
+  // Photo gallery — every image supplied in the source image set.
   photoGallery: [
-    { src: "assets/images/experience/srilankan/fleet-sunset.webp", caption: "SriLankan Airlines fleet at sunset", group: "SriLankan Airlines Engineering" },
     { src: "assets/images/experience/srilankan/cockpit.webp", caption: "Airbus cockpit familiarisation", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/training-team.webp", caption: "Engineering training team", group: "SriLankan Airlines Engineering" },
     { src: "assets/images/experience/srilankan/training-centre.webp", caption: "SriLankan Airlines training centre", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/wheel-hub.webp", caption: "Dismantled aircraft wheel hub", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/wheel-bolts.webp", caption: "Wheel-hub bolts and circlips removed for inspection", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/bearing-grease.webp", caption: "High-temperature bearing grease application", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/wheel-hub-lubrication.webp", caption: "Lubricating wheel-hub bolts and threaded areas", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/wheel-assembly.webp", caption: "Aircraft wheel unit assembly", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/tyre-fitting.webp", caption: "Fitting the wheel hub into the tyre", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/slide-raft.webp", caption: "Slide raft inflation and leakage inspection", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/life-jackets.webp", caption: "Life jackets folded for vacuum packing", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/safety-label.webp", caption: "Serviceable label with part and serial numbers", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/engine-maintenance.webp", caption: "Airbus aircraft undergoing engine maintenance", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/engine-module-work.webp", caption: "Engine module strip-down", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/trent-fan-work.webp", caption: "Rolls-Royce Trent 700 fan blades", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/engine-inspection.webp", caption: "Borescope probe inserted into an engine", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/borescope.webp", caption: "Borescope inspection display", group: "SriLankan Airlines Engineering" },
+    { src: "assets/images/experience/srilankan/training-team.webp", caption: "Engineering training team", group: "SriLankan Airlines Engineering" },
+    { src: "assets/images/experience/srilankan/hangar.webp", caption: "Wide-body base-maintenance hangar", group: "SriLankan Airlines Engineering" },
+    { src: "assets/images/experience/srilankan/engine-shop.webp", caption: "Engines under overhaul in the engine workshop", group: "SriLankan Airlines Engineering" },
     { src: "assets/images/experience/srilankan/engine-module.webp", caption: "Beside a turbofan engine", group: "SriLankan Airlines Engineering" },
+    { src: "assets/images/experience/srilankan/engine-module-work.webp", caption: "Technicians working on an engine module", group: "SriLankan Airlines Engineering" },
+    { src: "assets/images/experience/srilankan/engine-inspection.webp", caption: "Borescope inspection of an engine", group: "SriLankan Airlines Engineering" },
+    { src: "assets/images/experience/srilankan/trent-fan-work.webp", caption: "Rolls-Royce Trent 700 fan blades removed for replacement", group: "SriLankan Airlines Engineering" },
+    { src: "assets/images/experience/srilankan/borescope.webp", caption: "Borescope inspection display", group: "SriLankan Airlines Engineering" },
+    { src: "assets/images/experience/srilankan/wheel-stand.webp", caption: "Aircraft wheel unit on the assembly stand", group: "SriLankan Airlines Engineering" },
+    { src: "assets/images/experience/srilankan/wheel-assembly.webp", caption: "Assembling the wheel hub onto the tyre", group: "SriLankan Airlines Engineering" },
+    { src: "assets/images/experience/srilankan/tyre-fitting.webp", caption: "Fitting the wheel hub into an aircraft tyre", group: "SriLankan Airlines Engineering" },
+    { src: "assets/images/experience/srilankan/wheel-hub.webp", caption: "Dismantled wheel hub with drive keys", group: "SriLankan Airlines Engineering" },
+    { src: "assets/images/experience/srilankan/bearing-grease.webp", caption: "High-temperature bearing grease application", group: "SriLankan Airlines Engineering" },
+    { src: "assets/images/experience/srilankan/tyre-store.webp", caption: "Aircraft tyres awaiting fitment", group: "SriLankan Airlines Engineering" },
+    { src: "assets/images/experience/srilankan/slide-raft.webp", caption: "Slide raft inflated for leakage inspection", group: "SriLankan Airlines Engineering" },
+    { src: "assets/images/experience/srilankan/life-jackets.webp", caption: "Life jackets folded for inspection and vacuum packing", group: "SriLankan Airlines Engineering" },
+    { src: "assets/images/experience/srilankan/safety-label.webp", caption: "Serviceable label recording part number, serial number and expiry", group: "SriLankan Airlines Engineering" },
     { src: "assets/images/experience/srilankan/composite-repair.webp", caption: "Vacuum-bagging a composite repair", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/composite-patch.webp", caption: "Carbon-fibre repair patch curing", group: "SriLankan Airlines Engineering" },
+    { src: "assets/images/experience/srilankan/composite-patch.webp", caption: "Carbon-fibre repair patch bonded and taped for curing", group: "SriLankan Airlines Engineering" },
+    { src: "assets/images/experience/srilankan/structural-repair.webp", caption: "Riveted doubler repair masked for corrosion protection", group: "SriLankan Airlines Engineering" },
+    { src: "assets/images/experience/srilankan/structural-doubler.webp", caption: "Fuselage skin repair pinned out with clecos", group: "SriLankan Airlines Engineering" },
     { src: "assets/images/experience/srilankan/sheet-metal-equipment.webp", caption: "Sheet-metal forming equipment", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/structural-repair.webp", caption: "Riveted doubler repair masked for painting", group: "SriLankan Airlines Engineering" },
     { src: "assets/images/experience/srilankan/hydraulic-press.webp", caption: "Hydraulic press in the structural workshop", group: "SriLankan Airlines Engineering" },
     { src: "assets/images/experience/srilankan/ndt-wheel.webp", caption: "Eddy-current inspection of a wheel hub", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/magnetic-particle.webp", caption: "Magnetic-particle inspection coil", group: "SriLankan Airlines Engineering" },
     { src: "assets/images/experience/srilankan/ndt-uv.webp", caption: "Fluorescent penetrant indications under ultraviolet light", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/penetrant-booth.webp", caption: "Penetrant inspection booth", group: "SriLankan Airlines Engineering" },
+    { src: "assets/images/experience/srilankan/penetrant-booth.webp", caption: "Wheel hub under ultraviolet examination in the penetrant booth", group: "SriLankan Airlines Engineering" },
+    { src: "assets/images/experience/srilankan/magnetic-particle.webp", caption: "Magnetic-particle inspection coil fixture", group: "SriLankan Airlines Engineering" },
     { src: "assets/images/experience/srilankan/actuator-test-rig.webp", caption: "Rudder actuator hydraulic test rig", group: "SriLankan Airlines Engineering" },
     { src: "assets/images/experience/srilankan/accessories-bench.webp", caption: "Line-replaceable unit test bench", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/hangar.webp", caption: "Base-maintenance hangar", group: "SriLankan Airlines Engineering" },
     { src: "assets/images/experience/srilankan/battery-maintenance.webp", caption: "Battery charging and analysing rack", group: "SriLankan Airlines Engineering" },
     { src: "assets/images/experience/srilankan/battery-cells.webp", caption: "Aircraft Nickel–Cadmium battery cells", group: "SriLankan Airlines Engineering" },
+    { src: "assets/images/experience/falcon/e2-night.webp", caption: "E2 with its completed aerodynamic package", group: "Falcon E Racing" },
     { src: "assets/images/experience/falcon/e2-track.webp", caption: "E2 during track testing", group: "Falcon E Racing" },
-    { src: "assets/images/experience/falcon/e2-rear-view.webp", caption: "E2 rear aerodynamic package", group: "Falcon E Racing" },
-    { src: "assets/images/experience/falcon/aero-component.webp", caption: "Composite aerodynamic element", group: "Falcon E Racing" },
-    { src: "assets/images/experience/falcon/mould-team.webp", caption: "Aerodynamics team with fibreglass moulds", group: "Falcon E Racing" },
-    { src: "assets/images/experience/falcon/fibreglass-mould.webp", caption: "Prepared fibreglass mould", group: "Falcon E Racing" },
-    { src: "assets/images/experience/falcon/fibreglass-layup.webp", caption: "Fibreglass layup", group: "Falcon E Racing" },
-    { src: "assets/images/experience/falcon/carbon-body.webp", caption: "Carbon-composite body panel", group: "Falcon E Racing" },
-    { src: "assets/images/experience/falcon/wing-assembly.webp", caption: "Multi-element wing assembly with 3D-printed ribs", group: "Falcon E Racing" },
-    { src: "assets/images/experience/falcon/vehicle-launch.webp", caption: "E2 vehicle launch", group: "Falcon E Racing" },
+    { src: "assets/images/experience/falcon/e2-rear-view.webp", caption: "Rear aerodynamic package on track", group: "Falcon E Racing" },
     { src: "assets/images/experience/falcon/e2-display.webp", caption: "E2 on public display", group: "Falcon E Racing" },
-    { src: "assets/images/experience/falcon/e2-night.webp", caption: "Completed aerodynamic package", group: "Falcon E Racing" },
-    { src: "assets/images/experience/falcon/front-wing-cad.webp", caption: "Front-wing structural CAD model", group: "Falcon E Racing" },
-    { src: "assets/images/experience/falcon/cfd-tyre-domain.webp", caption: "CFD domain with rotating-wall tyre", group: "Falcon E Racing" },
-    { src: "assets/images/experience/falcon/cfd-multi-element.webp", caption: "Velocity contours around the multi-element wing", group: "Falcon E Racing" },
-    { src: "assets/images/experience/falcon/team-lineup.webp", caption: "Team Falcone Racing, 2025/2026", group: "Falcon E Racing" },
+    { src: "assets/images/experience/falcon/vehicle-launch.webp", caption: "E2 vehicle launch — Unleashed 2G", group: "Falcon E Racing" },
+    { src: "assets/images/experience/falcon/aero-component.webp", caption: "Carbon-composite aerodynamic element", group: "Falcon E Racing" },
+    { src: "assets/images/experience/falcon/wing-assembly.webp", caption: "Multi-element wing assembly with 3D-printed ribs", group: "Falcon E Racing" },
+    { src: "assets/images/experience/falcon/carbon-body.webp", caption: "Carbon-composite body panel", group: "Falcon E Racing" },
+    { src: "assets/images/experience/falcon/mould-team.webp", caption: "Aerodynamics team with the fibreglass moulds", group: "Falcon E Racing" },
+    { src: "assets/images/experience/falcon/fibreglass-mould.webp", caption: "Prepared fibreglass mould", group: "Falcon E Racing" },
+    { src: "assets/images/experience/falcon/fibreglass-layup.webp", caption: "Fibreglass layup during mould fabrication", group: "Falcon E Racing" },
+    { src: "assets/images/projects/falcon-aero/cfd-multi-element.webp", caption: "Velocity contours around the four-element front wing", group: "Formula Student Aerodynamics" },
+    { src: "assets/images/projects/falcon-aero/cfd-wing-tyre.webp", caption: "Front-wing wake interacting with the rotating tyre", group: "Formula Student Aerodynamics" },
+    { src: "assets/images/projects/falcon-aero/cfd-wing-contour.webp", caption: "Velocity field across the wing elements", group: "Formula Student Aerodynamics" },
+    { src: "assets/images/projects/falcon-aero/cfd-tyre-domain.webp", caption: "Full computational domain with the tyre", group: "Formula Student Aerodynamics" },
+    { src: "assets/images/projects/falcon-aero/front-wing-cad.webp", caption: "Dimensioned four-element front-wing geometry", group: "Formula Student Aerodynamics" },
+    { src: "assets/images/projects/falcon-aero/moga-design-table.webp", caption: "Multi-Objective Genetic Algorithm design points", group: "Formula Student Aerodynamics" },
+    { src: "assets/images/projects/falcon-aero/downforce-convergence.webp", caption: "Downforce convergence history", group: "Formula Student Aerodynamics" },
+    { src: "assets/images/projects/fyp/uav-flight.webp", caption: "The fabricated UAV in flight", group: "Final Year Project" },
+    { src: "assets/images/projects/fyp/uav-field.webp", caption: "The completed 2.5 m span UAV before a test flight", group: "Final Year Project" },
+    { src: "assets/images/projects/fyp/uav-front.webp", caption: "UAV front view on the test field", group: "Final Year Project" },
+    { src: "assets/images/projects/fyp/wing-ribs.webp", caption: "Laser-cut plywood ribs on the carbon-fibre spar", group: "Final Year Project" },
+    { src: "assets/images/projects/fyp/printed-pod.webp", caption: "3D-printed fuselage pod", group: "Final Year Project" },
+    { src: "assets/images/projects/fyp/printed-parts.webp", caption: "3D-printed airframe components", group: "Final Year Project" },
+    { src: "assets/images/projects/fyp/blubaby-flight.webp", caption: "Blu-Baby validation aircraft in flight", group: "Final Year Project" },
+    { src: "assets/images/projects/fyp/test-flight.webp", caption: "Flight testing in progress", group: "Final Year Project" },
+    { src: "assets/images/projects/fyp/team-presentation.webp", caption: "Project presentation with the UAV", group: "Final Year Project" },
+    { src: "assets/images/projects/fyp/poster.webp", caption: "Final-year project research poster", group: "Final Year Project" },
+    { src: "assets/images/projects/cfd/velocity-contour.webp", caption: "Velocity magnitude around the NREL S809 aerofoil", group: "CFD Analysis" },
+    { src: "assets/images/projects/cfd/pressure-contour.webp", caption: "Static pressure distribution around the aerofoil", group: "CFD Analysis" },
+    { src: "assets/images/projects/cfd/velocity-contour-high-aoa.webp", caption: "Velocity field approaching stall", group: "CFD Analysis" },
+    { src: "assets/images/projects/cfd/pressure-contour-high-aoa.webp", caption: "Static pressure field approaching stall", group: "CFD Analysis" },
+    { src: "assets/images/projects/cfd/mesh-overview.webp", caption: "Structured C-type mesh around the aerofoil", group: "CFD Analysis" },
+    { src: "assets/images/projects/cfd/mesh-near-wall.webp", caption: "Near-wall mesh refinement at the aerofoil surface", group: "CFD Analysis" },
+    { src: "assets/images/projects/cfd/domain-boundary-conditions.webp", caption: "Computational domain and boundary conditions", group: "CFD Analysis" },
+    { src: "assets/images/projects/cfd/cl-convergence.webp", caption: "Lift-coefficient convergence history", group: "CFD Analysis" },
+    { src: "assets/images/projects/cfd/cd-convergence.webp", caption: "Drag-coefficient convergence history", group: "CFD Analysis" },
+    { src: "assets/images/projects/cfd/ld-convergence.webp", caption: "Lift-to-drag ratio convergence history", group: "CFD Analysis" },
+    { src: "assets/images/projects/cfd/residuals.webp", caption: "Solution residuals", group: "CFD Analysis" },
+    { src: "assets/images/projects/propeller/propeller-render.webp", caption: "SolidWorks model of the two-bladed propeller", group: "Propeller Design" },
+    { src: "assets/images/projects/propeller/propeller-hub.webp", caption: "Propeller hub and blade root geometry", group: "Propeller Design" },
   ],
 
   awards: [
