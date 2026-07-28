@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manitha Pasandul — Portfolio</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #14161a;
+    --muted: #5c6470;
+    --line: #e4e7ec;
+    --accent: #2f6df6;
+    --card: #f8f9fb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0e1116;
+      --fg: #e8eaed;
+      --muted: #9aa3af;
+      --line: #232833;
+      --accent: #6b9bff;
+      --card: #161b22;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+  header { padding: 88px 0 56px; border-bottom: 1px solid var(--line); }
+  header h1 { font-size: clamp(2rem, 6vw, 3rem); margin: 0 0 8px; letter-spacing: -0.02em; }
+  header .role { color: var(--accent); font-weight: 600; margin: 0 0 16px; }
+  header p.bio { color: var(--muted); max-width: 56ch; margin: 0 0 24px; }
+
+  .links a {
+    display: inline-block;
+    margin: 0 12px 8px 0;
+    color: var(--fg);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 1px;
+    font-size: 0.95rem;
+  }
+  .links a:hover { color: var(--accent); }
+
+  section { padding: 48px 0; border-bottom: 1px solid var(--line); }
+  section:last-of-type { border-bottom: none; }
+  h2 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    margin: 0 0 24px;
+    font-weight: 600;
+  }
+
+  .project {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 16px;
+  }
+  .project h3 { margin: 0 0 6px; font-size: 1.1rem; }
+  .project h3 a { color: inherit; text-decoration: none; }
+  .project h3 a:hover { color: var(--accent); }
+  .project p { margin: 0 0 12px; color: var(--muted); font-size: 0.95rem; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tags span {
+    font-size: 0.75rem;
+    color: var(--muted);
+    border: 1px solid var(--line);
+    border-radius: 99px;
+    padding: 2px 10px;
+    background: var(--bg);
+  }
+
+  .skills { display: flex; flex-wrap: wrap; gap: 8px; }
+  .skills span {
+    font-size: 0.85rem;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 4px 12px;
+    background: var(--card);
+  }
+
+  footer {
+    padding: 40px 0 64px;
+    color: var(--muted);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--line);
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header>
+    <h1>Manitha Pasandul</h1>
+    <p class="role">Software Engineer</p>
+    <p class="bio">
+      I build things for the web and work on computer vision / 3D reconstruction.
+      Currently focused on machine learning and full-stack development.
+    </p>
+    <div class="links">
+      <a href="https://github.com/manithapasandul-wq">GitHub</a>
+      <a href="mailto:you@example.com">Email</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Résumé</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>Projects</h2>
+
+    <div class="project">
+      <h3><a href="#">Project One</a></h3>
+      <p>A short line describing what it does and why it was interesting to build.</p>
+      <div class="tags"><span>Python</span><span>PyTorch</span><span>CUDA</span></div>
+    </div>
+
+    <div class="project">
+      <h3><a href="#">Project Two</a></h3>
+      <p>A short line describing what it does and why it was interesting to build.</p>
+      <div class="tags"><span>React</span><span>TypeScript</span><span>Node</span></div>
+    </div>
+
+    <div class="project">
+      <h3><a href="#">Project Three</a></h3>
+      <p>A short line describing what it does and why it was interesting to build.</p>
+      <div class="tags"><span>FastAPI</span><span>Postgres</span><span>Docker</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <div class="skills">
+      <span>Python</span>
+      <span>JavaScript</span>
+      <span>TypeScript</span>
+      <span>React</span>
+      <span>Node.js</span>
+      <span>PyTorch</span>
+      <span>FastAPI</span>
+      <span>PostgreSQL</span>
+      <span>Docker</span>
+      <span>Git</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p style="color: var(--muted); margin: 0;">
+      Open to internships and collaboration —
+      <a href="mailto:you@example.com" style="color: var(--accent);">you@example.com</a>
+    </p>
+  </section>
+
+  <footer>© 2026 Manitha Pasandul</footer>
+
+</div>
+
+</body>
+</html>
