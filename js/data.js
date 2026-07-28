@@ -144,10 +144,6 @@ const PORTFOLIO_DATA = {
         "Completed a six-month industrial training placement at SriLankan Airlines Engineering, gaining practical knowledge across seven specialised workshops, including the Engine Module, NDT, and Paint and Composite Workshops, as well as base-maintenance and battery facilities supporting Airbus A320-family and A330 aircraft.",
         "The training strengthened my understanding of aircraft systems, inspection methods, technical documentation, quality control, and aviation safety procedures, while developing my attention to detail, experimental discipline, teamwork, and practical engineering awareness.",
       ],
-      responsibilities: [
-        "Completed six months of industrial training across seven specialised workshops, base-maintenance hangars, and aircraft battery facilities supporting Airbus A320-family and A330 aircraft.",
-        "Gained practical knowledge of aircraft systems, inspection methods, technical documentation, quality control, and aviation safety procedures.",
-      ],
       details: [
         {
           title: "Training Overview",
