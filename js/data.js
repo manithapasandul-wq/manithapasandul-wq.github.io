@@ -1,12 +1,15 @@
 /* ==========================================================================
    PORTFOLIO CONTENT DATA
    --------------------------------------------------------------------------
-   All dummy/placeholder content lives in this single file so it can be
-   swapped for real information later without touching markup or logic.
+   All site content lives in this single file so it can be edited without
+   touching markup or logic.
 
-   >>> REPLACE-ME markers point to every spot that needs real data before
-   >>> this site goes live: profile photo, CV file, social links, project
-   >>> images/descriptions, and personal contact details.
+   Profile text, education, experience, projects, awards, and interests are
+   real, sourced from the project portfolio document.
+
+   >>> REPLACE-ME markers point to what is still outstanding: contact email
+   >>> and phone, LinkedIn / Twitter / Instagram URLs, the CV file itself,
+   >>> and project images for the projects that had no photographs supplied.
    ========================================================================== */
 
 // Small inline-SVG placeholder generator so every image on the page is a
@@ -48,7 +51,9 @@ const PORTFOLIO_DATA = {
     location: "Sri Lanka",
     email: "manitha.pasandul@example.com", // Replace with your current email
     phone: "+94 77 000 0000", // Replace with your current phone number
-    cvUrl: "assets/cv/Manitha_Pasandul_CV.pdf",
+    // REPLACE-ME: this still points at the sample CV carried over from the
+    // source repo — drop your real CV into assets/cv/ and update this path.
+    cvUrl: "assets/cv/Manitha_Pasandul_Sample_CV.pdf",
     profileImage: "assets/images/profile.jpg",
     socials: {
       linkedin: "https://linkedin.com/in/example-profile", // Replace with your LinkedIn URL
@@ -68,7 +73,7 @@ const PORTFOLIO_DATA = {
       "Looking ahead, I aim to build on this foundation through research in high-speed and hypersonic aerodynamics, aeroelasticity, propulsion and combustion systems, and flight dynamics and control. I am particularly interested in combining computational and experimental methods to analyse and optimise advanced aerospace systems. I am currently seeking research assistant, MSc, or PhD opportunities where I can develop this expertise at a deeper and more specialised level.",
     ],
     stats: [
-      { value: "3.77", label: "Current CGPA" },
+      { value: "3.8", label: "Final CGPA" },
       { value: "6+", label: "Major Aerospace Projects" },
       { value: "6 Months", label: "Aircraft Engineering Training" },
       { value: "4", label: "Dean’s List Semesters" },
@@ -82,7 +87,7 @@ const PORTFOLIO_DATA = {
       institution: "University of Moratuwa, Sri Lanka",
       program: "BSc (Hons) Mechanical Engineering — Aeronautical Engineering Specialisation",
       period: "2022 — 2026",
-      classification: "First Class Division | CGPA: 3.77/4.00",
+      classification: "First Class Division | GPA: 3.8/4.00",
       highlights: [
         "Dean’s List recognition in Semesters 2, 4, 6, and 7.",
         "Final-year research focused on parametric sensitivity analysis and fine-tuning of fixed-wing UAV flight dynamics.",
@@ -367,225 +372,194 @@ const PORTFOLIO_DATA = {
   ],
 
   // Projects grouped by category. Each project supports a detailed modal view.
-  // REPLACE-ME: swap `image` / `gallery` and copy with real project material.
+  // Content sourced from the project portfolio document.
   projectCategories: [
     {
-      category: "Design & Manufacturing",
+      category: "Flight Dynamics & Simulation",
       projects: [
         {
-          id: "dm-1",
-          title: "Modular Workbench Fixture System",
+          id: "fyp-uav",
+          title: "Flight-Dynamics Analysis and Fine-Tuning of a Fixed-Wing UAV",
           summary:
-            "A reconfigurable fixture platform designed to cut changeover time between small-batch production runs.",
-          tools: ["SolidWorks", "DFM", "Sheet Metal"],
-          image: placeholderImage("Fixture System", 210, 172),
+            "Final-year research connecting UAV geometric design to real flight-dynamic behaviour through parametric sensitivity analysis, fabrication, flight testing, and modal identification.",
+          tools: ["Python", "AVL", "ArduPilot", "Arduino", "Prony\u2019s Method"],
+          // REPLACE-ME: no photographs of the UAV were supplied — swap in real images.
+          image: placeholderImage("Fixed-Wing UAV Flight Dynamics", 210, 172),
+          detailPage: "final-year-project.html",
+          detailPageLabel: "Read the full project",
           objectives: [
-            "Design a fixture platform reconfigurable across 5 part families.",
-            "Minimise changeover time between production batches.",
+            "Identify how geometric and mass-related design parameters influence the short-period, phugoid, Dutch-roll, roll-subsidence, and spiral modes.",
+            "Improve inherent stability through airframe geometry before relying on stability-augmentation systems.",
+            "Fabricate, instrument, and flight-test a fixed-wing UAV to validate the numerical framework against measured flight data.",
           ],
           challenges:
-            "Balancing rigidity for machining loads against the need for tool-less reconfiguration was the core design tension — early prototypes flexed under clamping force.",
+            "The fabricated UAV showed roll-related instability and needed frequent corrective pilot inputs, making a clean natural response after an elevator doublet hard to capture. Structural vibration affecting the IMU, control-surface backlash, servo delay, wind disturbance, a limited flying area and take-off distance, and damage during repeated test attempts all reduced the reliability of the modal identification. The APM 2.8 sampling rate and onboard memory were also insufficient for resolving rapid short-period oscillations.",
           methodology:
-            "Iterated through 3 SolidWorks concepts, used FEA to validate stiffness under worst-case clamping load, then produced a sheet-metal + modular T-slot base for a 3D-printed proof-of-concept.",
-          technologies: ["SolidWorks", "FEA (simulation study)", "Sheet Metal Design", "3D Printing"],
+            "A Python-based flight-dynamics framework automatically updated the UAV geometry, generated AVL input files, executed AVL, extracted stability derivatives and eigenvalues, identified the dynamic modes, and computed natural frequencies, damping ratios, and time constants for every configuration \u2014 allowing many geometries to be swept without preparing separate models by hand. Normalised sensitivity, the percentage change in a dynamic characteristic per one-percent change in a parameter, was used to compare parameters with different units and ranges. A 2.5 m-span UAV was then fabricated using carbon-fibre spar tubes, laser-cut plywood ribs, a welded aluminium wing box, and a 3D-printed fuselage pod, and integrated with an APM 2.8 running ArduPilot fixed-wing firmware. After the APM logging proved insufficient, an independent Arduino Nano, IMU, and SD-card system with Kalman filtering and a toggle-switch input marker was developed, and a stable Blu-Baby RC aircraft was added as a second validation platform. Recorded pitch-angle and pitch-rate responses were windowed and analysed using FFT and Prony\u2019s method.",
+          technologies: [
+            "Python",
+            "AVL (Athena Vortex Lattice)",
+            "ArduPilot / Mission Planner",
+            "Arduino Nano + IMU",
+            "Kalman Filtering",
+            "FFT and Prony\u2019s Method",
+            "Composite and 3D-Printed Fabrication",
+          ],
           outcomes:
-            "Sample results: changeover time reduced from ~25 minutes to ~7 minutes across the tested part families in a lab demonstration.",
-          gallery: [
-            placeholderImage("Concept Sketch", 210, 172),
-            placeholderImage("FEA Result", 172, 210),
-            placeholderImage("Prototype", 200, 260),
-          ],
-        },
-        {
-          id: "dm-2",
-          title: "Lightweight Bicycle Frame Redesign",
-          summary:
-            "Topology-optimised frame geometry exploring weight reduction while preserving stiffness targets.",
-          tools: ["SolidWorks", "Topology Optimisation", "Aluminium 6061"],
-          image: placeholderImage("Bike Frame", 190, 260),
-          objectives: [
-            "Reduce frame mass by at least 10% versus a baseline reference design.",
-            "Maintain torsional stiffness within 5% of baseline.",
-          ],
-          challenges:
-            "Topology-optimised organic shapes are difficult to manufacture with standard tube-and-lug methods, requiring a manufacturability pass after optimisation.",
-          methodology:
-            "Baseline model built in SolidWorks, topology optimisation study run to identify material-efficient regions, then manually re-interpreted into manufacturable tube profiles.",
-          technologies: ["SolidWorks Simulation", "Topology Optimisation", "Aluminium 6061-T6"],
-          outcomes:
-            "Sample results: 12% mass reduction achieved with stiffness within 3% of the baseline target.",
-          gallery: [
-            placeholderImage("Baseline Model", 190, 260),
-            placeholderImage("Optimised Shape", 190, 150),
-          ],
-        },
-        {
-          id: "dm-3",
-          title: "Precision Gearbox Housing",
-          summary:
-            "A compact two-stage gearbox housing designed for a robotics drivetrain, optimised for assembly.",
-          tools: ["AutoCAD", "SolidWorks", "GD&T"],
-          image: placeholderImage("Gearbox Housing", 172, 210),
-          objectives: [
-            "Design a two-stage reduction housing within a 90x90x60mm envelope.",
-            "Simplify assembly to fewer than 10 fasteners.",
-          ],
-          challenges:
-            "Maintaining shaft alignment tolerances across a split-housing design while keeping the part count low.",
-          methodology:
-            "Developed GD&T scheme for bearing bore alignment, validated with a tolerance stack-up analysis, then produced full manufacturing drawings.",
-          technologies: ["SolidWorks", "GD&T", "Tolerance Stack Analysis"],
-          outcomes:
-            "Sample results: final design used 8 fasteners and passed a simulated alignment tolerance check.",
-          gallery: [placeholderImage("Housing Exploded View", 172, 210)],
+            "Horizontal tail volume ratio proved the most effective short-period tuning parameter \u2014 a 1% increase raised short-period natural frequency by roughly 1.03% and damping ratio by roughly 0.68%. Wing dihedral dominated the spiral mode: increasing it from about 0\u00b0 to 8\u00b0 cut the spiral time constant from roughly 40.2 s to 3.0 s, a reduction greater than 92%. A 1% increase in wing aspect ratio raised phugoid natural frequency by about 0.2429%. The short-period response was successfully identified from the Blu-Baby flight data and compared against the numerical prediction, while the slower phugoid mode could not be reliably extracted within the available undisturbed flight time.",
         },
       ],
     },
     {
-      category: "Fluid Dynamics",
+      category: "Aerodynamics & CFD",
       projects: [
         {
-          id: "fd-1",
-          title: "Finned Heat Sink Airflow Study",
+          id: "nrel-s809",
+          title: "CFD Analysis and Validation of the NREL S809 Aerofoil",
           summary:
-            "CFD investigation comparing airflow and thermal performance across three fin geometries.",
-          tools: ["ANSYS Fluent", "CFD", "MATLAB"],
-          image: placeholderImage("Heat Sink CFD", 200, 300),
+            "Two-dimensional ANSYS Fluent study of the NREL S809 wind-turbine aerofoil from 0\u00b0 to 20\u00b0 angle of attack, validated against published research data.",
+          tools: ["ANSYS Fluent", "CFD", "Structured Meshing"],
+          // REPLACE-ME: no contour plots were supplied for this project.
+          image: placeholderImage("NREL S809 CFD Validation", 196, 260),
           objectives: [
-            "Compare thermal performance of straight, pin, and wavy fin geometries.",
-            "Identify the geometry with the best performance-to-pressure-drop ratio.",
+            "Establish a validated baseline CFD model of the unslotted NREL S809 aerofoil that can later be extended to passive flow-control concepts.",
+            "Evaluate lift, drag, lift-to-drag ratio, pressure distribution, and flow separation from 0\u00b0 to 20\u00b0 angle of attack.",
+            "Compare the predicted aerodynamic coefficients against published reference data.",
           ],
           challenges:
-            "Mesh independence was difficult to achieve near fin boundary layers without excessive cell count and simulation time.",
+            "Obtaining stable convergence at higher angles of attack was the main difficulty, because separated flow is highly unsteady and a steady-state solver cannot fully represent it \u2014 more iterations were needed near stall. Developing the structured near-wall mesh was also challenging, as the required y+ condition had to be balanced against skewness and orthogonality, and several bias factors were tested before an acceptable first-layer height and overall mesh quality were reached.",
           methodology:
-            "Built parametric fin geometries, ran steady-state CFD in ANSYS Fluent with k-omega SST turbulence model, post-processed results in MATLAB.",
-          technologies: ["ANSYS Fluent", "MATLAB", "Mesh Convergence Study"],
-          outcomes:
-            "Sample results: wavy fin geometry showed 18% better heat dissipation at a comparable pressure drop.",
-          gallery: [
-            placeholderImage("Mesh View", 200, 300),
-            placeholderImage("Velocity Contours", 300, 200),
-            placeholderImage("Temperature Field", 300, 200),
+            "A large C-type domain was built around a 600 mm chord aerofoil at a Reynolds number of 1 \u00d7 10\u2076, corresponding to an inlet velocity of 24.34 m/s, and meshed with structured quadrilaterals concentrated near the surface and in the downstream wake. The final mesh contained approximately 234,400 elements with a measured first-layer height of about 0.736 mm, selected after a grid-independence study showed the aerodynamic coefficients stabilising beyond roughly 200,000 elements. The standard k\u2013\u03b5 turbulence model with standard wall functions was used alongside a velocity inlet, pressure outlet, no-slip aerofoil wall, coupled pressure\u2013velocity solution, second-order pressure and momentum discretisation, least-squares cell-based gradients, and convergence criteria of 10\u207b\u2074. Angle of attack was varied in 2\u00b0 increments by resolving the constant inlet velocity into horizontal and vertical components.",
+          technologies: [
+            "ANSYS Fluent",
+            "Structured C-Type Meshing",
+            "k\u2013\u03b5 Turbulence Model",
+            "Grid-Independence Study",
           ],
+          outcomes:
+            "Lift increased with angle of attack to a maximum coefficient of approximately 1.20 near 14\u00b0 before separation developed and the aerofoil entered stall, with the maximum lift-to-drag ratio occurring at approximately 6\u00b0. Lift predictions agreed well with the published reference across most of the tested range, while larger drag deviations appeared at some intermediate and high angles \u2014 attributed mainly to mesh distribution, near-wall treatment, turbulence modelling, and the limits of a steady-state model close to stall. The study recommended the k\u2013\u03c9 SST model with a finer near-wall mesh at y+ close to one, and rotating the aerofoil geometry rather than the inlet-velocity direction, for future work.",
         },
         {
-          id: "fd-2",
-          title: "Centrifugal Pump Performance Analysis",
+          id: "fs-front-wing",
+          title: "Four-Element Formula Student Front Wing Optimisation",
           summary:
-            "Numerical modelling of a centrifugal pump impeller to predict head-flow performance curves.",
-          tools: ["ANSYS CFX", "CFD", "Python"],
-          image: placeholderImage("Pump Analysis", 300, 220),
+            "CFD-driven aerodynamic design of a four-element front wing for Falcon E Racing\u2019s E2 vehicle, optimised using a Multi-Objective Genetic Algorithm.",
+          tools: ["ANSYS Fluent", "MOGA", "CAD", "Carbon Fibre"],
+          image: "assets/images/experience/falcon/cfd-multi-element.webp",
+          detailPage: "falcon-e-racing.html",
+          detailPageLabel: "View the full experience",
           objectives: [
-            "Predict pump head-flow curve numerically and compare against sample manufacturer data.",
-            "Identify recirculation zones at off-design flow rates.",
+            "Maximise downforce and aerodynamic efficiency from a four-element front wing within Formula Student regulations.",
+            "Direct airflow over and around the front tyre to reduce wake formation and tyre-induced drag.",
+            "Carry the design through composite manufacture to integration with the vehicle.",
           ],
           challenges:
-            "Capturing rotor-stator interaction accurately required careful interface setup between rotating and stationary domains.",
+            "Representing the interaction between the front-wing wake and the tyre flow field meant including the front section of the tyre in the computational domain with a rotating-wall boundary condition. The geometry also had to remain feasible for hand-layup composite manufacture and compliant with Formula Student ground-clearance and packaging rules.",
           methodology:
-            "Modelled impeller and volute in CAD, simulated using a multiple reference frame approach in ANSYS CFX, automated post-processing with a Python script.",
-          technologies: ["ANSYS CFX", "Python", "Turbomachinery CFD"],
+            "Two-dimensional steady-state CFD simulations in ANSYS Fluent, with the tyre represented by a rotating-wall boundary condition, were driven by Multi-Objective Genetic Algorithm optimisation across angle of attack, ground clearance, element gaps, and overlaps. The resulting geometry was taken through fibreglass mould fabrication, mould preparation and release systems, carbon-fibre layup, production of 3D-printed aerofoil ribs, wing-element construction, multi-element alignment and assembly, and final integration with the vehicle.",
+          technologies: [
+            "ANSYS Fluent",
+            "Multi-Objective Genetic Algorithm",
+            "CAD",
+            "Carbon-Fibre Composite Manufacturing",
+          ],
           outcomes:
-            "Sample results: predicted head-flow curve within 6% of reference data across the tested flow range.",
+            "The simulation results supported data-driven decisions throughout front-wing development, and the wider aerodynamic package \u2014 front wing, rear wing, and aerodynamic body elements \u2014 was manufactured and integrated onto E2, the second vehicle built by Sri Lanka\u2019s first Formula Student car project.",
           gallery: [
-            placeholderImage("Impeller Model", 300, 220),
-            placeholderImage("Streamlines", 300, 220),
+            "assets/images/experience/falcon/cfd-tyre-domain.webp",
+            "assets/images/experience/falcon/front-wing-cad.webp",
+            "assets/images/experience/falcon/wing-assembly.webp",
+            "assets/images/experience/falcon/e2-track.webp",
           ],
         },
       ],
     },
     {
-      category: "Mechanical Simulations",
+      category: "Propulsion & Thermofluids",
       projects: [
         {
-          id: "ms-1",
-          title: "Vehicle Chassis Crash Simulation",
+          id: "propeller-bet",
+          title: "Propeller Design Using Blade Element Theory",
           summary:
-            "Explicit dynamics simulation estimating chassis deformation under a simplified frontal impact.",
-          tools: ["ANSYS Explicit Dynamics", "FEA"],
-          image: placeholderImage("Crash Simulation", 300, 190),
+            "Design of a twin two-bladed propeller system for a 1,500 kg aircraft, sized with an iterative MATLAB Blade Element Theory model and modelled in SolidWorks.",
+          tools: ["MATLAB", "Blade Element Theory", "SolidWorks"],
+          // REPLACE-ME: no renders of the propeller model were supplied.
+          image: placeholderImage("Blade Element Propeller Design", 26, 200),
           objectives: [
-            "Estimate peak deformation and energy absorption under a simplified frontal impact load case.",
-            "Compare two frame-rail thicknesses for crashworthiness.",
+            "Size a twin two-bladed propeller system to take a 1,500 kg aircraft to a 220 km/h take-off speed within a 1 km sea-level runway.",
+            "Determine blade chord, twist, thrust, torque, and efficiency distributions along the span.",
+            "Produce a manufacturable 3D propeller model from the calculated geometry.",
           ],
           challenges:
-            "Explicit dynamics solves are computationally heavy — balancing mesh resolution with available compute time was a constant trade-off.",
+            "Blade-tip speed had to be limited to Mach 0.74 to avoid excessive compressibility effects, noise, and efficiency loss. That capped the propeller radius at roughly 0.78 m, so the required blade loading had to be met through the chord and twist distributions rather than through diameter.",
           methodology:
-            "Simplified chassis model built in SolidWorks, simulated in ANSYS Explicit Dynamics with a rigid-wall frontal impact boundary condition.",
-          technologies: ["ANSYS Explicit Dynamics", "SolidWorks", "FEA"],
+            "Total thrust demand was derived from aircraft acceleration, aerodynamic drag, and the assumed climb angle at take-off, giving approximately 8.1 kN overall and about 4.05 kN per propeller. With a 6,000 rpm engine and a 1:2 reduction gearbox producing 3,000 rpm at the propeller, the aerodynamic portion of each blade was divided into 20 radial elements. A MATLAB routine seeded axial and tangential induction velocities, computed the local flow conditions, thrust, and torque for each element, then updated the inductions using momentum-theory relationships until successive values fell within a convergence tolerance of 10\u207b\u2075. NACA 6415 was selected after comparing several sections, producing a high lift coefficient at comparatively low drag (C_L = 1.791, C_D = 0.02515 at roughly 13\u00b0 angle of attack). The final geometry was lofted in SolidWorks through aerofoil sections scaled to the local chord and rotated to the calculated pitch angle, then patterned into a two-bladed hub.",
+          technologies: [
+            "MATLAB",
+            "Blade Element Theory",
+            "Momentum Theory",
+            "SolidWorks",
+            "NACA 6415 Aerofoil",
+          ],
           outcomes:
-            "Sample results: thicker frame rail reduced peak intrusion by 22% at the cost of 9% added mass.",
-          gallery: [placeholderImage("Deformation Plot", 300, 190)],
+            "The first blade element converged after 12 iterations and most others within 7 to 11. Each propeller produced approximately 4,134 N of thrust and 1,059 Nm of torque, giving about 8,264 N and 2,118 Nm for the pair \u2014 slightly above the 8.1 kN requirement. The design achieved an advance ratio of about 0.783, thrust coefficient 0.228, torque coefficient 0.0374, power coefficient 0.235, propeller efficiency of approximately 75.9%, and a required engine power of about 332.7 kW.",
         },
         {
-          id: "ms-2",
-          title: "Rotating Shaft Fatigue Life Estimation",
+          id: "gas-turbine-biodiesel",
+          title: "Gas Turbine Performance on Biodiesel Blends",
           summary:
-            "Fatigue analysis of a stepped shaft under cyclic bending load using stress-life methods.",
-          tools: ["ANSYS", "MATLAB", "FEA"],
-          image: placeholderImage("Shaft Fatigue", 300, 200),
+            "Current research refurbishing a small gas turbine model to investigate how biodiesel blends affect its output power and overall performance.",
+          tools: ["Gas Turbines", "Combustion", "Experimental Testing"],
+          // REPLACE-ME: no photographs of the gas turbine rig were supplied.
+          image: placeholderImage("Gas Turbine Biodiesel Research", 12, 40),
           objectives: [
-            "Estimate fatigue life of a stepped shaft under a sample cyclic bending load.",
-            "Evaluate the effect of fillet radius on stress concentration.",
+            "Refurbish a small gas turbine model and return it to a serviceable, repeatable test condition.",
+            "Investigate how biodiesel blends affect the engine\u2019s output power and overall performance.",
           ],
           challenges:
-            "Accurately capturing the stress concentration at the shaft step required local mesh refinement without destabilising the global solution.",
+            "Differences in performance between fuel blends can only be attributed to the fuel once the rig itself runs consistently, so restoring the gas turbine model to a reliable test condition is a prerequisite for the comparison.",
           methodology:
-            "Static FEA in ANSYS to extract stress concentration factors, fatigue life estimated using stress-life (S-N) approach scripted in MATLAB.",
-          technologies: ["ANSYS", "MATLAB", "Stress-Life Fatigue Method"],
-          outcomes:
-            "Sample results: increasing fillet radius by 2mm extended estimated fatigue life by roughly 3x.",
-          gallery: [
-            placeholderImage("Stress Contour", 300, 200),
-            placeholderImage("S-N Curve", 300, 200),
+            "Refurbishment of the small gas turbine model, followed by experimental running across biodiesel blends with output power and overall engine performance compared between fuels.",
+          technologies: [
+            "Gas Turbine Engines",
+            "Combustion",
+            "Alternative Aviation Fuels",
+            "Experimental Propulsion Testing",
           ],
+          outcomes:
+            "Ongoing research. The work is strengthening my interest in gas turbine engines, combustion, alternative aviation fuels, and experimental propulsion research.",
         },
       ],
     },
     {
-      category: "Academic Projects",
+      category: "Structures & FEA",
       projects: [
         {
-          id: "ac-1",
-          title: "Solar-Assisted Water Pumping System",
+          id: "wing-stress",
+          title: "Experimental and Numerical Stress Analysis of a Rectangular Wing",
           summary:
-            "Final-year coursework project sizing and modelling a small-scale solar water pumping setup.",
-          tools: ["MATLAB", "System Modelling"],
-          image: placeholderImage("Solar Pump", 300, 200),
+            "Strain-gauge testing and ANSYS Static Structural modelling of a rectangular wing under front- and rear-spar tip loads, used to select a landing-gear mounting location.",
+          tools: ["ANSYS Static Structural", "SolidWorks", "Strain Gauges"],
+          // REPLACE-ME: no test-rig photographs or contour plots were supplied.
+          image: placeholderImage("Wing Structural Test and FEA", 260, 200),
           objectives: [
-            "Size a solar PV array and pump combination for a sample rural irrigation case.",
-            "Model daily output against sample regional solar irradiance data.",
+            "Compare how a concentrated landing-gear-type load transfers through the spars, ribs, and skin when applied at the front- versus rear-spar tip.",
+            "Validate a finite element model of the wing against experimental strain measurements.",
+            "Recommend the more suitable spar for landing-gear attachment.",
           ],
           challenges:
-            "Matching pump characteristic curves against variable solar input required an iterative sizing approach rather than a single calculation.",
+            "The two methods sample the structure very differently: strain gauges measure local normal strains only at the points where they are installed, while ANSYS reports the maximum equivalent stress anywhere in the model \u2014 including near bolt holes, edges, or concentrated load points where no gauge existed. Reconciling those results was the main source of deviation, particularly for the rear-spar case.",
           methodology:
-            "Built a MATLAB model combining PV output estimation with pump performance curves, iterated component sizing against a sample demand profile.",
-          technologies: ["MATLAB", "Renewable Energy Systems", "System Sizing"],
-          outcomes:
-            "Sample results: proposed system met 92% of sample daily water demand across a modelled dry season.",
-          gallery: [placeholderImage("System Diagram", 300, 200)],
-        },
-        {
-          id: "ac-2",
-          title: "Low-Cost Prosthetic Hand Mechanism",
-          summary:
-            "Group coursework project designing a tendon-driven mechanism for an affordable prosthetic hand.",
-          tools: ["SolidWorks", "3D Printing", "Mechanism Design"],
-          image: placeholderImage("Prosthetic Hand", 300, 220),
-          objectives: [
-            "Design an underactuated tendon-driven gripping mechanism.",
-            "Keep bill-of-materials cost within a sample low-cost target.",
+            "The wing prototype was mounted as a cantilever using the TrueStructures strain measurement system, with uniaxial gauges on the front-spar flanges and rear-spar web and three rectangular rosettes on the front-spar web and the upper and lower skins. Unloaded and loaded voltages were recorded for a 30 lb (133.45 N) load applied at each spar tip and converted into strain and stress using the gauge factor and aluminium material properties; rosette data were processed through strain-transformation relationships and Mohr\u2019s circle to obtain principal strains, principal stresses, principal directions, and maximum in-plane shear stress. A detailed SolidWorks model \u2014 front and rear spars, upper and lower skins, internal ribs, lightening holes, spar flanges, and root mounting holes, with rivets and non-structural details removed \u2014 was assigned Aluminium 6061-T6, imported into ANSYS Static Structural, and meshed with tetrahedral elements after a mesh-independence study, settling at approximately 171,817 elements. The root bolt holes were modelled as fixed supports to represent the experimental clamping arrangement.",
+          technologies: [
+            "ANSYS Static Structural",
+            "SolidWorks",
+            "Strain-Gauge Rosettes",
+            "Mohr\u2019s Circle",
+            "Aluminium 6061-T6",
           ],
-          challenges:
-            "Achieving adaptive grip across irregular object shapes with a minimal number of actuators was the central mechanism-design challenge.",
-          methodology:
-            "Designed an underactuated linkage in SolidWorks, 3D-printed functional prototype fingers, tested grip on a sample set of household objects.",
-          technologies: ["SolidWorks", "3D Printing", "Underactuated Mechanisms"],
           outcomes:
-            "Sample results: prototype successfully grasped 8 of 10 sample test objects in initial trials.",
-          gallery: [
-            placeholderImage("Hand Prototype", 300, 220),
-            placeholderImage("Linkage Diagram", 300, 220),
-          ],
+            "The highest measured stress occurred at gauge B on the lower flange of the front spar in both load cases: approximately 69.62 MPa for front-spar loading and 58.16 MPa for rear-spar loading, a reduction of about 16.5% when the load moved aft. The FEA gave 2.422 mm deformation and 74.694 MPa equivalent stress for front-spar loading against 2.491 mm and 77.411 MPa for rear-spar loading, agreeing with experiment to within approximately 7.3% for the front spar and 33.1% for the rear. The rear spar was recommended as the more suitable landing-gear mounting location, with a load-spreading bracket and local reinforcement around the attachment region to control stress concentration.",
         },
       ],
     },
@@ -593,43 +567,48 @@ const PORTFOLIO_DATA = {
 
   awards: [
     {
-      title: "Dean's List Honours",
-      organisation: "University of Moratuwa (Sample)",
-      year: "2023",
+      title: "First Class Division",
+      organisation: "University of Moratuwa",
+      year: "2026",
       description:
-        "Recognised for academic excellence, ranking in the top percentile of the Mechanical Engineering cohort (sample achievement).",
+        "BSc (Hons) Mechanical Engineering, specialised in the Aeronautical stream, completed with a First Class Division and a GPA of 3.8/4.00.",
     },
     {
-      title: "Best Final Year Project — Runner Up",
-      organisation: "Dept. of Mechanical Engineering (Sample)",
-      year: "2024",
+      title: "Dean\u2019s List Recognition",
+      organisation: "Faculty of Engineering, University of Moratuwa",
+      year: "2022 \u2014 2026",
       description:
-        "Runner-up award for the CFD-based heat exchanger optimisation project at the departmental symposium (sample achievement).",
+        "Named to the Dean\u2019s List for academic performance in Semesters 2, 4, 6, and 7.",
     },
     {
-      title: "Inter-University CAD Design Challenge",
-      organisation: "Sample National Engineering Association",
-      year: "2022",
+      title: "Island Rank 684 \u2014 G.C.E. Advanced Level",
+      organisation: "Bandaranayake College, Gampaha",
+      year: "2020",
       description:
-        "Placed 2nd nationally for a rapid CAD design and manufacturing-feasibility challenge (sample achievement).",
+        "Two A grades and a B in Combined Mathematics, Physics, and Chemistry, with a Z-score of 2.1187 and an island rank of 684.",
     },
     {
-      title: "STEM Outreach Recognition Award",
-      organisation: "Sample STEM for Schools Initiative",
-      year: "2022",
+      title: "Nine A Grades \u2014 G.C.E. Ordinary Level",
+      organisation: "Bandaranayake College, Gampaha",
+      year: "2017",
       description:
-        "Awarded for outstanding volunteer contribution mentoring school students in robotics and CAD (sample achievement).",
+        "Completed the G.C.E. Ordinary Level examination with nine A grades.",
+    },
+    {
+      title: "Aerodynamics Lead, Sri Lanka\u2019s First Formula Student Car",
+      organisation: "Falcon E Racing, University of Moratuwa",
+      year: "E2 Programme",
+      description:
+        "Led the aerodynamic package development for E2, the second vehicle of Sri Lanka\u2019s first Formula Student car project, from CFD optimisation through composite manufacture to vehicle integration.",
     },
   ],
 
   interests: [
-    { name: "Automotive Engineering", icon: "car" },
-    { name: "Robotics", icon: "robot" },
-    { name: "Renewable Energy", icon: "sun" },
-    { name: "Product Design", icon: "cube" },
-    { name: "3D Printing", icon: "printer" },
-    { name: "Aerodynamics", icon: "wind" },
-    { name: "Photography", icon: "camera" },
-    { name: "Hiking", icon: "mountain" },
+    { name: "High-Speed & Hypersonic Aerodynamics", icon: "wind" },
+    { name: "Aeroelasticity", icon: "cube" },
+    { name: "Propulsion & Combustion Systems", icon: "sun" },
+    { name: "Flight Dynamics & Control", icon: "send" },
+    { name: "Experimental Aerospace Testing", icon: "camera" },
+    { name: "Design, Fabrication & Flight Testing", icon: "printer" },
   ],
 };

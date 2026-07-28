@@ -154,7 +154,7 @@
     $("#hero-title").textContent = profile.title;
     $("#hero-tagline").textContent = profile.tagline;
     $("#hero-photo").src = profile.profileImage;
-    $("#hero-photo").alt = `Placeholder profile photo of ${profile.name}`;
+    $("#hero-photo").alt = `Profile photo of ${profile.name}`;
 
     $("#hero-cv-btn").href = profile.cvUrl;
     $("#contact-cv-btn").href = profile.cvUrl;
@@ -308,7 +308,7 @@
               projectLookup.set(project.id, project);
               return `
               <article class="project-card reveal">
-                <div class="project-card-img"><img src="${project.image}" alt="${project.title} placeholder image" loading="lazy" /></div>
+                <div class="project-card-img"><img src="${project.image}" alt="${project.title}" loading="lazy" /></div>
                 <div class="project-card-body">
                   <h4>${project.title}</h4>
                   <p>${project.summary}</p>
@@ -351,7 +351,7 @@
     const body = $("#modal-body");
 
     body.innerHTML = `
-      <img class="modal-hero-img" src="${project.image}" alt="${project.title} cover placeholder image" />
+      <img class="modal-hero-img" src="${project.image}" alt="${project.title}" />
       <div class="modal-content">
         <h3 id="modal-title">${project.title}</h3>
         <p class="modal-subtitle">${project.summary}</p>
@@ -384,10 +384,21 @@
         </div>
 
         ${
+          project.detailPage
+            ? `<div class="modal-section">
+                <a class="experience-page-link" href="${project.detailPage}">
+                  <span>${project.detailPageLabel || "View full project"}</span>
+                  <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"/></svg>
+                </a>
+              </div>`
+            : ""
+        }
+
+        ${
           project.gallery && project.gallery.length
             ? `<div class="modal-section">
                 <h5>Gallery</h5>
-                <div class="modal-gallery">${project.gallery.map((src) => `<img src="${src}" alt="${project.title} additional placeholder image" loading="lazy" />`).join("")}</div>
+                <div class="modal-gallery">${project.gallery.map((src) => `<img src="${src}" alt="${project.title} — supporting image" loading="lazy" />`).join("")}</div>
               </div>`
             : ""
         }
@@ -436,14 +447,18 @@
    * RENDER: INTERESTS
    * ------------------------------------------------------------------ */
   const interestBlurbs = {
-    "Automotive Engineering": "Engines, drivetrains, and everything that makes vehicles move efficiently.",
-    Robotics: "Building small mechanisms and automation projects for fun.",
-    "Renewable Energy": "Solar, wind, and sustainable power system design.",
-    "Product Design": "Turning rough concepts into refined, usable products.",
-    "3D Printing": "Rapid prototyping ideas layer by layer.",
-    Aerodynamics: "Airflow, drag, and the physics of efficient motion.",
-    Photography: "Capturing engineering details and landscapes alike.",
-    Hiking: "Exploring trails and recharging away from the workshop.",
+    "High-Speed & Hypersonic Aerodynamics":
+      "Compressible flow, shock interaction, and the aerodynamics of high-speed vehicles.",
+    Aeroelasticity:
+      "The coupling between aerodynamic loading and structural deformation in flight.",
+    "Propulsion & Combustion Systems":
+      "Gas turbine engines, combustion behaviour, and alternative aviation fuels.",
+    "Flight Dynamics & Control":
+      "Dynamic modes, stability derivatives, and how airframe geometry shapes handling.",
+    "Experimental Aerospace Testing":
+      "Instrumentation, data acquisition, and validating simulation against measured data.",
+    "Design, Fabrication & Flight Testing":
+      "Taking a design from CAD through composite fabrication to a flying prototype.",
   };
 
   function renderInterests() {
@@ -453,7 +468,7 @@
       <div class="interest-card reveal">
         <div class="interest-icon"><svg class="icon"><use href="#icon-${interest.icon}"/></svg></div>
         <h4>${interest.name}</h4>
-        <p>${interestBlurbs[interest.name] || "Sample interest description."}</p>
+        <p>${interestBlurbs[interest.name] || ""}</p>
       </div>`
       )
       .join("");
