@@ -220,7 +220,6 @@
                     (img, i) => `
                   <figure class="exp-slide${i === 0 ? " is-active" : ""}" data-slide="${i}">
                     <img src="${img.src}" alt="${img.caption}" loading="lazy" />
-                    <figcaption>${img.caption}</figcaption>
                   </figure>`
                   )
                   .join("")}

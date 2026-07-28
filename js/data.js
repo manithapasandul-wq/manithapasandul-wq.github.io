@@ -130,14 +130,9 @@ const PORTFOLIO_DATA = {
       id: "srilankan-airlines",
       images: [
         { src: "assets/images/experience/srilankan/cockpit.webp", caption: "Airbus cockpit familiarisation" },
-        { src: "assets/images/experience/srilankan/engine-module.webp", caption: "Beside a turbofan engine" },
-        { src: "assets/images/experience/srilankan/trent-fan-work.webp", caption: "Trent 700 fan blades removed for replacement" },
-        { src: "assets/images/experience/srilankan/wheel-assembly.webp", caption: "Aircraft wheel assembly" },
-        { src: "assets/images/experience/srilankan/ndt-uv.webp", caption: "Fluorescent penetrant inspection under UV light" },
-        { src: "assets/images/experience/srilankan/composite-repair.webp", caption: "Vacuum-bagging a composite repair" },
-        { src: "assets/images/experience/srilankan/structural-doubler.webp", caption: "Fuselage skin repair pinned out with clecos" },
-        { src: "assets/images/experience/srilankan/hangar.webp", caption: "Wide-body base-maintenance hangar" },
         { src: "assets/images/experience/srilankan/training-team.webp", caption: "Engineering training team" },
+        { src: "assets/images/experience/srilankan/training-centre.webp", caption: "SriLankan Airlines training centre" },
+        { src: "assets/images/experience/falcon/e2-runway.webp", caption: "Formula Student E2 at the runway test venue" },
       ],
       detailPage: "srilankan-airlines.html",
       detailPageLabel: "View Full Experience",
@@ -333,6 +328,9 @@ const PORTFOLIO_DATA = {
     },
     {
       id: "temporary-instructor",
+      images: [
+        { src: "assets/images/experience/moratuwa/instructor-portrait.webp", caption: "Department of Mechanical Engineering, University of Moratuwa" },
+      ],
       type: "Academic Experience",
       position: "Temporary Instructor",
       organisation: "Department of Mechanical Engineering, University of Moratuwa",
@@ -353,6 +351,9 @@ const PORTFOLIO_DATA = {
     },
     {
       id: "aeronautical-society",
+      images: [
+        { src: "assets/images/experience/society/bcas-crest.webp", caption: "Bandaranayake College Aeronautical Society" },
+      ],
       type: "Student Society",
       position: "Senior Member of the Aeronautical Society",
       organisation: "Bandaranayake College, Gampaha",
