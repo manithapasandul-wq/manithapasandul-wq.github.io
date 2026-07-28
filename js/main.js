@@ -209,6 +209,8 @@
         const paragraphs =
           Array.isArray(exp.summary) && exp.summary.length ? exp.summary : [];
         const bullets = Array.isArray(exp.responsibilities) ? exp.responsibilities : [];
+        // Paragraphs that read as a conclusion, so they sit below the bullet list.
+        const closing = Array.isArray(exp.closing) ? exp.closing : [];
         const images = Array.isArray(exp.images) ? exp.images : [];
 
         const media = images.length
@@ -269,6 +271,8 @@
                     </ul>`
                   : ""
               }
+
+              ${closing.map((paragraph) => `<p>${paragraph}</p>`).join("")}
 
               ${
                 exp.detailPage

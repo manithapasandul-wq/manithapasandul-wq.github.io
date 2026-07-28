@@ -324,13 +324,16 @@ const PORTFOLIO_DATA = {
       period: "July 2026 — Present",
       summary: [
         "I currently work full-time as a Temporary Instructor in the Department of Mechanical Engineering at the University of Moratuwa, supporting undergraduate teaching, practical sessions, tutorials, laboratory activities, student assessments, and technical guidance across core mechanical engineering subjects.",
-        "I am assigned to ME2024 – Manufacturing Processes, ME1823 – Basic Engineering Thermodynamics, ME2093 – Mechanics of Machines I, and ME4220 – Principles of Naval Architecture.",
-        "This experience has strengthened my technical knowledge, communication, teaching, and problem-solving skills while allowing me to guide students in applying theoretical engineering concepts to practical problems.",
+        "I am assigned to the following modules:",
       ],
       responsibilities: [
-        "Support undergraduate teaching, practical sessions, tutorials, laboratory activities, student assessments, and technical guidance.",
-        "Assigned modules: ME2024 Manufacturing Processes, ME1823 Basic Engineering Thermodynamics, ME2093 Mechanics of Machines I, and ME4220 Principles of Naval Architecture.",
-        "Guide students in applying theoretical engineering concepts to practical problems.",
+        "ME2024 – Manufacturing Processes",
+        "ME1823 – Basic Engineering Thermodynamics",
+        "ME2093 – Mechanics of Machines I",
+        "ME4220 – Principles of Naval Architecture",
+      ],
+      closing: [
+        "This experience has strengthened my technical knowledge, communication, teaching, and problem-solving skills while allowing me to guide students in applying theoretical engineering concepts to practical problems.",
       ],
       achievements: [
         "Strengthened my technical communication, teaching, organisation, and engineering problem-solving skills.",
