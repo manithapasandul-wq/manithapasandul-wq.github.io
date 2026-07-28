@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-<link rel="stylesheet" href="css/style.css?v=8">
+<link rel="stylesheet" href="css/style.css?v=9">
 <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
 </head>
 <body>
@@ -65,6 +65,7 @@
       <li><a href="#experience" class="nav-link" data-nav="experience">Experience</a></li>
       <li><a href="#skills" class="nav-link" data-nav="skills">Skills</a></li>
       <li><a href="#projects" class="nav-link" data-nav="projects">Projects</a></li>
+      <li><a href="#gallery" class="nav-link" data-nav="gallery">Gallery</a></li>
       <li><a href="#awards" class="nav-link" data-nav="awards">Awards</a></li>
       <li><a href="#interests" class="nav-link" data-nav="interests">Interests</a></li>
       <li><a href="#contact" class="nav-link" data-nav="contact">Contact</a></li>
@@ -211,9 +212,31 @@
 </section>
 
 <!-- ==========================================================================
+     GALLERY
+     ========================================================================== -->
+<section id="gallery" class="section">
+  <div class="container">
+    <div class="section-heading reveal">
+      <p class="eyebrow">In the Workshop</p>
+      <h2>Gallery</h2>
+      <p class="section-sub">Photographs from industrial training at SriLankan Airlines Engineering and the Falcon E Racing Formula Student programme.</p>
+    </div>
+
+    <div class="gallery-filter" id="gallery-filter">
+      <button class="filter-btn active" data-gallery-filter="all">All</button>
+      <!-- group buttons filled by JS -->
+    </div>
+
+    <div class="gallery-grid" id="gallery-grid">
+      <!-- filled by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
      AWARDS
      ========================================================================== -->
-<section id="awards" class="section">
+<section id="awards" class="section section-alt">
   <div class="container">
     <div class="section-heading reveal">
       <p class="eyebrow">Recognition</p>
@@ -229,7 +252,7 @@
 <!-- ==========================================================================
      INTERESTS
      ========================================================================== -->
-<section id="interests" class="section section-alt">
+<section id="interests" class="section">
   <div class="container">
     <div class="section-heading reveal">
       <p class="eyebrow">Research Focus</p>
@@ -305,6 +328,18 @@
 <!-- ==========================================================================
      PROJECT MODAL
      ========================================================================== -->
+<div class="lightbox-overlay" id="lightbox" aria-hidden="true" role="dialog" aria-label="Photograph viewer">
+  <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Close">
+    <svg class="icon"><use href="#icon-x"/></svg>
+  </button>
+  <button class="lightbox-nav previous" id="lightbox-prev" type="button" aria-label="Previous photograph">&#8592;</button>
+  <figure class="lightbox-figure">
+    <img id="lightbox-img" src="" alt="" />
+    <figcaption id="lightbox-caption"></figcaption>
+  </figure>
+  <button class="lightbox-nav next" id="lightbox-next" type="button" aria-label="Next photograph">&#8594;</button>
+</div>
+
 <div class="modal-overlay" id="project-modal" aria-hidden="true">
   <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <button class="modal-close" id="modal-close" type="button" aria-label="Close project details">
@@ -350,7 +385,7 @@
   <svg class="icon"><use href="#icon-arrow-up"/></svg>
 </button>
 
-<script src="js/data.js?v=8"></script>
-<script src="js/main.js?v=8"></script>
+<script src="js/data.js?v=9"></script>
+<script src="js/main.js?v=9"></script>
 </body>
 </html>

@@ -424,6 +424,113 @@
   }
 
   /* ------------------------------------------------------------------ *
+   * RENDER: PHOTO GALLERY + LIGHTBOX
+   * ------------------------------------------------------------------ */
+  let galleryPhotos = [];
+  let lightboxIndex = 0;
+
+  function renderGallery() {
+    const grid = $("#gallery-grid");
+    const filterWrap = $("#gallery-filter");
+    if (!grid || !Array.isArray(PORTFOLIO_DATA.photoGallery)) return;
+
+    galleryPhotos = PORTFOLIO_DATA.photoGallery;
+
+    // one filter button per group, in first-seen order
+    const groups = [];
+    galleryPhotos.forEach((p) => {
+      if (p.group && !groups.includes(p.group)) groups.push(p.group);
+    });
+    groups.forEach((group) => {
+      const btn = document.createElement("button");
+      btn.className = "filter-btn";
+      btn.dataset.galleryFilter = slugify(group);
+      btn.textContent = group;
+      filterWrap.appendChild(btn);
+    });
+
+    grid.innerHTML = galleryPhotos
+      .map(
+        (photo, i) => `
+      <figure class="gallery-item reveal" data-group="${slugify(photo.group || "")}" data-index="${i}" tabindex="0" role="button" aria-label="${photo.caption}">
+        <img src="${photo.src}" alt="${photo.caption}" loading="lazy" />
+        <figcaption>${photo.caption}</figcaption>
+      </figure>`
+      )
+      .join("");
+
+    initRevealAnimations();
+
+    filterWrap.addEventListener("click", (e) => {
+      const btn = e.target.closest(".filter-btn");
+      if (!btn) return;
+      $$(".filter-btn", filterWrap).forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+      const filter = btn.dataset.galleryFilter;
+      $$(".gallery-item", grid).forEach((item) => {
+        item.style.display = filter === "all" || item.dataset.group === filter ? "" : "none";
+      });
+    });
+
+    const open = (e) => {
+      const item = e.target.closest(".gallery-item");
+      if (!item) return;
+      openLightbox(Number(item.dataset.index));
+    };
+    grid.addEventListener("click", open);
+    grid.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        open(e);
+      }
+    });
+  }
+
+  function showLightboxPhoto(index) {
+    const photo = galleryPhotos[index];
+    if (!photo) return;
+    lightboxIndex = index;
+    $("#lightbox-img").src = photo.src;
+    $("#lightbox-img").alt = photo.caption;
+    $("#lightbox-caption").textContent = photo.caption;
+  }
+
+  function openLightbox(index) {
+    const overlay = $("#lightbox");
+    showLightboxPhoto(index);
+    overlay.classList.add("open");
+    overlay.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeLightbox() {
+    const overlay = $("#lightbox");
+    overlay.classList.remove("open");
+    overlay.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+
+  function stepLightbox(delta) {
+    if (!galleryPhotos.length) return;
+    showLightboxPhoto((lightboxIndex + delta + galleryPhotos.length) % galleryPhotos.length);
+  }
+
+  function initLightbox() {
+    const overlay = $("#lightbox");
+    if (!overlay) return;
+    $("#lightbox-close").addEventListener("click", closeLightbox);
+    $("#lightbox-prev").addEventListener("click", () => stepLightbox(-1));
+    $("#lightbox-next").addEventListener("click", () => stepLightbox(1));
+    overlay.addEventListener("click", (e) => { if (e.target === overlay) closeLightbox(); });
+    document.addEventListener("keydown", (e) => {
+      if (!overlay.classList.contains("open")) return;
+      if (e.key === "Escape") closeLightbox();
+      if (e.key === "ArrowLeft") stepLightbox(-1);
+      if (e.key === "ArrowRight") stepLightbox(1);
+    });
+  }
+
+  /* ------------------------------------------------------------------ *
    * RENDER: AWARDS
    * ------------------------------------------------------------------ */
   function renderAwards() {
@@ -525,6 +632,7 @@
     renderExperienceTimeline();
     renderSkills();
     renderProjects();
+    renderGallery();
     renderAwards();
     renderInterests();
     renderSocials();
@@ -538,6 +646,7 @@
     initSkillBars();
     initBackToTop();
     initModal();
+    initLightbox();
     initContactForm();
   });
 })();
