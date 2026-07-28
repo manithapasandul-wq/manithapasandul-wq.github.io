@@ -349,11 +349,10 @@ const PORTFOLIO_DATA = {
       organisation: "Bandaranayake College, Gampaha",
       period: "2017 — 2020",
       summary: [
-        "Served as a Senior Member of the Aeronautical Society at Bandaranayake College from 2017 to 2020, gaining foundational experience in RC aircraft flying, basic aerodynamics, flight controls, and electronics. During this period, I independently built an F450 quadcopter using a DJI NAZA-M Lite flight controller and fabricated RC aircraft models, including an F-22 Raptor and Blu Baby.",
+        "Served as a Senior Member of the Aeronautical Society at Bandaranayake College from 2017 to 2020, gaining foundational experience in RC aircraft flying, basic aerodynamics, flight controls, and electronics.",
       ],
       responsibilities: [
-        "Learned the fundamentals of RC aircraft flying, basic aerodynamics, flight controls, and electronics.",
-        "Independently built an F450 quadcopter using a DJI NAZA-M Lite flight controller.",
+        "Built an F450 quadcopter using a DJI NAZA-M Lite flight controller.",
         "Fabricated RC aircraft models including an F-22 Raptor and Blu Baby.",
       ],
       achievements: [
