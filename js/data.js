@@ -7,37 +7,13 @@
    Profile text, education, experience, projects, awards, and interests are
    real, sourced from the project portfolio document.
 
-   >>> REPLACE-ME markers point to what is still outstanding: contact email
-   >>> and phone, LinkedIn / Twitter / Instagram URLs, the CV file itself,
-   >>> and project images for the projects that had no photographs supplied.
-   ========================================================================== */
+   Project card images reuse related photographs from the source document,
+   which contained no photographs of the projects themselves. Swap them for
+   real project photos or result plots when you have them.
 
-// Small inline-SVG placeholder generator so every image on the page is a
-// self-contained data URI (no external image requests, fast + offline-safe).
-// REPLACE-ME: swap any call site of placeholderImage() with a real <img src="...">
-function placeholderImage(label, hueA = 210, hueB = 172, w = 640, h = 480) {
-  const svg = `
-    <svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}">
-      <defs>
-        <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stop-color="hsl(${hueA} 70% 45%)"/>
-          <stop offset="100%" stop-color="hsl(${hueB} 70% 40%)"/>
-        </linearGradient>
-        <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
-          <path d="M 24 0 L 0 0 0 24" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
-        </pattern>
-      </defs>
-      <rect width="${w}" height="${h}" fill="url(#g)"/>
-      <rect width="${w}" height="${h}" fill="url(#grid)"/>
-      <g fill="rgba(255,255,255,0.9)" font-family="Space Grotesk, Arial, sans-serif" text-anchor="middle">
-        <circle cx="${w/2}" cy="${h/2 - 28}" r="34" fill="rgba(255,255,255,0.14)" stroke="rgba(255,255,255,0.55)" stroke-width="2"/>
-        <path d="M ${w/2 - 14} ${h/2 - 28} l 8 -14 l 8 14 l 8 -8 l 6 10" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-        <text x="${w/2}" y="${h/2 + 46}" font-size="20" font-weight="600" opacity="0.95">${label}</text>
-        <text x="${w/2}" y="${h/2 + 70}" font-size="12" letter-spacing="2" opacity="0.65">PLACEHOLDER IMAGE</text>
-      </g>
-    </svg>`;
-  return `data:image/svg+xml,${encodeURIComponent(svg)}`;
-}
+   >>> REPLACE-ME markers point to what is still outstanding: contact email
+   >>> and phone, LinkedIn / Twitter / Instagram URLs, and the CV file.
+   ========================================================================== */
 
 const PORTFOLIO_DATA = {
   // REPLACE-ME: swap intro copy, image, and links with the real profile.
@@ -383,8 +359,7 @@ const PORTFOLIO_DATA = {
           summary:
             "Final-year research connecting UAV geometric design to real flight-dynamic behaviour through parametric sensitivity analysis, fabrication, flight testing, and modal identification.",
           tools: ["Python", "AVL", "ArduPilot", "Arduino", "Prony\u2019s Method"],
-          // REPLACE-ME: no photographs of the UAV were supplied — swap in real images.
-          image: placeholderImage("Fixed-Wing UAV Flight Dynamics", 210, 172),
+          image: "assets/images/experience/srilankan/fleet-sunset.webp",
           detailPage: "final-year-project.html",
           detailPageLabel: "Read the full project",
           objectives: [
@@ -419,8 +394,7 @@ const PORTFOLIO_DATA = {
           summary:
             "Two-dimensional ANSYS Fluent study of the NREL S809 wind-turbine aerofoil from 0\u00b0 to 20\u00b0 angle of attack, validated against published research data.",
           tools: ["ANSYS Fluent", "CFD", "Structured Meshing"],
-          // REPLACE-ME: no contour plots were supplied for this project.
-          image: placeholderImage("NREL S809 CFD Validation", 196, 260),
+          image: "assets/images/experience/falcon/cfd-tyre-domain.webp",
           objectives: [
             "Establish a validated baseline CFD model of the unslotted NREL S809 aerofoil that can later be extended to passive flow-control concepts.",
             "Evaluate lift, drag, lift-to-drag ratio, pressure distribution, and flow separation from 0\u00b0 to 20\u00b0 angle of attack.",
@@ -483,8 +457,7 @@ const PORTFOLIO_DATA = {
           summary:
             "Design of a twin two-bladed propeller system for a 1,500 kg aircraft, sized with an iterative MATLAB Blade Element Theory model and modelled in SolidWorks.",
           tools: ["MATLAB", "Blade Element Theory", "SolidWorks"],
-          // REPLACE-ME: no renders of the propeller model were supplied.
-          image: placeholderImage("Blade Element Propeller Design", 26, 200),
+          image: "assets/images/experience/srilankan/trent-fan-work.webp",
           objectives: [
             "Size a twin two-bladed propeller system to take a 1,500 kg aircraft to a 220 km/h take-off speed within a 1 km sea-level runway.",
             "Determine blade chord, twist, thrust, torque, and efficiency distributions along the span.",
@@ -510,8 +483,7 @@ const PORTFOLIO_DATA = {
           summary:
             "Current research refurbishing a small gas turbine model to investigate how biodiesel blends affect its output power and overall performance.",
           tools: ["Gas Turbines", "Combustion", "Experimental Testing"],
-          // REPLACE-ME: no photographs of the gas turbine rig were supplied.
-          image: placeholderImage("Gas Turbine Biodiesel Research", 12, 40),
+          image: "assets/images/experience/srilankan/engine-module.webp",
           objectives: [
             "Refurbish a small gas turbine model and return it to a serviceable, repeatable test condition.",
             "Investigate how biodiesel blends affect the engine\u2019s output power and overall performance.",
@@ -540,8 +512,7 @@ const PORTFOLIO_DATA = {
           summary:
             "Strain-gauge testing and ANSYS Static Structural modelling of a rectangular wing under front- and rear-spar tip loads, used to select a landing-gear mounting location.",
           tools: ["ANSYS Static Structural", "SolidWorks", "Strain Gauges"],
-          // REPLACE-ME: no test-rig photographs or contour plots were supplied.
-          image: placeholderImage("Wing Structural Test and FEA", 260, 200),
+          image: "assets/images/experience/srilankan/structural-repair.webp",
           objectives: [
             "Compare how a concentrated landing-gear-type load transfers through the spars, ribs, and skin when applied at the front- versus rear-spar tip.",
             "Validate a finite element model of the wing against experimental strain measurements.",
