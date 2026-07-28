@@ -132,7 +132,7 @@ const PORTFOLIO_DATA = {
         { src: "assets/images/experience/srilankan/cockpit.webp", caption: "Airbus cockpit familiarisation" },
         { src: "assets/images/experience/srilankan/training-team.webp", caption: "Engineering training team" },
         { src: "assets/images/experience/srilankan/training-centre.webp", caption: "SriLankan Airlines training centre" },
-        { src: "assets/images/experience/falcon/e2-runway.webp", caption: "Formula Student E2 at the runway test venue" },
+        { src: "assets/images/experience/srilankan/engine-module.webp", caption: "Beside a turbofan engine in the Engine Module Workshop" },
       ],
       detailPage: "srilankan-airlines.html",
       detailPageLabel: "View Full Experience",
