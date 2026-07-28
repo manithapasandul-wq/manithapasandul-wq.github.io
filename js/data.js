@@ -267,14 +267,9 @@ const PORTFOLIO_DATA = {
       id: "falcon-e-racing",
       images: [
         { src: "assets/images/experience/falcon/e2-night.webp", caption: "E2 with its completed aerodynamic package" },
-        { src: "assets/images/experience/falcon/e2-track.webp", caption: "E2 during track testing" },
-        { src: "assets/images/experience/falcon/wing-assembly.webp", caption: "Multi-element wing assembly with 3D-printed ribs" },
-        { src: "assets/images/experience/falcon/fibreglass-layup.webp", caption: "Fibreglass layup during mould fabrication" },
-        { src: "assets/images/experience/falcon/mould-team.webp", caption: "Aerodynamics team with the fibreglass moulds" },
-        { src: "assets/images/experience/falcon/carbon-body.webp", caption: "Carbon-composite body panel" },
-        { src: "assets/images/experience/falcon/aero-component.webp", caption: "Carbon-composite aerodynamic element" },
         { src: "assets/images/experience/falcon/vehicle-launch.webp", caption: "E2 vehicle launch — Unleashed 2G" },
-        { src: "assets/images/experience/falcon/e2-display.webp", caption: "E2 on public display" },
+        { src: "assets/images/experience/falcon/e2-track.webp", caption: "E2 during track testing" },
+        { src: "assets/images/experience/falcon/e2-runway.webp", caption: "E2 at the runway test venue" },
       ],
       detailPage: "falcon-e-racing.html",
       detailPageLabel: "View Full Experience",
@@ -284,10 +279,6 @@ const PORTFOLIO_DATA = {
       period: "University Project",
       summary: [
         "Served as an Aerodynamics Engineer for Falcon E Racing, Sri Lanka’s first Formula Student car project, leading the aerodynamic package development for the team’s second vehicle, E2. My work covered CFD-based aerodynamic optimisation, composite manufacturing, wing construction, assembly, and vehicle integration.",
-      ],
-      responsibilities: [
-        "Led the aerodynamic package development for E2, the second vehicle developed by Sri Lanka’s first Formula Student car project.",
-        "Covered CFD-based optimisation, composite manufacturing, front and rear wing construction, assembly, and vehicle integration.",
       ],
       details: [
         {
