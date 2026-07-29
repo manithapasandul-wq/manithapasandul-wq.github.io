@@ -1390,6 +1390,18 @@ h1, h2, h3, h4 {
   object-fit: contain;
 }
 
+/* Mixed portrait and landscape source material shown whole. The 4:3 frame is
+   a compromise: the wide shots are width-limited either way, and the taller
+   ones gain height they would lose in a 16:9 box. */
+.experience-media-slideshow.is-uncropped {
+  aspect-ratio: 4 / 3;
+  background: var(--bg-alt);
+}
+
+.experience-media-slideshow.is-uncropped .exp-slide img {
+  object-fit: contain;
+}
+
 /* Slideshow sits to the right of the workshop text rather than below it, so
    the photographs stay in view while the bullet list is read. */
 .experience-section-card.has-slideshow {
