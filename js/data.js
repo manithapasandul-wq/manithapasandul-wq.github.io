@@ -556,7 +556,36 @@ const PORTFOLIO_DATA = {
     },
     {
       category: "Structures & FEA",
+      // Single full-width cards — both write-ups need the room.
+      layout: "single",
       projects: [
+        {
+          id: "sailplane-wing",
+          title: "Design of a Sailplane with a Semi-Monocoque Wing",
+          summary:
+            "Aerodynamic, structural, and manufacturing design of a high-performance sailplane wing for a 300 kg aircraft, taken from aerofoil selection through to a complete SolidWorks assembly.",
+          cardSummary: [
+            "Designed a high-performance sailplane wing by integrating aerodynamic optimization, analytical structural design, material selection, and manufacturing planning. XFLR5 and MATLAB were used to compare aerofoils, optimize the aspect and taper ratios, evaluate glide performance and longitudinal stability, and determine spanwise lift, drag, shear, bending, and torsional loads.",
+            "Analytical methods were then applied to size the dual-spar wing structure and assess spar stresses, deflection, shear flow, skin buckling, ribs, and stringers. The project also included a Design for X phase covering material availability, manufacturability, component fabrication, joining methods, assembly sequence, and the development of the complete wing model in SolidWorks.",
+          ],
+          tools: ["XFLR5", "MATLAB", "SolidWorks", "Semi-Monocoque", "Aluminium Alloys"],
+          image: "assets/images/projects/sailplane/wing2.webp",
+          detailPage: "sailplane-wing.html",
+          detailPageLabel: "Explore the full project",
+          cardLinksToPage: true,
+          objectives: [
+            "Size a high-performance sailplane wing for a 300 kg aircraft from aerofoil selection through to a manufacturable assembly.",
+            "Establish the spanwise load distributions and size the dual-spar structure against them.",
+            "Carry the design through material selection, buckling evaluation, and a manufacturing and assembly plan.",
+          ],
+          challenges:
+            "Aerodynamic efficiency, structural mass, and manufacturability pull against each other: a high aspect ratio improves glide performance but raises root bending moments and tip deflection, while the thin skins that keep mass down are the panels most at risk of compression buckling.",
+          methodology:
+            "Seven glider aerofoils were compared in XFLR5 before selecting the WORTMANN FX 76-MP-120. MATLAB programs swept aspect and taper ratios through the finite-wing lift slope and Oswald efficiency factor, then produced the spanwise lift, weight, drag, shear, bending, and torsional distributions. The dual-spar wing box was sized using the lumped-area method, with plate-buckling equations setting stringer spacing.",
+          technologies: ["XFLR5", "MATLAB", "SolidWorks", "Lumped-Area Method", "Aluminium 5056-H18", "Aluminium 2024-T3"],
+          outcomes:
+            "The selected aerofoil reached a two-dimensional lift-to-drag ratio of about 192.6, with the finite wing peaking near 18.83 at 5.5°. Best-glide speed came out at roughly 17.94 m/s against a theoretical 17.98 m/s. The two spars weighed about 41.71 kg before lightening holes, with a predicted tip deflection of 0.5848 m against a 0.8 m limit.",
+        },
         {
           id: "wing-stress",
           title: "Experimental and Numerical Stress Analysis of a Rectangular Wing",
