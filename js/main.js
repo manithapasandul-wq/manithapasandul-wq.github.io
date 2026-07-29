@@ -395,7 +395,7 @@
                 : `<button class="see-more-btn" data-project-id="${project.id}">See More <svg class="icon"><use href="#icon-arrow-right"/></svg></button>`;
               return `
               <article class="project-card reveal">
-                <div class="project-card-img"><img src="${project.image}" alt="${project.title}" loading="lazy" /></div>
+                <div class="project-card-img${project.imageFit === "contain" ? " is-contained" : ""}"><img src="${project.image}" alt="${project.title}" loading="lazy" /></div>
                 <div class="project-card-body">
                   <h4>${project.title}</h4>
                   ${blurb}

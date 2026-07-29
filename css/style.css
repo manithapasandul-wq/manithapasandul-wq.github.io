@@ -758,6 +758,23 @@ h1, h2, h3, h4 {
 .project-grid-single { grid-template-columns: 1fr; }
 .project-grid-single .project-card { flex-direction: row; }
 .project-grid-single .project-card-img { flex: 0 0 40%; aspect-ratio: auto; }
+
+/* Wide renders shown whole rather than cropped to fill. In the full-width
+   cards the panel is centred at the image's own height, so a landscape shot
+   does not leave a tall empty band beside a long write-up. */
+.project-card-img.is-contained { background: var(--bg-alt); }
+.project-card-img.is-contained img { object-fit: contain; }
+.project-card:hover .project-card-img.is-contained img { transform: none; }
+
+.project-grid-single .project-card-img.is-contained {
+  align-self: center;
+  background: none;
+}
+
+.project-grid-single .project-card-img.is-contained img {
+  height: auto;
+  border-radius: var(--radius-sm);
+}
 .project-grid-single .project-card-body { padding: 28px 30px; }
 .project-grid-single .project-card-body p { flex: 0 0 auto; margin-bottom: 12px; text-align: justify; }
 .project-grid-single .project-card-body p:last-of-type { margin-bottom: 18px; }

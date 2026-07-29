@@ -381,7 +381,9 @@ const PORTFOLIO_DATA = {
             "The work included automating aerodynamic and dynamic analyses, designing and fabricating a 2.5 m wingspan UAV, integrating an APM 2.8 flight controller, and developing an Arduino-based IMU and SD-card data-logging system. Flight responses were processed using FFT and Prony analysis to estimate modal characteristics and validate the predicted short-period behaviour using experimental flight data with the use of MATLAB.",
           ],
           tools: ["Python", "AVL", "ArduPilot", "Arduino", "MATLAB", "Prony\u2019s Method"],
-          image: "assets/images/projects/fyp/uav-flight.webp",
+          image: "assets/images/projects/fyp/g1.webp",
+          // Wide shot \u2014 fit it whole rather than cropping to fill the panel.
+          imageFit: "contain",
           detailPage: "final-year-project.html",
           detailPageLabel: "Explore the full project",
           // Card button opens the detail page instead of the modal.
@@ -570,6 +572,7 @@ const PORTFOLIO_DATA = {
           ],
           tools: ["XFLR5", "MATLAB", "SolidWorks", "Semi-Monocoque", "Aluminium Alloys"],
           image: "assets/images/projects/sailplane/wing2.webp",
+          imageFit: "contain",
           detailPage: "sailplane-wing.html",
           detailPageLabel: "Explore the full project",
           cardLinksToPage: true,
