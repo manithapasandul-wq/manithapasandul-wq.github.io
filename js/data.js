@@ -508,14 +508,23 @@ const PORTFOLIO_DATA = {
     },
     {
       category: "Propulsion & Thermofluids",
+      // Single full-width cards, matching the other project sections.
+      layout: "single",
       projects: [
         {
           id: "propeller-bet",
           title: "Propeller Design Using Blade Element Theory",
           summary:
             "Design of a twin two-bladed propeller system for a 1,500 kg aircraft, sized with an iterative MATLAB Blade Element Theory model and modelled in SolidWorks.",
-          tools: ["MATLAB", "Blade Element Theory", "SolidWorks"],
-          image: "assets/images/projects/propeller/propeller-render.webp",
+          cardSummary: [
+            "Designed a twin two-bladed propeller system for a 1,500 kg aircraft using Blade Element Theory. Developed a MATLAB-based iterative model to determine blade chord, twist, thrust, torque, and efficiency, selected the NACA 6415 aerofoil, and created the final 3D propeller model in SolidWorks. The completed design achieved the required take-off thrust with an estimated efficiency of approximately 75.9%.",
+          ],
+          tools: ["MATLAB", "Blade Element Theory", "SolidWorks", "NACA 6415", "Momentum Theory"],
+          image: "assets/images/projects/propeller/p1.webp",
+          imageFit: "contain",
+          detailPage: "propeller-design.html",
+          detailPageLabel: "Explore the full project",
+          cardLinksToPage: true,
           objectives: [
             "Size a twin two-bladed propeller system to take a 1,500 kg aircraft to a 220 km/h take-off speed within a 1 km sea-level runway.",
             "Determine blade chord, twist, thrust, torque, and efficiency distributions along the span.",
