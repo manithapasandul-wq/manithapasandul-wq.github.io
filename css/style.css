@@ -1112,7 +1112,18 @@ h1, h2, h3, h4 {
   max-width: none;
 }
 
+/* Explicit placement: any number of text blocks stack in column one and the
+   slideshow holds column two. Auto-placement would push the slideshow into
+   the text column as soon as a third child appeared. */
+.full-experience-hero-body > .full-experience-lead,
+.full-experience-hero-body > .experience-key-list,
+.full-experience-hero-body > .experience-link-row {
+  grid-column: 1;
+}
+
 .full-experience-hero-body > .full-experience-hero-media {
+  grid-column: 2;
+  grid-row: 1 / -1;
   margin: 4px 0 0;
 }
 
@@ -1442,6 +1453,60 @@ h1, h2, h3, h4 {
   font-weight: 700;
 }
 
+/* Official team channels, so a reader can verify the car and the programme. */
+.experience-link-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.experience-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text);
+  text-decoration: none;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.experience-link:hover,
+.experience-link:focus-visible {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.experience-link .icon {
+  flex-shrink: 0;
+  width: 21px;
+  height: 21px;
+  color: var(--primary);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+}
+
+.experience-link span {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+}
+
+.experience-link strong {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.experience-link small {
+  color: var(--text-muted);
+  font-size: 0.76rem;
+}
+
 /* Cards that carry a paragraph as well as a list need the slideshow to span
    all three text rows. */
 .experience-section-card.has-slideshow > .experience-media-slideshow {
@@ -1627,6 +1692,11 @@ h1, h2, h3, h4 {
   .full-experience-hero-body,
   .experience-section-card.has-slideshow {
     grid-template-columns: 1fr;
+  }
+
+  .full-experience-hero-body > .full-experience-hero-media {
+    grid-column: 1;
+    grid-row: auto;
   }
 
   .experience-section-card.has-slideshow > .experience-media-slideshow {
