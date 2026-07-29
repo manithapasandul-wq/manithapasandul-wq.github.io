@@ -1149,9 +1149,17 @@ h1, h2, h3, h4 {
 /* Opt-in justified body copy, per page. */
 .justify-copy .full-experience-lead,
 .justify-copy .experience-section-card p,
-.justify-copy .experience-key-list li {
+.justify-copy .experience-key-list li,
+.justify-copy .experience-step-list li,
+.justify-copy .experience-finding p {
   text-align: justify;
   text-justify: inter-word;
+}
+
+/* Headings stay flush left even when the body copy is justified. */
+.justify-copy .experience-section-card h2,
+.justify-copy .experience-section-card h3 {
+  text-align: left;
 }
 
 .full-experience-lead-list li {
@@ -1499,10 +1507,10 @@ h1, h2, h3, h4 {
   align-items: start;
 }
 
-.experience-section-card.has-slideshow > h2,
-.experience-section-card.has-slideshow > p,
-.experience-section-card.has-slideshow > .experience-tag-row,
-.experience-section-card.has-slideshow > .experience-key-list {
+/* Every text block belongs in the left column. Listing element types
+   individually let headings, callouts and ordered lists fall through to
+   auto-placement and land in the slideshow column. */
+.experience-section-card.has-slideshow > * {
   grid-column: 1;
 }
 
