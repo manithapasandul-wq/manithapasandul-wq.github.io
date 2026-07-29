@@ -467,8 +467,9 @@ const PORTFOLIO_DATA = {
             "CFD-driven aerodynamic design of a four-element front wing for Falcon E Racing\u2019s E2 vehicle, optimised using a Multi-Objective Genetic Algorithm.",
           tools: ["ANSYS Fluent", "MOGA", "CAD", "Carbon Fibre"],
           image: "assets/images/projects/falcon-aero/cfd-multi-element.webp",
-          detailPage: "falcon-e-racing.html",
-          detailPageLabel: "View the full experience",
+          detailPage: "falcon-e-racing.html#aerodynamic-design",
+          detailPageLabel: "Explore the full project",
+          cardLinksToPage: true,
           objectives: [
             "Maximise downforce and aerodynamic efficiency from a four-element front wing within Formula Student regulations.",
             "Direct airflow over and around the front tyre to reduce wake formation and tyre-induced drag.",
@@ -588,6 +589,38 @@ const PORTFOLIO_DATA = {
           technologies: ["XFLR5", "MATLAB", "SolidWorks", "Lumped-Area Method", "Aluminium 5056-H18", "Aluminium 2024-T3"],
           outcomes:
             "The selected aerofoil reached a two-dimensional lift-to-drag ratio of about 192.6, with the finite wing peaking near 18.83 at 5.5°. Best-glide speed came out at roughly 17.94 m/s against a theoretical 17.98 m/s. The two spars weighed about 41.71 kg before lightening holes, with a predicted tip deflection of 0.5848 m against a 0.8 m limit.",
+        },
+        {
+          id: "fs-front-wing-structure",
+          title: "Structural Design and Fabrication of a Four-Element Front Wing",
+          summary:
+            "Lightweight carbon-composite structure for the Formula Student front wing, designed to hold the optimised aerofoil geometry under aerodynamic load.",
+          cardSummary: [
+            "Designed and fabricated the structural members of the four-element front wing with the objective of achieving a lightweight yet sufficiently stiff assembly capable of maintaining the optimised aerodynamic shape under load. Each aerofoil element combined upper and lower carbon-fibre skins, internal 3D-printed PLA ribs, and 3 mm laser-cut aluminium spars acting as the primary spanwise load-bearing members.",
+            "The skins were produced through a purpose-developed wet-layup process using 3D-printed moulds sanded to 1200 grit, combined fast- and slow-curing resin systems, and vacuum bagging to consolidate the laminate and hold the aerofoil profile through cure. PVC-board endplates with laser-cut honeycomb patterns and acrylic collars at the bolted joints completed the assembly.",
+          ],
+          tools: ["Carbon Fibre", "Wet Layup", "Vacuum Bagging", "SolidWorks", "3D Printing"],
+          image: "assets/images/projects/falcon-aero/fw1.webp",
+          imageFit: "contain",
+          detailPage: "falcon-e-racing.html#front-wing-structure",
+          detailPageLabel: "Explore the full project",
+          cardLinksToPage: true,
+        },
+        {
+          id: "fs-rear-wing-structure",
+          title: "Structural Design and Fabrication of the Rear Wing",
+          summary:
+            "Four-element rear wing built as a lightweight semi-monocoque assembly with sandwich-panel endplates and integrated mounting ribs.",
+          cardSummary: [
+            "Designed the rear wing as a lighter and less structurally complex assembly than the front wing, while retaining enough stiffness to hold the required aerodynamic geometry under load. Four aerofoil elements were connected by two endplates, each element built from internal spars, ribs, and skin panels to form a lightweight semi-monocoque structure that transfers load into the vehicle mounting system.",
+            "Mounting loads were carried by the first element, whose outer ribs were 3D-printed in PLA while the two inner ribs were laser cut from 6 mm aluminium to stiffen the bracket interfaces. The endplates were built as sandwich panels — two carbon-fibre skins over a honeycomb-patterned PVC core — which cut mass against the previous solid-core design while increasing section stiffness.",
+          ],
+          tools: ["Carbon Fibre", "Sandwich Panel", "Semi-Monocoque", "SolidWorks", "3D Printing"],
+          image: "assets/images/projects/falcon-aero/rw1.webp",
+          imageFit: "contain",
+          detailPage: "falcon-e-racing.html#rear-wing-structure",
+          detailPageLabel: "Explore the full project",
+          cardLinksToPage: true,
         },
         {
           id: "wing-stress",

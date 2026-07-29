@@ -1357,6 +1357,11 @@ h1, h2, h3, h4 {
   padding: 30px;
 }
 
+/* Deep links from the project cards land below the sticky header. */
+.experience-section-card[id] {
+  scroll-margin-top: calc(var(--header-h) + 22px);
+}
+
 .experience-section-card h2 {
   margin-bottom: 14px;
   font-size: clamp(1.3rem, 2.6vw, 1.75rem);
