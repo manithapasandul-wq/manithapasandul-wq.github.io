@@ -547,30 +547,6 @@ const PORTFOLIO_DATA = {
             "assets/images/projects/propeller/propeller-hub.webp",
           ],
         },
-        {
-          id: "gas-turbine-biodiesel",
-          title: "Gas Turbine Performance on Biodiesel Blends",
-          summary:
-            "Current research refurbishing a small gas turbine model to investigate how biodiesel blends affect its output power and overall performance.",
-          tools: ["Gas Turbines", "Combustion", "Experimental Testing"],
-          image: "assets/images/experience/srilankan/engine-module.webp",
-          objectives: [
-            "Refurbish a small gas turbine model and return it to a serviceable, repeatable test condition.",
-            "Investigate how biodiesel blends affect the engine\u2019s output power and overall performance.",
-          ],
-          challenges:
-            "Differences in performance between fuel blends can only be attributed to the fuel once the rig itself runs consistently, so restoring the gas turbine model to a reliable test condition is a prerequisite for the comparison.",
-          methodology:
-            "Refurbishment of the small gas turbine model, followed by experimental running across biodiesel blends with output power and overall engine performance compared between fuels.",
-          technologies: [
-            "Gas Turbine Engines",
-            "Combustion",
-            "Alternative Aviation Fuels",
-            "Experimental Propulsion Testing",
-          ],
-          outcomes:
-            "Ongoing research. The work is strengthening my interest in gas turbine engines, combustion, alternative aviation fuels, and experimental propulsion research.",
-        },
       ],
     },
     {
