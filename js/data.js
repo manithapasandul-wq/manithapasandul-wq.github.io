@@ -366,16 +366,26 @@ const PORTFOLIO_DATA = {
   projectCategories: [
     {
       category: "Flight Dynamics & Simulation",
+      // Single full-width card \u2014 the write-up is long enough to need the room.
+      layout: "single",
       projects: [
         {
           id: "fyp-uav",
-          title: "Flight-Dynamics Analysis and Fine-Tuning of a Fixed-Wing UAV",
+          title:
+            "Design and Development of a Framework for Flight Dynamics and Control for Small Conventional Surveillance UAVs",
           summary:
             "Final-year research connecting UAV geometric design to real flight-dynamic behaviour through parametric sensitivity analysis, fabrication, flight testing, and modal identification.",
-          tools: ["Python", "AVL", "ArduPilot", "Arduino", "Prony\u2019s Method"],
+          // Shown on the home-page card in place of the one-line summary.
+          cardSummary: [
+            "Developed and experimentally validated a flight-dynamics framework for small conventional fixed-wing UAVs by combining AVL-based stability analysis, geometric sensitivity studies, aircraft fabrication, onboard flight-data acquisition, and system-identification techniques. The project evaluated key dynamic modes, investigated how aircraft design parameters influence stability, and compared predicted responses with flight-test data obtained from instrumented UAV platforms.",
+            "The work included automating aerodynamic and dynamic analyses, designing and fabricating a 2.5 m wingspan UAV, integrating an APM 2.8 flight controller, and developing an Arduino-based IMU and SD-card data-logging system. Flight responses were processed using FFT and Prony analysis to estimate modal characteristics and validate the predicted short-period behaviour using experimental flight data with the use of MATLAB.",
+          ],
+          tools: ["Python", "AVL", "ArduPilot", "Arduino", "MATLAB", "Prony\u2019s Method"],
           image: "assets/images/projects/fyp/uav-flight.webp",
           detailPage: "final-year-project.html",
-          detailPageLabel: "Read the full project",
+          detailPageLabel: "Explore the full project",
+          // Card button opens the detail page instead of the modal.
+          cardLinksToPage: true,
           objectives: [
             "Identify how geometric and mass-related design parameters influence the short-period, phugoid, Dutch-roll, roll-subsidence, and spiral modes.",
             "Improve inherent stability through airframe geometry before relying on stability-augmentation systems.",

@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Final-year research on fixed-wing UAV flight dynamics: parametric sensitivity analysis in Python and AVL, UAV fabrication and APM 2.8 integration, and flight-test modal identification using FFT and Prony's method." />
-  <title>Final Year Project | Manitha Pasandul</title>
+  <title>Flight Dynamics and Control Framework for Small Conventional UAVs | Manitha Pasandul</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=29" />
+  <link rel="stylesheet" href="css/style.css?v=30" />
 
   <script>
     (function () {
@@ -20,7 +20,7 @@
   </script>
 </head>
 
-<body class="detail-page-body">
+<body class="detail-page-body justify-copy">
   <header class="detail-site-header">
     <div class="container detail-navbar">
       <a class="brand" href="index.html#home">Manitha<span class="brand-accent">.</span></a>
@@ -45,194 +45,326 @@
     <div class="experience-breadcrumb">
       <a href="index.html#projects">Projects</a>
       <span>/</span>
-      <span>Final Year Project</span>
+      <span>Flight Dynamics and Control Framework</span>
     </div>
 
-    <section class="full-experience-hero">
-      <span class="full-experience-kicker">Final Year Project</span>
-      <h1 class="full-experience-title">Flight-Dynamics Analysis and Fine-Tuning of a Fixed-Wing UAV</h1>
-      <p class="full-experience-subtitle">Department of Mechanical Engineering · University of Moratuwa</p>
-      <p class="full-experience-lead">
-        This project established a complete workflow for connecting UAV geometric design with its actual flight-dynamic behaviour — from a parametric sensitivity analysis of the five dynamic modes, through the fabrication and instrumentation of a fixed-wing UAV, to experimental modal identification from recorded flight data.
-      </p>
-      <div class="experience-tag-row"><span class="tag">Python</span><span class="tag">AVL</span><span class="tag">Flight Dynamics</span><span class="tag">ArduPilot</span><span class="tag">Arduino</span><span class="tag">Kalman Filter</span><span class="tag">FFT</span><span class="tag">Prony&rsquo;s Method</span></div>
-    </section>
-
-
-      <div class="experience-gallery-wrap">
-        <button class="gallery-control previous" type="button" data-gallery-previous aria-label="Previous images">←</button>
-        <div class="experience-gallery" data-experience-gallery>
-          <figure>
-            <img src="assets/images/projects/fyp/uav-flight.webp" alt="The fabricated fixed-wing UAV in flight" loading="lazy" />
-            <figcaption>The fabricated UAV in flight</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/images/projects/fyp/uav-field.webp" alt="The completed 2.5 m span UAV on the test field" loading="lazy" />
-            <figcaption>Completed 2.5 m span airframe</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/images/projects/fyp/uav-front.webp" alt="Front view of the UAV before a test flight" loading="lazy" />
-            <figcaption>Pre-flight on the test field</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/images/projects/fyp/wing-ribs.webp" alt="Laser-cut plywood ribs threaded onto the carbon-fibre spar" loading="lazy" />
-            <figcaption>Wing rib and spar assembly</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/images/projects/fyp/printed-pod.webp" alt="3D-printed fuselage pod" loading="lazy" />
-            <figcaption>3D-printed fuselage pod</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/images/projects/fyp/printed-parts.webp" alt="3D-printed airframe components laid out" loading="lazy" />
-            <figcaption>Printed airframe components</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/images/projects/fyp/blubaby-flight.webp" alt="The Blu-Baby validation aircraft in flight" loading="lazy" />
-            <figcaption>Blu-Baby validation platform</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/images/projects/fyp/test-flight.webp" alt="Flight testing in progress" loading="lazy" />
-            <figcaption>Flight testing</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/images/projects/fyp/team-presentation.webp" alt="Project presentation with the UAV" loading="lazy" />
-            <figcaption>Project presentation</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/images/projects/fyp/poster.webp" alt="Final-year project research poster" loading="lazy" />
-            <figcaption>Research poster</figcaption>
-          </figure>
+    <section class="full-experience-hero has-media">
+      <span class="full-experience-kicker">Final-Year Research</span>
+      <h1 class="full-experience-title">Flight Dynamics and Control Framework for Small Conventional UAVs</h1>
+      <p class="full-experience-subtitle">Department of Mechanical Engineering &middot; University of Moratuwa</p>
+      <div class="full-experience-hero-body">
+        <p class="full-experience-lead">
+          The project established a complete workflow for connecting UAV geometric design with its actual flight-dynamic behaviour. First, a parametric sensitivity analysis was conducted to determine how changes in major geometric and mass-related parameters influence the short-period, phugoid, Dutch-roll, roll-subsidence, and spiral modes. Based on the developed numerical framework, a fixed-wing UAV was then fabricated and equipped with an APM 2.8 flight controller to provide control, stabilization, navigation, and initial flight-data recording capabilities. During flight testing, several practical limitations were identified in both the fabricated aircraft and the original data-acquisition method. Therefore, an independent Arduino-based data-acquisition system was developed using an IMU, Kalman filtering, SD-card storage, and an input-identification mechanism. After difficulties were encountered while obtaining reliable modal responses from the first fabricated UAV, a stable Blu-Baby RC aircraft was used as an additional validation platform. The recorded pitch-angle and pitch-rate responses were pre-processed and analysed using FFT and Prony&rsquo;s method to estimate the experimental dynamic-mode characteristics and compare them with the numerical predictions.
+        </p>
+        <div class="exp-media experience-media-slideshow full-experience-hero-media" data-slideshow>
+          <div class="exp-slides">
+            <figure class="exp-slide is-active" data-slide="0"><img src="assets/images/projects/fyp/uav-flight.webp" alt="The fabricated UAV in flight" loading="lazy" /></figure>
+            <figure class="exp-slide" data-slide="1"><img src="assets/images/projects/fyp/uav-field.webp" alt="The completed 2.5 m span UAV before a test flight" loading="lazy" /></figure>
+            <figure class="exp-slide" data-slide="2"><img src="assets/images/projects/fyp/blubaby-flight.webp" alt="Blu-Baby validation aircraft in flight" loading="lazy" /></figure>
+            <figure class="exp-slide" data-slide="3"><img src="assets/images/projects/fyp/poster.webp" alt="Final-year project research poster" loading="lazy" /></figure>
+          </div>
+          <button class="exp-slide-nav previous" type="button" data-slide-prev aria-label="Previous image">&#8592;</button>
+          <button class="exp-slide-nav next" type="button" data-slide-next aria-label="Next image">&#8594;</button>
+          <div class="exp-slide-dots" role="tablist">
+            <button class="exp-dot is-active" type="button" data-slide-to="0" role="tab" aria-label="Image 1 of 4"></button>
+            <button class="exp-dot" type="button" data-slide-to="1" role="tab" aria-label="Image 2 of 4"></button>
+            <button class="exp-dot" type="button" data-slide-to="2" role="tab" aria-label="Image 3 of 4"></button>
+            <button class="exp-dot" type="button" data-slide-to="3" role="tab" aria-label="Image 4 of 4"></button>
+          </div>
         </div>
-        <button class="gallery-control next" type="button" data-gallery-next aria-label="Next images">→</button>
       </div>
-
-    <div class="full-experience-layout">
+      <div class="experience-tag-row"><span class="tag">Flight Dynamics</span><span class="tag">AVL</span><span class="tag">MATLAB</span><span class="tag">Python</span><span class="tag">SolidWorks</span><span class="tag">XFLR5</span><span class="tag">Flow5</span><span class="tag">Aerodynamics</span><span class="tag">System Identification</span><span class="tag">FFT</span><span class="tag">Prony&rsquo;s Method</span><span class="tag">Kalman Filtering</span><span class="tag">ArduPilot</span><span class="tag">Arduino</span><span class="tag">Flight Testing</span><span class="tag">Composite Fabrication</span></div>
+    </section>
+    <div class="full-experience-layout is-single-column">
       <div class="full-experience-content">
 
-<section class="experience-section-card">
-  <h2>Overall Project Workflow</h2>
+<section class="experience-section-card has-slideshow">
+  <h2>Parametric Sensitivity Analysis of UAV Flight Dynamics</h2>
+  <h3>Purpose of the Sensitivity Analysis</h3>
   <p>
-    First, a parametric sensitivity analysis was conducted to determine how changes in major geometric and mass-related parameters influence the short-period, phugoid, Dutch-roll, roll-subsidence, and spiral modes. Based on the developed numerical framework, a fixed-wing UAV was then fabricated and equipped with an APM 2.8 flight controller to provide control, stabilisation, navigation, and initial flight-data recording capabilities.
+    The parametric sensitivity analysis was conducted to identify how changes in the geometric and mass-related properties of a small fixed-wing UAV affect its dynamic behaviour. The main objective was to determine which design parameters could be adjusted during the preliminary design stage to improve the aircraft&rsquo;s inherent stability and flying qualities.
   </p>
   <p>
-    During flight testing, several practical limitations were identified in both the fabricated aircraft and the original data-acquisition method. An independent Arduino-based data-acquisition system was therefore developed using an IMU, Kalman filtering, SD-card storage, and an input-identification mechanism. After difficulties were encountered while obtaining reliable modal responses from the first fabricated UAV, a stable Blu-Baby RC aircraft was used as an additional validation platform. The recorded pitch-angle and pitch-rate responses were pre-processed and analysed using FFT and Prony&rsquo;s method to estimate the experimental dynamic-mode characteristics and compare them with the numerical predictions.
-  </p>
-</section>
-
-<section class="experience-section-card">
-  <h2>Chapter 1 — Parametric Sensitivity Analysis</h2>
-  <h3>Purpose</h3>
-  <p>
-    The sensitivity analysis was conducted to identify how changes in the geometric and mass-related properties of a small fixed-wing UAV affect its dynamic behaviour, and to determine which design parameters could be adjusted during preliminary design to improve inherent stability and flying qualities.
+    This approach supports <strong>passive stabilization</strong>, in which desirable dynamic characteristics are achieved through appropriate airframe geometry, aerodynamic configuration, centre-of-gravity location, and mass distribution. Compared with active stabilization methods that depend on continuous sensor feedback, actuator corrections, and complex control algorithms, passive stabilization can be more energy-efficient because it reduces the control effort required to maintain stable flight. It can also lower onboard computational demand, reduce repeated control-surface movements, and improve reliability when sensor data or control-system performance is limited.
   </p>
   <p>
-    This approach supports passive stabilisation, in which desirable dynamic characteristics are achieved through airframe geometry, aerodynamic configuration, centre-of-gravity location, and mass distribution. Compared with active stabilisation — which depends on continuous sensor feedback, actuator corrections, and complex control algorithms — passive stabilisation can be more energy-efficient, lower onboard computational demand, reduce repeated control-surface movements, and improve reliability when sensor data or control-system performance is limited. Active stabilisation may still be required for precise control, disturbance rejection, or autonomous operation, but designing satisfactory inherent stability first reduces the workload placed on the flight controller.
+    Active stabilization may still be required to achieve precise control, disturbance rejection, or autonomous operation. However, designing the aircraft to possess satisfactory inherent stability first reduces the workload placed on the flight controller. Therefore, the sensitivity analysis was used to identify geometric modifications that could improve dynamic behaviour before relying on stability-augmentation systems.
   </p>
-
-  <h3>Baseline Configuration and Parameters</h3>
   <p>
-    A baseline UAV configuration was established using the developed Python-based flight-dynamics framework, covering main-wing geometry, horizontal- and vertical-tail geometry, fuselage dimensions, control-surface geometry, aircraft mass, centre-of-gravity position, moments of inertia, and the cruise velocity and operating condition. Selected parameters were then varied individually while the others were held as consistent as possible. Because aircraft geometric parameters are interconnected — changing wing aspect ratio alters span and chord, and changing tail-volume ratio affects tail area or tail arm — the complete geometry and associated aerodynamic properties were recalculated for every modified configuration.
+    The analysis considered the five main dynamic modes of a conventional fixed-wing UAV:
   </p>
   <ul class="experience-key-list">
-    <li>Main wing aspect ratio, sweep angle, dihedral angle, and aerofoil</li>
-    <li>Horizontal tail volume ratio, sweep angle, and lift-curve slope</li>
-    <li>Vertical tail volume ratio and lift-curve slope</li>
+    <li>Short-period mode</li>
+    <li>Phugoid mode</li>
+    <li>Dutch-roll mode</li>
+    <li>Roll-subsidence mode</li>
+    <li>Spiral mode</li>
+  </ul>
+  <p>
+    Instead of improving stability only through repeated fabrication, flight testing, and controller tuning, the analysis provided a numerical method for identifying the parameters with the greatest influence on each mode. This allowed the UAV geometry to be systematically refined before final fabrication and reduced dependence on complex active-control solutions.
+  </p>
+  <h3>Baseline UAV Configuration</h3>
+  <p>
+    A baseline UAV configuration was established using the developed Python-based flight-dynamics framework. This configuration included the aircraft&rsquo;s:
+  </p>
+  <ul class="experience-key-list">
+    <li>Main-wing geometry</li>
+    <li>Horizontal- and vertical-tail geometry</li>
+    <li>Fuselage dimensions</li>
+    <li>Control-surface geometry</li>
+    <li>Aircraft mass</li>
+    <li>Centre-of-gravity position</li>
+    <li>Moments of inertia</li>
+    <li>Cruise velocity and operating condition</li>
+  </ul>
+  <p>
+    The baseline configuration was used as the reference for the complete sensitivity analysis. Selected design parameters were varied individually while the remaining parameters were maintained as consistently as possible.
+  </p>
+  <p>
+    However, because aircraft geometric parameters are interconnected, changing one parameter could affect several other properties. For example, modifying the wing aspect ratio changed the wing span and chord, while changing the tail-volume ratio affected the tail area or tail arm. Therefore, the complete geometry and associated aerodynamic properties were recalculated for each modified configuration.
+  </p>
+  <h3>Parameters Considered</h3>
+  <p>
+    The geometric and mass-related parameters were selected according to their expected influence on UAV dynamic behaviour. The main parameters investigated included:
+  </p>
+  <ul class="experience-key-list">
+    <li>Main wing aspect ratio</li>
+    <li>Main wing sweep angle</li>
+    <li>Main wing dihedral angle</li>
+    <li>Main wing aerofoil</li>
+    <li>Horizontal tail volume ratio</li>
+    <li>Horizontal tail sweep angle</li>
+    <li>Horizontal tail lift-curve slope</li>
+    <li>Vertical tail volume ratio</li>
+    <li>Vertical tail lift-curve slope</li>
     <li>Centre of gravity position</li>
-    <li>Pitch, roll, and yaw moments of inertia</li>
+    <li>Pitch moment of inertia</li>
+    <li>Roll moment of inertia</li>
+    <li>Yaw moment of inertia</li>
     <li>Cruise velocity</li>
   </ul>
-  <div class="experience-media-pair">
-    <img src="assets/images/projects/fyp/poster.webp" alt="Final-year project research poster" loading="lazy" />
-    <img src="assets/images/projects/fyp/team-presentation.webp" alt="Project presentation with the UAV" loading="lazy" />
+  <p>
+    Each parameter was varied across a practical design range. For every variation, a new UAV configuration was generated and analysed.
+  </p>
+  <h3>Sensitivity Analysis Procedure</h3>
+  <p>
+    The sensitivity analysis process followed a repeated numerical workflow. First, the baseline geometry and operating conditions were supplied to the flight-dynamics framework. The selected parameter was then changed incrementally while the other input conditions were kept unchanged where possible.
+  </p>
+  <p>
+    For each modified configuration, the framework automatically:
+  </p>
+  <ol class="experience-step-list">
+    <li>Updated the affected UAV geometry.</li>
+    <li>Generated the required AVL geometry and input files.</li>
+    <li>Executed AVL through the Python environment.</li>
+    <li>Extracted aerodynamic stability derivatives and eigenvalues.</li>
+    <li>Identified the corresponding dynamic modes.</li>
+    <li>Calculated natural frequencies, damping ratios, or time constants.</li>
+    <li>Stored the results for comparison with the baseline aircraft.</li>
+  </ol>
+  <p>
+    This automated process allowed many geometric configurations to be evaluated without manually preparing separate AVL models for every case. It also ensured that the same calculation procedure was applied consistently throughout the study.
+  </p>
+  <h3>Normalized Sensitivity</h3>
+  <p>
+    The parameters investigated had different units and numerical ranges. Therefore, <strong>normalized sensitivity</strong> was used to compare their relative influence. Normalized sensitivity represented the percentage change in a dynamic characteristic caused by a one-percent change in a selected design parameter. This allowed parameters such as aspect ratio, tail-volume ratio, sweep angle, and moment of inertia to be compared on a common basis.
+  </p>
+  <p>
+    For relationships that showed an approximately consistent trend, regression analysis was used to estimate the normalized sensitivity coefficient. Some parameter variations produced nonlinear responses. In such cases, the complete trend was considered instead of representing the behaviour using a single sensitivity value.
+  </p>
+  <h3>Short-Period Sensitivity Results</h3>
+  <p>
+    The short-period response was strongly influenced by the horizontal tail design, static margin, centre of gravity position, and pitch moment of inertia. The <strong>horizontal tail volume ratio</strong> produced one of the clearest and most predictable effects. For the investigated UAV configuration:
+  </p>
+  <div class="experience-finding">
+    <p>A 1% increase in horizontal tail volume ratio produced approximately a <strong>1.03% increase in short-period natural frequency</strong> and approximately a <strong>0.68% increase in short-period damping ratio</strong>.</p>
   </div>
-
-  <h3>Automated Procedure</h3>
   <p>
-    For each modified configuration the framework automatically updated the affected geometry, generated the required AVL geometry and input files, executed AVL through the Python environment, extracted aerodynamic stability derivatives and eigenvalues, identified the corresponding dynamic modes, calculated natural frequencies, damping ratios, or time constants, and stored the results for comparison against the baseline aircraft. This allowed many geometric configurations to be evaluated without manually preparing separate AVL models, and ensured the same calculation procedure was applied consistently throughout.
+    Increasing the horizontal tail volume strengthened the pitching moment response generated by the tail. Therefore, it provided an effective geometric parameter for adjusting the short-period characteristics.
   </p>
   <p>
-    Because the parameters had different units and numerical ranges, normalised sensitivity — the percentage change in a dynamic characteristic caused by a one-percent change in a design parameter — was used to compare their relative influence. Regression analysis estimated the coefficient where trends were approximately consistent; where the response was nonlinear, the complete trend was considered rather than a single value.
+    The centre of gravity position also had a significant influence. Moving the centre of gravity changed the static margin and consequently modified both the frequency and damping of the short-period response.
   </p>
-</section>
-
-<section class="experience-section-card">
-  <h2>Sensitivity Results by Mode</h2>
-
-  <h3>Short-Period Mode</h3>
   <p>
-    The short-period response was strongly influenced by horizontal tail design, static margin, centre of gravity position, and pitch moment of inertia. Horizontal tail volume ratio produced the clearest and most predictable effect: a 1% increase produced approximately a 1.03% increase in short-period natural frequency and approximately a 0.68% increase in short-period damping ratio. Moving the centre of gravity changed the static margin and therefore modified both frequency and damping, while a lower pitch inertia produced a faster response and higher natural frequency — though changing inertia required rearranging onboard components and had to be considered together with the centre of gravity. Main wing and horizontal tail sweep also affected the short-period characteristics, more nonlinearly, because they modified several aerodynamic properties at once.
+    The pitch moment of inertia affected how rapidly the UAV responded to a pitching moment. A lower pitch inertia produced a faster response and a higher natural frequency. However, changing the inertia required rearranging onboard components and therefore had to be considered together with the centre of gravity position.
   </p>
-
-  <h3>Phugoid Mode</h3>
   <p>
-    The phugoid response was affected mainly by wing geometry, aerodynamic efficiency, cruise velocity, drag characteristics, and the overall longitudinal configuration. Increasing wing aspect ratio from approximately 7 to 9 increased the calculated phugoid frequency, with a 1% increase in aspect ratio producing approximately a 0.2429% increase in phugoid natural frequency. Phugoid damping was less linear, because changing aspect ratio also affected induced drag, lift-to-drag ratio, wing geometry, and the aerodynamic derivatives associated with aircraft speed — so phugoid tuning could not be based on aspect ratio alone.
+    Main wing and horizontal tail sweep also affected the short-period characteristics, although their effects were more nonlinear because they modified several aerodynamic properties simultaneously.
   </p>
-
-  <h3>Dutch-Roll Mode</h3>
+  <h3>Phugoid Sensitivity Results</h3>
   <p>
-    The Dutch-roll response was mainly affected by vertical tail design, wing sweep, wing dihedral, and yaw-related inertia properties. Increasing the vertical tail contribution changed both the directional restoring tendency and yaw damping, though not consistently linearly across the full range. Wing sweep and dihedral changed the coupling between rolling and yawing motion, so vertical tail volume, sweep, and dihedral had to be evaluated together rather than adjusted independently — improving one lateral characteristic could degrade another.
+    The phugoid response was affected mainly by wing geometry, aerodynamic efficiency, cruise velocity, drag characteristics, and the overall longitudinal configuration. The main wing aspect ratio showed a relatively consistent influence on the phugoid frequency. Increasing the wing aspect ratio from approximately 7 to 9 produced an increase in the calculated phugoid frequency. For the analysed range:
   </p>
-
-  <h3>Roll-Subsidence Mode</h3>
+  <div class="experience-finding">
+    <p>A 1% increase in wing aspect ratio produced approximately a <strong>0.2429% increase in phugoid natural frequency</strong>.</p>
+  </div>
   <p>
-    Roll subsidence was influenced mainly by roll moment of inertia, wingspan, aspect ratio, sweep angle, and aerodynamic roll damping. Increasing mass located far from the aircraft centreline increased roll inertia and slowed the roll response, while reducing it allowed the aircraft to settle more rapidly after a rolling disturbance. Wing geometry also modified aerodynamic roll damping, but the trends were not always linear, so tuning required considering both external wing geometry and internal component arrangement.
+    The phugoid damping response was less linear. This was because changing the aspect ratio also affected induced drag, lift-to-drag ratio, wing geometry, and the aerodynamic derivatives associated with aircraft speed.
   </p>
-
-  <h3>Spiral Mode</h3>
   <p>
-    Wing dihedral was the most influential parameter for the spiral mode. Increasing the dihedral angle from approximately 0° to 8° reduced the spiral-mode time constant from approximately 40.2 seconds to 3.0 seconds — a reduction greater than 92% — demonstrating that relatively small dihedral changes produce a significant change in spiral response. Excessive dihedral, however, also affects Dutch-roll behaviour and roll-control performance, so the final angle had to be selected by considering the combined lateral-directional response.
+    Therefore, phugoid tuning could not be based on aspect ratio alone. It required consideration of the aircraft&rsquo;s aerodynamic efficiency, operating velocity, wing configuration, and propulsion effects.
   </p>
-
+  <h3>Dutch-Roll Sensitivity Results</h3>
+  <p>
+    The Dutch-roll response was mainly affected by the vertical tail design, wing sweep, wing dihedral, and yaw-related inertia properties. The vertical tail volume ratio influenced both the directional restoring tendency and yaw damping of the UAV. Increasing the vertical tail contribution generally changed the Dutch-roll frequency and damping. However, the variation was not consistently linear throughout the complete range.
+  </p>
+  <p>
+    Wing sweep and dihedral also affected the Dutch-roll response because they changed the coupling between rolling and yawing motion. Therefore, vertical tail volume, wing sweep, and dihedral needed to be evaluated together rather than being adjusted independently.
+  </p>
+  <p>
+    The analysis showed that <strong>improving one lateral characteristic could negatively affect another</strong>. Consequently, Dutch-roll tuning required a balanced selection of vertical-tail and wing geometry.
+  </p>
+  <h3>Roll-Subsidence Sensitivity Results</h3>
+  <p>
+    The roll-subsidence response was influenced mainly by the roll moment of inertia, wingspan, aspect ratio, sweep angle, and aerodynamic roll damping. Increasing the mass located far from the aircraft centreline increased the roll moment of inertia and resulted in a slower roll response. Reducing the roll moment of inertia allowed the aircraft to respond and settle more rapidly after a rolling disturbance.
+  </p>
+  <p>
+    Wing geometry also modified aerodynamic roll damping. However, the resulting trends were not always linear because wing modifications affected both aerodynamic derivatives and mass distribution properties. Therefore, roll-subsidence tuning required consideration of both the external wing geometry and the internal component arrangement.
+  </p>
+  <h3>Spiral-Mode Sensitivity Results</h3>
+  <p>
+    <strong>Wing dihedral</strong> was identified as the most influential parameter for modifying the spiral-mode behaviour.
+  </p>
+  <div class="experience-finding">
+    <p>Increasing the wing dihedral angle from approximately 0&deg; to 8&deg; reduced the spiral-mode time constant from approximately <strong>40.2 seconds to 3.0 seconds</strong> &mdash; a reduction of <strong>more than 92%</strong>.</p>
+  </div>
+  <p>
+    The result demonstrated that relatively small changes in wing dihedral could produce a significant change in the spiral response. However, excessive dihedral could also affect Dutch-roll behaviour and roll-control performance. Therefore, the final dihedral angle had to be selected by considering the combined lateral-directional response rather than only the spiral mode.
+  </p>
   <h3>Proposed Fine-Tuning Approach</h3>
   <p>
-    Based on these results, a systematic sequence was proposed: adjust the short-period characteristics first using horizontal-tail volume ratio, centre of gravity position, horizontal tail effectiveness, and pitch moment of inertia; then consider spiral and Dutch-roll characteristics together using wing dihedral, vertical tail volume ratio, wing sweep, and directional-stability parameters; then refine roll subsidence using roll moment of inertia, wing geometry, and internal mass distribution; and finally adjust the phugoid response using wing aspect ratio, tail aerodynamic efficiency, cruise velocity, and the overall longitudinal configuration. Modifying the most influential parameters first reduces unwanted changes to the other dynamic modes.
+    Based on the sensitivity results, a systematic fine-tuning approach was proposed. The short-period characteristics should first be adjusted using:
   </p>
-</section>
-
-<section class="experience-section-card">
-  <h2>Chapter 2 — UAV Fabrication and APM 2.8 Integration</h2>
-  <h3>Airframe</h3>
+  <ul class="experience-key-list">
+    <li>Horizontal-tail volume ratio</li>
+    <li>Centre of gravity position</li>
+    <li>Horizontal tail effectiveness</li>
+    <li>Pitch moment of inertia</li>
+  </ul>
   <p>
-    A physical fixed-wing UAV was fabricated to support experimental flight testing and validate the dynamic behaviour predicted by the framework, designed as a lightweight conventional aircraft with sufficient structural strength and internal space for the propulsion system, flight controller, receiver, sensors, battery, and data-acquisition equipment.
+    The spiral and Dutch-roll characteristics should then be considered together using:
+  </p>
+  <ul class="experience-key-list">
+    <li>Wing dihedral</li>
+    <li>Vertical tail volume ratio</li>
+    <li>Wing sweep</li>
+    <li>Directional-stability parameters</li>
+  </ul>
+  <p>
+    The roll-subsidence response could subsequently be refined using:
+  </p>
+  <ul class="experience-key-list">
+    <li>Roll moment of inertia</li>
+    <li>Wing geometry</li>
+    <li>Internal mass distribution</li>
+  </ul>
+  <p>
+    Finally, the phugoid response could be adjusted using:
+  </p>
+  <ul class="experience-key-list">
+    <li>Wing aspect ratio</li>
+    <li>Tail aerodynamic efficiency</li>
+    <li>Cruise velocity</li>
+    <li>Overall longitudinal configuration</li>
+  </ul>
+  <p>
+    This approach allowed the most influential parameters to be modified first while reducing unwanted changes to the other dynamic modes.
+  </p>
+  <h3>Summary</h3>
+  <p>
+    The sensitivity analysis established a direct connection between UAV design parameters and dynamic-mode characteristics. <strong>Horizontal tail volume ratio was identified as an effective parameter for short-period tuning, while wing dihedral had the strongest influence on the spiral mode.</strong> Wing aspect ratio affected the phugoid frequency, and the vertical tail configuration influenced the Dutch-roll response.
   </p>
   <p>
-    The UAV had an approximately 2.5 m wingspan. The wing structure used hollow carbon-fibre tubes as main spars and laser-cut plywood ribs to maintain the aerofoil profile, with a fabrication jig controlling rib spacing and alignment and heat-shrink film producing a lightweight aerodynamic surface. The central wing box was manufactured from welded aluminium members and acted as the main structural connection between the wings, fuselage, landing gear, propulsion system, and tail booms, while the fuselage pod was 3D printed at low infill to reduce weight while maintaining stiffness.
+    The results demonstrated that UAV dynamic behaviour could be improved through systematic geometric modification before relying on stability-augmentation systems or repeated physical prototypes. The analysis therefore formed the numerical foundation for the subsequent fabrication and flight validation stages of the project.
   </p>
-  <p>
-    Twin carbon-fibre tubes served as tail booms supporting the horizontal and vertical tail surfaces. The elevator and rudder servos were positioned closer to the fuselage with control inputs transmitted through push rods, reducing the mass located far behind the centre of gravity and limiting the pitch moment of inertia. Battery and payload positions were made adjustable so the centre of gravity could be corrected before flight.
-  </p>
-
-  <h3>Flight Controller and Pre-Flight Testing</h3>
-  <p>
-    The APM 2.8 was installed close to the centre of gravity and configured using ArduPilot fixed-wing firmware through Mission Planner, connected to the receiver, electronic speed controller, aileron, elevator and rudder servos, GPS module, and power system. Assisted modes were used during initial flight testing, take-off, and recovery, while manual mode was selected during dynamic-response testing so the flight controller would not significantly modify the aircraft&rsquo;s natural response. The APM recorded pitch, roll, yaw, angular rates, accelerations, GPS position, altitude, and ground speed.
-  </p>
-  <p>
-    Before flight, control-surface directions, servo operation, motor response, radio range, centre of gravity position, structural connections, sensor calibration, and APM flight modes were checked, and taxi and low-speed tests confirmed directional control and propulsion performance.
-  </p>
-  <div class="experience-media-pair">
-    <img src="assets/images/projects/fyp/wing-ribs.webp" alt="Laser-cut plywood ribs on the carbon-fibre spar" loading="lazy" />
-    <img src="assets/images/projects/fyp/printed-pod.webp" alt="3D-printed fuselage pod" loading="lazy" />
-    <img src="assets/images/projects/fyp/printed-parts.webp" alt="3D-printed airframe components" loading="lazy" />
-    <img src="assets/images/projects/fyp/uav-field.webp" alt="The completed UAV on the test field" loading="lazy" />
+  <div class="exp-media experience-media-slideshow" data-slideshow>
+    <div class="exp-slides">
+      <figure class="exp-slide is-active" data-slide="0"><img src="assets/images/projects/fyp/poster.webp" alt="Final-year project research poster" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="1"><img src="assets/images/projects/fyp/team-presentation.webp" alt="Project presentation with the UAV" loading="lazy" /></figure>
+    </div>
+    <button class="exp-slide-nav previous" type="button" data-slide-prev aria-label="Previous image">&#8592;</button>
+    <button class="exp-slide-nav next" type="button" data-slide-next aria-label="Next image">&#8594;</button>
+    <div class="exp-slide-dots" role="tablist">
+      <button class="exp-dot is-active" type="button" data-slide-to="0" role="tab" aria-label="Image 1 of 2"></button>
+      <button class="exp-dot" type="button" data-slide-to="1" role="tab" aria-label="Image 2 of 2"></button>
+    </div>
   </div>
 </section>
 
-<section class="experience-section-card">
-  <h2>Chapter 3 — Data Acquisition, Flight Testing, and Validation</h2>
-  <h3>Limitations of the Initial Method</h3>
+<section class="experience-section-card has-slideshow">
+  <h2>Fabrication of the UAV and Integration of the APM 2.8 Flight Controller</h2>
+  <h3>Purpose of UAV Fabrication</h3>
   <p>
-    The APM 2.8 was initially used to record the UAV&rsquo;s flight response, but its effective sampling rate and onboard memory were insufficient for reliably capturing rapid short-period oscillations, and a considerable portion of the available recording time was consumed by take-off, trimming, and positioning before the test manoeuvres.
+    A physical fixed-wing UAV was fabricated to support experimental flight testing and validate the dynamic behaviour predicted by the developed framework. The aircraft was designed as a lightweight conventional UAV with sufficient structural strength and internal space for the propulsion system, flight controller, receiver, sensors, battery, and data-acquisition equipment.
   </p>
+  <h3>Airframe Fabrication</h3>
+  <p>
+    The UAV had an approximately <strong>2.5 m wingspan</strong>. The wing structure was constructed using hollow carbon-fibre tubes as the main spars and laser-cut plywood ribs to maintain the required aerofoil profile. A fabrication jig was used to control rib spacing and alignment, and the completed structure was covered with heat-shrink film to produce a lightweight aerodynamic surface.
+  </p>
+  <p>
+    The central wing box was manufactured from welded aluminium members and acted as the main structural connection between the wings, fuselage, landing gear, propulsion system, and tail booms. The fuselage pod was produced using 3D printing with a low infill percentage to reduce weight while maintaining sufficient stiffness.
+  </p>
+  <p>
+    Twin carbon-fibre tubes were used as tail booms to support the horizontal and vertical tail surfaces. The elevator and rudder servos were positioned closer to the fuselage, with control inputs transmitted through push rods. <strong>This reduced the mass located far behind the centre of gravity and helped limit the pitch moment of inertia.</strong>
+  </p>
+  <p>
+    The battery and payload positions were made adjustable so that the aircraft centre of gravity could be corrected before flight. The completed UAV incorporated the motor, propeller, electronic speed controller, receiver, control servos, landing gear, flight controller, and onboard data-acquisition hardware.
+  </p>
+  <h3>APM 2.8 Integration</h3>
+  <p>
+    The APM 2.8 flight controller was installed close to the aircraft centre of gravity and configured using ArduPilot fixed-wing firmware through Mission Planner. It was connected to the receiver, electronic speed controller, aileron, elevator and rudder servos, GPS module, and power system.
+  </p>
+  <p>
+    The aircraft was configured with manual and assisted flight modes. Assisted modes were used during initial flight testing, take-off, and recovery, while <strong>manual mode was selected during dynamic-response testing to avoid the flight controller significantly modifying the aircraft&rsquo;s natural response</strong>.
+  </p>
+  <p>
+    The APM recorded flight parameters including pitch, roll, yaw, angular rates, accelerations, GPS position, altitude, and ground speed. These records provided the initial flight data for assessing the UAV response and identifying the limitations of the original logging arrangement.
+  </p>
+  <h3>Ground and Pre-Flight Testing</h3>
+  <p>
+    Before flight, the control-surface directions, servo operation, motor response, radio range, centre of gravity position, structural connections, sensor calibration, and APM flight modes were checked. Taxi and low-speed tests were also conducted to confirm directional control and propulsion performance. These checks ensured that the aircraft was structurally secure, correctly balanced, and ready for the initial flight-test programme.
+  </p>
+  <div class="exp-media experience-media-slideshow" data-slideshow>
+    <div class="exp-slides">
+      <figure class="exp-slide is-active" data-slide="0"><img src="assets/images/projects/fyp/wing-ribs.webp" alt="Laser-cut plywood ribs on the carbon-fibre spar" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="1"><img src="assets/images/projects/fyp/printed-pod.webp" alt="3D-printed fuselage pod" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="2"><img src="assets/images/projects/fyp/printed-parts.webp" alt="3D-printed airframe components" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="3"><img src="assets/images/projects/fyp/uav-front.webp" alt="UAV front view on the test field" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="4"><img src="assets/images/projects/fyp/uav-field.webp" alt="The completed UAV before a test flight" loading="lazy" /></figure>
+    </div>
+    <button class="exp-slide-nav previous" type="button" data-slide-prev aria-label="Previous image">&#8592;</button>
+    <button class="exp-slide-nav next" type="button" data-slide-next aria-label="Next image">&#8594;</button>
+    <div class="exp-slide-dots" role="tablist">
+      <button class="exp-dot is-active" type="button" data-slide-to="0" role="tab" aria-label="Image 1 of 5"></button>
+      <button class="exp-dot" type="button" data-slide-to="1" role="tab" aria-label="Image 2 of 5"></button>
+      <button class="exp-dot" type="button" data-slide-to="2" role="tab" aria-label="Image 3 of 5"></button>
+      <button class="exp-dot" type="button" data-slide-to="3" role="tab" aria-label="Image 4 of 5"></button>
+      <button class="exp-dot" type="button" data-slide-to="4" role="tab" aria-label="Image 5 of 5"></button>
+    </div>
+  </div>
+</section>
 
+<section class="experience-section-card has-slideshow">
+  <h2>Flight-Data Pre-Processing and Validation Using the Blu-Baby Aircraft</h2>
+  <h3>Limitations of the Initial Data-Collection Method</h3>
+  <p>
+    The APM 2.8 was initially used for recording the UAV&rsquo;s flight response. However, <strong>its effective sampling rate and onboard memory were insufficient for reliably capturing rapid short-period oscillations</strong>. A considerable portion of the available recording time was also required for take-off, trimming, and positioning the aircraft before the test manoeuvres. To overcome these limitations, an independent Arduino-based data-acquisition system was developed.
+  </p>
   <h3>Arduino-Based Data-Acquisition System</h3>
   <p>
-    An independent system was developed using an Arduino Nano, an IMU, and an SD-card module, recording pitch angle, pitch rate, time, and input-marker information in CSV format at a higher sampling rate than the APM. A Kalman filter combined accelerometer and gyroscope measurements, reducing accelerometer noise and gyroscope drift while preserving the rapid pitch response required for modal analysis. A toggle switch connected through an auxiliary radio channel marked the beginning of each elevator-doublet manoeuvre, making the exact response region easy to extract during post-processing.
+    The new system consisted of an Arduino Nano, an IMU, and an SD-card module. It recorded pitch angle, pitch rate, time, and input-marker information in CSV format at a higher sampling rate than the APM logging system. A <strong>Kalman filter</strong> was implemented to combine accelerometer and gyroscope measurements. This reduced accelerometer noise and gyroscope drift while preserving the rapid pitch response required for modal analysis.
   </p>
-
-  <h3>Difficulties with the Fabricated UAV</h3>
+  <p>
+    A toggle switch connected through an auxiliary radio channel was used to mark the beginning of each elevator-doublet manoeuvre. Recording this switch signal with the IMU data made it easier to identify and extract the exact response region during post-processing.
+  </p>
+  <h3>Difficulties Encountered with the Fabricated UAV</h3>
+  <p>
+    Several difficulties were experienced during flight testing of the fabricated UAV. The aircraft showed roll-related instability and required frequent corrective pilot inputs, making it difficult to obtain a clean natural response after the elevator doublet.
+  </p>
+  <p>
+    The available flying area and take-off distance were also limited, and the aircraft often had to be turned soon after take-off. This reduced the time available to establish a steady trimmed condition before beginning the test. Other practical issues included:
+  </p>
   <ul class="experience-key-list">
-    <li>Roll-related instability requiring frequent corrective pilot inputs</li>
-    <li>Limited flying area and take-off distance, reducing time to establish a trimmed condition</li>
     <li>Structural vibration affecting the IMU measurements</li>
     <li>Control-surface backlash and servo delay</li>
     <li>Wind disturbances and variation in flight speed</li>
@@ -240,64 +372,75 @@
     <li>Difficulty obtaining a sufficiently long undisturbed response</li>
   </ul>
   <p>
-    Because of these conditions the measured response contained both the aircraft&rsquo;s natural motion and corrective pilot inputs, reducing the reliability of the modal-identification results.
+    Because of these conditions, <strong>the measured response contained both the aircraft&rsquo;s natural motion and corrective pilot inputs</strong>, reducing the reliability of the modal-identification results.
   </p>
-
-  <div class="experience-media-pair">
-    <img src="assets/images/projects/fyp/uav-flight.webp" alt="The fabricated UAV in flight during testing" loading="lazy" />
-    <img src="assets/images/projects/fyp/test-flight.webp" alt="Flight testing in progress" loading="lazy" />
-  </div>
-
   <h3>Validation Using the Blu-Baby Aircraft</h3>
   <p>
-    A Blu-Baby RC aircraft was selected as a secondary validation platform because of its more stable and predictable flight behaviour. Its geometry, mass properties, centre of gravity position, and operating condition were entered into the numerical framework, and the same Arduino data-acquisition system, IMU, Kalman filter, SD-card recording, and toggle-switch marking method were installed so the experimental procedure remained consistent. During testing the aircraft was brought to an approximately steady flight condition before an elevator doublet was applied, and the resulting pitch-angle and pitch-rate responses were recorded.
-  </p>
-
-  <h3>Pre-Processing and Modal Identification</h3>
-  <p>
-    After each flight the Arduino CSV files and APM logs were transferred for analysis, with the recorded toggle-switch signal used to identify each doublet manoeuvre. The selected data were processed by extracting the doublet response region, removing the initial steady-state offset, checking sampling interval and data continuity, removing corrupted or unsuitable measurements, separating repeated manoeuvres, and preparing the pitch-angle and pitch-rate signals for modal analysis. Careful time-window selection was necessary: too short a window excluded useful response data, while too long a window admitted gusts, turns, or pilot corrections.
+    A Blu-Baby RC aircraft was selected as a secondary validation platform because it had more stable and predictable flight behaviour. Its geometry, mass properties, centre of gravity position, and operating condition were first entered into the developed numerical framework. The Arduino data-acquisition system was then installed on the Blu-Baby aircraft. The same IMU, Kalman filter, SD-card recording, and toggle-switch marking method were used so that the experimental procedure remained consistent.
   </p>
   <p>
-    The Fast Fourier Transform identified the dominant frequency in the measured pitch response and allowed repeated flight tests to be compared, but because the recorded response was a short decaying transient, FFT gave limited frequency resolution and could not directly determine damping. Prony&rsquo;s method was therefore used to estimate both frequency and damping ratio, with a second-order Prony model applied to the pitch-angle and pitch-rate data to identify the dominant short-period pole pair. The pitch-rate signal was selected as the main validation signal because it represented the rapid rotational motion of the short-period mode more clearly than pitch angle.
+    During testing, the aircraft was brought to an approximately steady flight condition before an elevator doublet was applied. The resulting pitch-angle and pitch-rate responses were recorded for post-processing.
   </p>
-
-  <div class="experience-media-pair">
-    <img src="assets/images/projects/fyp/blubaby-flight.webp" alt="The Blu-Baby validation aircraft in flight" loading="lazy" />
-    <img src="assets/images/projects/fyp/uav-front.webp" alt="UAV front view before a test flight" loading="lazy" />
-  </div>
-
+  <h3>Data Pre-Processing</h3>
+  <p>
+    After each flight, the Arduino CSV files and APM logs were transferred for analysis. The recorded toggle-switch signal was used to identify each doublet manoeuvre. The selected data were then processed by:
+  </p>
+  <ol class="experience-step-list">
+    <li>Extracting the doublet response region.</li>
+    <li>Removing the initial steady-state offset.</li>
+    <li>Checking the sampling interval and data continuity.</li>
+    <li>Removing corrupted or unsuitable measurements.</li>
+    <li>Separating repeated test manoeuvres.</li>
+    <li>Preparing the pitch-angle and pitch-rate signals for modal analysis.</li>
+  </ol>
+  <p>
+    Careful selection of the time window was necessary. A very short window could exclude useful response data, while a long window could include gusts, turns, or pilot corrections.
+  </p>
+  <h3>FFT and Prony Analysis</h3>
+  <p>
+    The Fast Fourier Transform was used to identify the dominant frequency in the measured pitch response and compare repeated flight tests. However, since the recorded response was a short, decaying transient, <strong>FFT provided limited frequency resolution and could not directly determine damping</strong>.
+  </p>
+  <p>
+    Prony&rsquo;s method was therefore used to estimate both the frequency and damping ratio of the response. A second-order Prony model was applied to the pitch-angle and pitch-rate data to identify the dominant short-period pole pair. The pitch-rate signal was selected as the main validation signal because it represented the rapid rotational motion of the short-period mode more clearly than the pitch-angle signal.
+  </p>
   <h3>Comparison with the Numerical Model</h3>
   <p>
-    The experimentally identified short-period frequency and damping ratio were compared with the values predicted by the numerical framework. Some differences were observed because the numerical model assumed a rigid aircraft operating near a steady trimmed condition, while the real aircraft was affected by structural flexibility, pilot correction, servo dynamics, sensor noise, manufacturing deviations, propeller slipstream, and uncertainty in the inertia and centre of gravity values. The short-period response was successfully identified from the Blu-Baby flight data; the slower phugoid mode could not be reliably extracted, as it required a longer undisturbed flight period.
+    The experimentally identified short-period frequency and damping ratio were compared with the values predicted by the numerical framework. Some differences were observed because the numerical model assumed a rigid aircraft operating near a steady trimmed condition. The real aircraft was affected by structural flexibility, pilot correction, servo dynamics, sensor noise, manufacturing deviations, propeller slipstream, and uncertainty in the inertia and centre of gravity values.
   </p>
+  <div class="experience-finding">
+    <p>The <strong>short-period response was successfully identified</strong> from the Blu-Baby flight data. The slower <strong>phugoid mode could not be reliably extracted</strong>, because a longer undisturbed flight period was required.</p>
+  </div>
+  <h3>Summary</h3>
+  <p>
+    The initial difficulties experienced with the fabricated UAV led to the development of an improved Arduino-based data-acquisition and pre-processing method. The Blu-Baby aircraft provided a more stable platform for collecting clean pitch-response data.
+  </p>
+  <p>
+    The final workflow combined IMU measurement, Kalman filtering, toggle-switch input identification, data-window extraction, FFT analysis, and Prony-based modal identification. This enabled the experimental short-period response to be compared with the predictions of the developed flight-dynamics framework.
+  </p>
+  <div class="exp-media experience-media-slideshow" data-slideshow>
+    <div class="exp-slides">
+      <figure class="exp-slide is-active" data-slide="0"><img src="assets/images/projects/fyp/blubaby-flight.webp" alt="Blu-Baby validation aircraft in flight" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="1"><img src="assets/images/projects/fyp/test-flight.webp" alt="Flight testing in progress" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="2"><img src="assets/images/projects/fyp/uav-flight.webp" alt="The fabricated UAV in flight" loading="lazy" /></figure>
+    </div>
+    <button class="exp-slide-nav previous" type="button" data-slide-prev aria-label="Previous image">&#8592;</button>
+    <button class="exp-slide-nav next" type="button" data-slide-next aria-label="Next image">&#8594;</button>
+    <div class="exp-slide-dots" role="tablist">
+      <button class="exp-dot is-active" type="button" data-slide-to="0" role="tab" aria-label="Image 1 of 3"></button>
+      <button class="exp-dot" type="button" data-slide-to="1" role="tab" aria-label="Image 2 of 3"></button>
+      <button class="exp-dot" type="button" data-slide-to="2" role="tab" aria-label="Image 3 of 3"></button>
+    </div>
+  </div>
 </section>
 
-<section class="experience-section-card">
-  <h2>Outcome</h2>
-  <p>
-    The sensitivity analysis established a direct connection between UAV design parameters and dynamic-mode characteristics. Horizontal tail volume ratio was identified as an effective parameter for short-period tuning, wing dihedral had the strongest influence on the spiral mode, wing aspect ratio affected the phugoid frequency, and the vertical tail configuration influenced the Dutch-roll response. The results demonstrated that UAV dynamic behaviour can be improved through systematic geometric modification before relying on stability-augmentation systems or repeated physical prototypes.
-  </p>
-  <p>
-    The final workflow combined IMU measurement, Kalman filtering, toggle-switch input identification, data-window extraction, FFT analysis, and Prony-based modal identification, enabling the experimental short-period response to be compared against the predictions of the developed flight-dynamics framework.
-  </p>
+<section class="experience-section-card experience-navigate-card">
+  <h2>Navigate</h2>
+  <div class="experience-page-cta">
+    <a class="btn btn-primary" href="index.html#projects">Back to Projects</a>
+    <a class="btn btn-outline" href="index.html#contact">Contact Me</a>
+  </div>
 </section>
-
       </div>
-
-      <aside class="experience-facts" aria-label="Project summary facts">
-        <div class="experience-facts-card">
-          <h2>At a glance</h2>
-          <div class="experience-fact"><span>Type</span><strong>Final-year research project</strong></div><div class="experience-fact"><span>Framework</span><strong>Python + AVL, fully automated sweeps</strong></div><div class="experience-fact"><span>Aircraft</span><strong>2.5 m span fixed-wing UAV, APM 2.8</strong></div><div class="experience-fact"><span>Instrumentation</span><strong>Arduino Nano, IMU, SD card, Kalman filter</strong></div><div class="experience-fact"><span>Analysis</span><strong>FFT and Prony&rsquo;s method</strong></div><div class="experience-fact"><span>Key result</span><strong>Dihedral 0°→8° cut spiral time constant by over 92%</strong></div>
-        </div>
-        <div class="experience-facts-card">
-          <h2>Navigate</h2>
-          <div class="experience-page-cta">
-            <a class="btn btn-primary" href="index.html#projects">Back to Projects</a>
-            <a class="btn btn-outline" href="index.html#contact">Contact Me</a>
-          </div>
-        </div>
-      </aside>
-
     </div>
   </main>
 
@@ -308,6 +451,6 @@
     </div>
   </footer>
 
-  <script src="js/detail-page.js?v=29"></script>
+  <script src="js/detail-page.js?v=30"></script>
 </body>
 </html>

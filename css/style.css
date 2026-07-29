@@ -753,7 +753,22 @@ h1, h2, h3, h4 {
 .see-more-btn:hover { gap: 10px; }
 .see-more-btn .icon { width: 1em; height: 1em; }
 
-@media (max-width: 980px) { .project-grid { grid-template-columns: 1fr 1fr; } }
+/* Single full-width project card: image beside the write-up rather than a
+   lone third-width card in a three-column grid. */
+.project-grid-single { grid-template-columns: 1fr; }
+.project-grid-single .project-card { flex-direction: row; }
+.project-grid-single .project-card-img { flex: 0 0 40%; aspect-ratio: auto; }
+.project-grid-single .project-card-body { padding: 28px 30px; }
+.project-grid-single .project-card-body p { flex: 0 0 auto; margin-bottom: 12px; text-align: justify; }
+.project-grid-single .project-card-body p:last-of-type { margin-bottom: 18px; }
+.project-grid-single .project-card-body h4 { font-size: 1.22rem; line-height: 1.35; margin-bottom: 12px; }
+.project-grid-single .tag-row { margin-top: auto; }
+
+@media (max-width: 980px) { .project-grid { grid-template-columns: 1fr 1fr; } .project-grid-single { grid-template-columns: 1fr; } }
+@media (max-width: 780px) {
+  .project-grid-single .project-card { flex-direction: column; }
+  .project-grid-single .project-card-img { flex: none; aspect-ratio: 4 / 3; }
+}
 @media (max-width: 640px) { .project-grid { grid-template-columns: 1fr; } }
 
 /* ---------- Modal ---------- */
@@ -1322,11 +1337,73 @@ h1, h2, h3, h4 {
   font-size: clamp(1.3rem, 2.6vw, 1.75rem);
 }
 
+/* Sub-topic headings inside a long write-up: accent colour and a clear step
+   up in size so the sections are scannable without numbering. */
 .experience-section-card h3 {
-  margin-top: 22px;
-  margin-bottom: 9px;
-  color: var(--primary);
-  font-size: 1.05rem;
+  margin-top: 30px;
+  margin-bottom: 11px;
+  color: var(--accent);
+  font-size: clamp(1.12rem, 1.7vw, 1.3rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.experience-section-card h3:first-of-type {
+  margin-top: 6px;
+}
+
+/* Pulled-out findings. */
+.experience-finding {
+  margin: 16px 0;
+  padding: 13px 17px;
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  background: var(--accent-soft);
+  color: var(--text);
+}
+
+.experience-section-card .experience-finding p:last-child {
+  margin-bottom: 0;
+}
+
+.experience-section-card strong {
+  color: var(--text);
+  font-weight: 700;
+}
+
+/* Ordered procedure lists, numbered in the accent colour. */
+.experience-step-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 4px 0 8px;
+  counter-reset: step;
+  list-style: none;
+}
+
+.experience-step-list li {
+  position: relative;
+  padding-left: 30px;
+  color: var(--text-muted);
+  line-height: 1.68;
+}
+
+.experience-step-list li::before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0.15em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 700;
 }
 
 .experience-section-card p {

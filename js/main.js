@@ -383,18 +383,24 @@
       block.dataset.category = slug;
       block.innerHTML = `
         <h3 class="project-category-title reveal">${cat.category}</h3>
-        <div class="project-grid">
+        <div class="project-grid${cat.layout === "single" ? " project-grid-single" : ""}">
           ${cat.projects
             .map((project) => {
               projectLookup.set(project.id, project);
+              const blurb = Array.isArray(project.cardSummary)
+                ? project.cardSummary.map((p) => `<p>${p}</p>`).join("")
+                : `<p>${project.summary}</p>`;
+              const action = project.cardLinksToPage && project.detailPage
+                ? `<a class="see-more-btn" href="${project.detailPage}">${project.detailPageLabel || "Explore the full project"} <svg class="icon"><use href="#icon-arrow-right"/></svg></a>`
+                : `<button class="see-more-btn" data-project-id="${project.id}">See More <svg class="icon"><use href="#icon-arrow-right"/></svg></button>`;
               return `
               <article class="project-card reveal">
                 <div class="project-card-img"><img src="${project.image}" alt="${project.title}" loading="lazy" /></div>
                 <div class="project-card-body">
                   <h4>${project.title}</h4>
-                  <p>${project.summary}</p>
+                  ${blurb}
                   <div class="tag-row">${project.tools.map((t) => `<span class="tag">${t}</span>`).join("")}</div>
-                  <button class="see-more-btn" data-project-id="${project.id}">See More <svg class="icon"><use href="#icon-arrow-right"/></svg></button>
+                  ${action}
                 </div>
               </article>`;
             })
