@@ -1091,6 +1091,34 @@ h1, h2, h3, h4 {
   margin-bottom: 34px;
 }
 
+/* Hero text beside its slideshow, so the photographs are visible without
+   scrolling past the rotation list. */
+.full-experience-hero.has-media {
+  max-width: none;
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(270px, 0.65fr);
+  gap: 30px;
+  align-items: start;
+}
+
+.full-experience-hero-text {
+  min-width: 0;
+}
+
+.full-experience-hero-media {
+  margin: 6px 0 0;
+  position: sticky;
+  top: calc(var(--header-h) + 18px);
+}
+
+.full-experience-lead-list {
+  margin: 14px 0 18px;
+}
+
+.full-experience-lead-list li {
+  font-size: 0.97rem;
+}
+
 .full-experience-kicker {
   display: inline-flex;
   align-items: center;
@@ -1331,6 +1359,28 @@ h1, h2, h3, h4 {
   border-radius: var(--radius-sm);
 }
 
+/* Slideshow sits to the right of the workshop text rather than below it, so
+   the photographs stay in view while the bullet list is read. */
+.experience-section-card.has-slideshow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.85fr);
+  column-gap: 26px;
+  align-items: start;
+}
+
+.experience-section-card.has-slideshow > h2,
+.experience-section-card.has-slideshow > .experience-key-list {
+  grid-column: 1;
+}
+
+.experience-section-card.has-slideshow > .experience-media-slideshow {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  margin: 4px 0 0;
+  position: sticky;
+  top: calc(var(--header-h) + 18px);
+}
+
 .experience-media-slideshow .exp-slide-nav {
   font-size: 1.05rem;
   line-height: 1;
@@ -1497,6 +1547,22 @@ h1, h2, h3, h4 {
   .experience-media-pair,
   .experience-facts {
     grid-template-columns: 1fr;
+  }
+
+  .full-experience-hero.has-media,
+  .experience-section-card.has-slideshow {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-section-card.has-slideshow > .experience-media-slideshow {
+    grid-column: 1;
+    grid-row: auto;
+    position: static;
+    margin-top: 18px;
+  }
+
+  .full-experience-hero-media {
+    position: static;
   }
 
   .experience-media-pair img {
