@@ -1410,6 +1410,26 @@ h1, h2, h3, h4 {
   margin-top: 16px;
 }
 
+/* The roster poster is portrait and text-dense, so it is centred at its own
+   aspect ratio rather than cropped into a slideshow frame. */
+.experience-team-figure {
+  margin: 20px auto 0;
+  max-width: 540px;
+}
+
+.experience-team-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+.full-experience-lead strong {
+  color: var(--text);
+  font-weight: 700;
+}
+
 /* Cards that carry a paragraph as well as a list need the slideshow to span
    all three text rows. */
 .experience-section-card.has-slideshow > .experience-media-slideshow {
