@@ -4,7 +4,8 @@ IMG_*.JPG
 305308*.jpg
 .DS_Store
 
-# Raw camera drops at the repo root — only the optimised WebP derivatives
-# under assets/images/ are published.
+# Raw camera drops and source documents at the repo root — only the
+# optimised derivatives under assets/ are published.
 /*.jpeg
 /*.jpg
+/*.pdf
