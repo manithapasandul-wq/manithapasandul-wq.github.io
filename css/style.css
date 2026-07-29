@@ -1531,9 +1531,9 @@ h1, h2, h3, h4 {
   margin: 0 auto 26px;
 }
 
-/* Poster card: portrait sheet shown large, with its downloads beneath. */
+/* Poster card: portrait sheet centred, with its links centred beneath. */
 .experience-poster-figure {
-  margin: 22px 0;
+  margin: 22px auto;
   max-width: 620px;
 }
 
@@ -1548,6 +1548,16 @@ h1, h2, h3, h4 {
 
 .experience-poster-card .experience-page-cta {
   margin-top: 4px;
+  justify-content: center;
+}
+
+.experience-poster-card .btn .icon {
+  flex-shrink: 0;
+  width: 19px;
+  height: 19px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
 }
 
 /* The roster poster is portrait and text-dense, so it is centred at its own
