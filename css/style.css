@@ -1095,18 +1095,24 @@ h1, h2, h3, h4 {
    scrolling past the rotation list. */
 .full-experience-hero.has-media {
   max-width: none;
+}
+
+/* The lead paragraph runs the full page width; only the rotation list and
+   the slideshow sit side by side beneath it. */
+.full-experience-hero-body {
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(270px, 0.65fr);
-  gap: 30px;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.85fr);
+  column-gap: 26px;
   align-items: start;
+  margin-top: 14px;
 }
 
-.full-experience-hero-text {
-  min-width: 0;
+.full-experience-hero.has-media > .full-experience-lead {
+  max-width: none;
 }
 
-.full-experience-hero.has-media > .full-experience-hero-media {
-  margin: 6px 0 0;
+.full-experience-hero-body > .full-experience-hero-media {
+  margin: 4px 0 0;
 }
 
 .full-experience-lead-list {
@@ -1157,6 +1163,7 @@ h1, h2, h3, h4 {
 .full-experience-lead {
   max-width: 900px;
   color: var(--text-muted);
+  /* overridden to full width on heroes that carry a slideshow */
   font-size: clamp(1rem, 1.8vw, 1.12rem);
   line-height: 1.82;
 }
@@ -1380,8 +1387,15 @@ h1, h2, h3, h4 {
 }
 
 .experience-section-card.has-slideshow > h2,
+.experience-section-card.has-slideshow > p,
 .experience-section-card.has-slideshow > .experience-key-list {
   grid-column: 1;
+}
+
+/* Cards that carry a paragraph as well as a list need the slideshow to span
+   all three text rows. */
+.experience-section-card.has-slideshow > .experience-media-slideshow {
+  grid-row: 1 / -1;
 }
 
 .experience-section-card.has-slideshow > .experience-media-slideshow {
@@ -1560,7 +1574,7 @@ h1, h2, h3, h4 {
     grid-template-columns: 1fr;
   }
 
-  .full-experience-hero.has-media,
+  .full-experience-hero-body,
   .experience-section-card.has-slideshow {
     grid-template-columns: 1fr;
   }

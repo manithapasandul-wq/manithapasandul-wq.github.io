@@ -3,3 +3,8 @@ IMG.zip
 IMG_*.JPG
 305308*.jpg
 .DS_Store
+
+# Raw camera drops at the repo root — only the optimised WebP derivatives
+# under assets/images/ are published.
+/*.jpeg
+/*.jpg
