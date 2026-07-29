@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=31" />
+  <link rel="stylesheet" href="css/style.css?v=32" />
 
   <script>
     (function () {
@@ -78,8 +78,33 @@
     <div class="full-experience-layout is-single-column">
       <div class="full-experience-content">
 
-<section class="experience-section-card has-slideshow">
-  <h2>Parametric Sensitivity Analysis of UAV Flight Dynamics</h2>
+<section class="experience-section-card media-top">
+  <h2>Sensitivity Analysis Procedure</h2>
+  <div class="exp-media experience-media-slideshow is-uncropped" data-slideshow>
+    <div class="exp-slides">
+      <figure class="exp-slide is-active" data-slide="0"><img src="assets/images/projects/fyp/proc-1.webp" alt="Sensitivity analysis framework" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="1"><img src="assets/images/projects/fyp/proc-2.webp" alt="Sensitivity analysis framework" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="2"><img src="assets/images/projects/fyp/proc-3.webp" alt="Sensitivity analysis framework" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="3"><img src="assets/images/projects/fyp/proc-4.webp" alt="Sensitivity analysis framework" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="4"><img src="assets/images/projects/fyp/proc-5.webp" alt="Sensitivity analysis framework" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="5"><img src="assets/images/projects/fyp/proc-6.webp" alt="Sensitivity analysis framework" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="6"><img src="assets/images/projects/fyp/proc-7.webp" alt="Sensitivity analysis framework" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="7"><img src="assets/images/projects/fyp/proc-8.webp" alt="Sensitivity analysis framework" loading="lazy" /></figure>
+    </div>
+    <button class="exp-slide-nav previous" type="button" data-slide-prev aria-label="Previous image">&#8592;</button>
+    <button class="exp-slide-nav next" type="button" data-slide-next aria-label="Next image">&#8594;</button>
+    <div class="exp-slide-dots" role="tablist">
+      <button class="exp-dot is-active" type="button" data-slide-to="0" role="tab" aria-label="Image 1 of 8"></button>
+      <button class="exp-dot" type="button" data-slide-to="1" role="tab" aria-label="Image 2 of 8"></button>
+      <button class="exp-dot" type="button" data-slide-to="2" role="tab" aria-label="Image 3 of 8"></button>
+      <button class="exp-dot" type="button" data-slide-to="3" role="tab" aria-label="Image 4 of 8"></button>
+      <button class="exp-dot" type="button" data-slide-to="4" role="tab" aria-label="Image 5 of 8"></button>
+      <button class="exp-dot" type="button" data-slide-to="5" role="tab" aria-label="Image 6 of 8"></button>
+      <button class="exp-dot" type="button" data-slide-to="6" role="tab" aria-label="Image 7 of 8"></button>
+      <button class="exp-dot" type="button" data-slide-to="7" role="tab" aria-label="Image 8 of 8"></button>
+    </div>
+  </div>
+
   <h3>Purpose of the Sensitivity Analysis</h3>
   <p>
     The parametric sensitivity analysis was conducted to identify how changes in the geometric and mass-related properties of a small fixed-wing UAV affect its dynamic behaviour. The main objective was to determine which design parameters could be adjusted during the preliminary design stage to improve the aircraft&rsquo;s inherent stability and flying qualities.
@@ -172,7 +197,37 @@
   <p>
     For relationships that showed an approximately consistent trend, regression analysis was used to estimate the normalized sensitivity coefficient. Some parameter variations produced nonlinear responses. In such cases, the complete trend was considered instead of representing the behaviour using a single sensitivity value.
   </p>
-  <h3>Short-Period Sensitivity Results</h3>
+</section>
+
+<section class="experience-section-card media-top">
+  <h2>Results of the Sensitivity Analysis</h2>
+  <div class="exp-media experience-media-slideshow is-diagram" data-slideshow>
+    <div class="exp-slides">
+      <figure class="exp-slide is-active" data-slide="0"><img src="assets/images/projects/fyp/plot-sppo1.webp" alt="Short-period sensitivity plot" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="1"><img src="assets/images/projects/fyp/plot-sppo2.webp" alt="Short-period sensitivity plot" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="2"><img src="assets/images/projects/fyp/plot-sppo3.webp" alt="Short-period sensitivity plot" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="3"><img src="assets/images/projects/fyp/plot-sppo4.webp" alt="Short-period sensitivity plot" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="4"><img src="assets/images/projects/fyp/plot-phu1.webp" alt="Phugoid sensitivity plot" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="5"><img src="assets/images/projects/fyp/plot-phu2.webp" alt="Phugoid sensitivity plot" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="6"><img src="assets/images/projects/fyp/plot-dutchroll1.webp" alt="Dutch-roll sensitivity plot" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="7"><img src="assets/images/projects/fyp/plot-roll1.webp" alt="Roll-subsidence sensitivity plot" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="8"><img src="assets/images/projects/fyp/plot-spiral.webp" alt="Spiral-mode sensitivity plot" loading="lazy" /></figure>
+    </div>
+    <button class="exp-slide-nav previous" type="button" data-slide-prev aria-label="Previous image">&#8592;</button>
+    <button class="exp-slide-nav next" type="button" data-slide-next aria-label="Next image">&#8594;</button>
+    <div class="exp-slide-dots" role="tablist">
+      <button class="exp-dot is-active" type="button" data-slide-to="0" role="tab" aria-label="Image 1 of 9"></button>
+      <button class="exp-dot" type="button" data-slide-to="1" role="tab" aria-label="Image 2 of 9"></button>
+      <button class="exp-dot" type="button" data-slide-to="2" role="tab" aria-label="Image 3 of 9"></button>
+      <button class="exp-dot" type="button" data-slide-to="3" role="tab" aria-label="Image 4 of 9"></button>
+      <button class="exp-dot" type="button" data-slide-to="4" role="tab" aria-label="Image 5 of 9"></button>
+      <button class="exp-dot" type="button" data-slide-to="5" role="tab" aria-label="Image 6 of 9"></button>
+      <button class="exp-dot" type="button" data-slide-to="6" role="tab" aria-label="Image 7 of 9"></button>
+      <button class="exp-dot" type="button" data-slide-to="7" role="tab" aria-label="Image 8 of 9"></button>
+      <button class="exp-dot" type="button" data-slide-to="8" role="tab" aria-label="Image 9 of 9"></button>
+    </div>
+  </div>
+<h3>Short-Period Sensitivity Results</h3>
   <p>
     The short-period response was strongly influenced by the horizontal tail design, static margin, centre of gravity position, and pitch moment of inertia. The <strong>horizontal tail volume ratio</strong> produced one of the clearest and most predictable effects. For the investigated UAV configuration:
   </p>
@@ -277,36 +332,40 @@
   <p>
     The results demonstrated that UAV dynamic behaviour could be improved through systematic geometric modification before relying on stability-augmentation systems or repeated physical prototypes. The analysis therefore formed the numerical foundation for the subsequent fabrication and flight validation stages of the project.
   </p>
-  <div class="exp-media experience-media-slideshow is-diagram" data-slideshow>
+</section>
+
+<section class="experience-section-card media-top">
+  <h2>Fabrication of the UAV and Integration of the APM 2.8 Flight Controller</h2>
+<div class="exp-media experience-media-slideshow is-uncropped" data-slideshow>
     <div class="exp-slides">
-      <figure class="exp-slide is-active" data-slide="0"><img src="assets/images/projects/fyp/plot-sppo1.webp" alt="Short-period sensitivity plot" loading="lazy" /></figure>
-      <figure class="exp-slide" data-slide="1"><img src="assets/images/projects/fyp/plot-sppo2.webp" alt="Short-period sensitivity plot" loading="lazy" /></figure>
-      <figure class="exp-slide" data-slide="2"><img src="assets/images/projects/fyp/plot-sppo3.webp" alt="Short-period sensitivity plot" loading="lazy" /></figure>
-      <figure class="exp-slide" data-slide="3"><img src="assets/images/projects/fyp/plot-sppo4.webp" alt="Short-period sensitivity plot" loading="lazy" /></figure>
-      <figure class="exp-slide" data-slide="4"><img src="assets/images/projects/fyp/plot-phu1.webp" alt="Phugoid sensitivity plot" loading="lazy" /></figure>
-      <figure class="exp-slide" data-slide="5"><img src="assets/images/projects/fyp/plot-phu2.webp" alt="Phugoid sensitivity plot" loading="lazy" /></figure>
-      <figure class="exp-slide" data-slide="6"><img src="assets/images/projects/fyp/plot-dutchroll1.webp" alt="Dutch-roll sensitivity plot" loading="lazy" /></figure>
-      <figure class="exp-slide" data-slide="7"><img src="assets/images/projects/fyp/plot-roll1.webp" alt="Roll-subsidence sensitivity plot" loading="lazy" /></figure>
-      <figure class="exp-slide" data-slide="8"><img src="assets/images/projects/fyp/plot-spiral.webp" alt="Spiral-mode sensitivity plot" loading="lazy" /></figure>
+      <figure class="exp-slide is-active" data-slide="0"><img src="assets/images/projects/fyp/g1.webp" alt="UAV fabrication" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="1"><img src="assets/images/projects/fyp/g2.webp" alt="UAV fabrication" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="2"><img src="assets/images/projects/fyp/g3.webp" alt="UAV fabrication" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="3"><img src="assets/images/projects/fyp/g4.webp" alt="UAV fabrication" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="4"><img src="assets/images/projects/fyp/g5.webp" alt="UAV fabrication" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="5"><img src="assets/images/projects/fyp/fyp2.webp" alt="UAV fabrication" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="6"><img src="assets/images/projects/fyp/fyp5.webp" alt="UAV fabrication" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="7"><img src="assets/images/projects/fyp/fyp6.webp" alt="UAV fabrication" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="8"><img src="assets/images/projects/fyp/fyp7.webp" alt="UAV fabrication" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="9"><img src="assets/images/projects/fyp/fyp9.webp" alt="UAV fabrication" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="10"><img src="assets/images/projects/fyp/fyp3.webp" alt="UAV fabrication" loading="lazy" /></figure>
     </div>
     <button class="exp-slide-nav previous" type="button" data-slide-prev aria-label="Previous image">&#8592;</button>
     <button class="exp-slide-nav next" type="button" data-slide-next aria-label="Next image">&#8594;</button>
     <div class="exp-slide-dots" role="tablist">
-      <button class="exp-dot is-active" type="button" data-slide-to="0" role="tab" aria-label="Image 1 of 9"></button>
-      <button class="exp-dot" type="button" data-slide-to="1" role="tab" aria-label="Image 2 of 9"></button>
-      <button class="exp-dot" type="button" data-slide-to="2" role="tab" aria-label="Image 3 of 9"></button>
-      <button class="exp-dot" type="button" data-slide-to="3" role="tab" aria-label="Image 4 of 9"></button>
-      <button class="exp-dot" type="button" data-slide-to="4" role="tab" aria-label="Image 5 of 9"></button>
-      <button class="exp-dot" type="button" data-slide-to="5" role="tab" aria-label="Image 6 of 9"></button>
-      <button class="exp-dot" type="button" data-slide-to="6" role="tab" aria-label="Image 7 of 9"></button>
-      <button class="exp-dot" type="button" data-slide-to="7" role="tab" aria-label="Image 8 of 9"></button>
-      <button class="exp-dot" type="button" data-slide-to="8" role="tab" aria-label="Image 9 of 9"></button>
+      <button class="exp-dot is-active" type="button" data-slide-to="0" role="tab" aria-label="Image 1 of 11"></button>
+      <button class="exp-dot" type="button" data-slide-to="1" role="tab" aria-label="Image 2 of 11"></button>
+      <button class="exp-dot" type="button" data-slide-to="2" role="tab" aria-label="Image 3 of 11"></button>
+      <button class="exp-dot" type="button" data-slide-to="3" role="tab" aria-label="Image 4 of 11"></button>
+      <button class="exp-dot" type="button" data-slide-to="4" role="tab" aria-label="Image 5 of 11"></button>
+      <button class="exp-dot" type="button" data-slide-to="5" role="tab" aria-label="Image 6 of 11"></button>
+      <button class="exp-dot" type="button" data-slide-to="6" role="tab" aria-label="Image 7 of 11"></button>
+      <button class="exp-dot" type="button" data-slide-to="7" role="tab" aria-label="Image 8 of 11"></button>
+      <button class="exp-dot" type="button" data-slide-to="8" role="tab" aria-label="Image 9 of 11"></button>
+      <button class="exp-dot" type="button" data-slide-to="9" role="tab" aria-label="Image 10 of 11"></button>
+      <button class="exp-dot" type="button" data-slide-to="10" role="tab" aria-label="Image 11 of 11"></button>
     </div>
   </div>
-</section>
-
-<section class="experience-section-card has-slideshow">
-  <h2>Fabrication of the UAV and Integration of the APM 2.8 Flight Controller</h2>
   <h3>Purpose of UAV Fabrication</h3>
   <p>
     A physical fixed-wing UAV was fabricated to support experimental flight testing and validate the dynamic behaviour predicted by the developed framework. The aircraft was designed as a lightweight conventional UAV with sufficient structural strength and internal space for the propulsion system, flight controller, receiver, sensors, battery, and data-acquisition equipment.
@@ -338,40 +397,32 @@
   <p>
     Before flight, the control-surface directions, servo operation, motor response, radio range, centre of gravity position, structural connections, sensor calibration, and APM flight modes were checked. Taxi and low-speed tests were also conducted to confirm directional control and propulsion performance. These checks ensured that the aircraft was structurally secure, correctly balanced, and ready for the initial flight-test programme.
   </p>
-  <div class="exp-media experience-media-slideshow is-uncropped" data-slideshow>
+</section>
+
+<section class="experience-section-card media-top">
+  <h2>Flight-Data Pre-Processing and Validation Using the Blu-Baby Aircraft</h2>
+<div class="exp-media experience-media-slideshow is-uncropped" data-slideshow>
     <div class="exp-slides">
-      <figure class="exp-slide is-active" data-slide="0"><img src="assets/images/projects/fyp/g1.webp" alt="UAV fabrication" loading="lazy" /></figure>
-      <figure class="exp-slide" data-slide="1"><img src="assets/images/projects/fyp/g2.webp" alt="UAV fabrication" loading="lazy" /></figure>
-      <figure class="exp-slide" data-slide="2"><img src="assets/images/projects/fyp/g3.webp" alt="UAV fabrication" loading="lazy" /></figure>
-      <figure class="exp-slide" data-slide="3"><img src="assets/images/projects/fyp/g4.webp" alt="UAV fabrication" loading="lazy" /></figure>
-      <figure class="exp-slide" data-slide="4"><img src="assets/images/projects/fyp/g5.webp" alt="UAV fabrication" loading="lazy" /></figure>
-      <figure class="exp-slide" data-slide="5"><img src="assets/images/projects/fyp/fyp2.webp" alt="UAV fabrication" loading="lazy" /></figure>
-      <figure class="exp-slide" data-slide="6"><img src="assets/images/projects/fyp/fyp5.webp" alt="UAV fabrication" loading="lazy" /></figure>
-      <figure class="exp-slide" data-slide="7"><img src="assets/images/projects/fyp/fyp6.webp" alt="UAV fabrication" loading="lazy" /></figure>
-      <figure class="exp-slide" data-slide="8"><img src="assets/images/projects/fyp/fyp7.webp" alt="UAV fabrication" loading="lazy" /></figure>
-      <figure class="exp-slide" data-slide="9"><img src="assets/images/projects/fyp/fyp9.webp" alt="UAV fabrication" loading="lazy" /></figure>
-      <figure class="exp-slide" data-slide="10"><img src="assets/images/projects/fyp/fyp3.webp" alt="UAV fabrication" loading="lazy" /></figure>
+      <figure class="exp-slide is-active" data-slide="0"><img src="assets/images/projects/fyp/fyp3.webp" alt="Flight-data validation" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="1"><img src="assets/images/projects/fyp/fyp8.webp" alt="Recorded flight response" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="2"><img src="assets/images/projects/fyp/res.webp" alt="Modal identification result" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="3"><img src="assets/images/projects/fyp/response.webp" alt="Measured pitch response" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="4"><img src="assets/images/projects/fyp/d2p.webp" alt="Elevator-doublet response" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="5"><img src="assets/images/projects/fyp/d2.webp" alt="Elevator-doublet response" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="6"><img src="assets/images/projects/fyp/data_2.webp" alt="Recorded flight data" loading="lazy" /></figure>
     </div>
     <button class="exp-slide-nav previous" type="button" data-slide-prev aria-label="Previous image">&#8592;</button>
     <button class="exp-slide-nav next" type="button" data-slide-next aria-label="Next image">&#8594;</button>
     <div class="exp-slide-dots" role="tablist">
-      <button class="exp-dot is-active" type="button" data-slide-to="0" role="tab" aria-label="Image 1 of 11"></button>
-      <button class="exp-dot" type="button" data-slide-to="1" role="tab" aria-label="Image 2 of 11"></button>
-      <button class="exp-dot" type="button" data-slide-to="2" role="tab" aria-label="Image 3 of 11"></button>
-      <button class="exp-dot" type="button" data-slide-to="3" role="tab" aria-label="Image 4 of 11"></button>
-      <button class="exp-dot" type="button" data-slide-to="4" role="tab" aria-label="Image 5 of 11"></button>
-      <button class="exp-dot" type="button" data-slide-to="5" role="tab" aria-label="Image 6 of 11"></button>
-      <button class="exp-dot" type="button" data-slide-to="6" role="tab" aria-label="Image 7 of 11"></button>
-      <button class="exp-dot" type="button" data-slide-to="7" role="tab" aria-label="Image 8 of 11"></button>
-      <button class="exp-dot" type="button" data-slide-to="8" role="tab" aria-label="Image 9 of 11"></button>
-      <button class="exp-dot" type="button" data-slide-to="9" role="tab" aria-label="Image 10 of 11"></button>
-      <button class="exp-dot" type="button" data-slide-to="10" role="tab" aria-label="Image 11 of 11"></button>
+      <button class="exp-dot is-active" type="button" data-slide-to="0" role="tab" aria-label="Image 1 of 7"></button>
+      <button class="exp-dot" type="button" data-slide-to="1" role="tab" aria-label="Image 2 of 7"></button>
+      <button class="exp-dot" type="button" data-slide-to="2" role="tab" aria-label="Image 3 of 7"></button>
+      <button class="exp-dot" type="button" data-slide-to="3" role="tab" aria-label="Image 4 of 7"></button>
+      <button class="exp-dot" type="button" data-slide-to="4" role="tab" aria-label="Image 5 of 7"></button>
+      <button class="exp-dot" type="button" data-slide-to="5" role="tab" aria-label="Image 6 of 7"></button>
+      <button class="exp-dot" type="button" data-slide-to="6" role="tab" aria-label="Image 7 of 7"></button>
     </div>
   </div>
-</section>
-
-<section class="experience-section-card has-slideshow">
-  <h2>Flight-Data Pre-Processing and Validation Using the Blu-Baby Aircraft</h2>
   <h3>Limitations of the Initial Data-Collection Method</h3>
   <p>
     The APM 2.8 was initially used for recording the UAV&rsquo;s flight response. However, <strong>its effective sampling rate and onboard memory were insufficient for reliably capturing rapid short-period oscillations</strong>. A considerable portion of the available recording time was also required for take-off, trimming, and positioning the aircraft before the test manoeuvres. To overcome these limitations, an independent Arduino-based data-acquisition system was developed.
@@ -443,27 +494,22 @@
   <p>
     The final workflow combined IMU measurement, Kalman filtering, toggle-switch input identification, data-window extraction, FFT analysis, and Prony-based modal identification. This enabled the experimental short-period response to be compared with the predictions of the developed flight-dynamics framework.
   </p>
-  <div class="exp-media experience-media-slideshow is-uncropped" data-slideshow>
-    <div class="exp-slides">
-      <figure class="exp-slide is-active" data-slide="0"><img src="assets/images/projects/fyp/fyp3.webp" alt="Flight-data validation" loading="lazy" /></figure>
-      <figure class="exp-slide" data-slide="1"><img src="assets/images/projects/fyp/fyp8.webp" alt="Recorded flight response" loading="lazy" /></figure>
-      <figure class="exp-slide" data-slide="2"><img src="assets/images/projects/fyp/res.webp" alt="Modal identification result" loading="lazy" /></figure>
-      <figure class="exp-slide" data-slide="3"><img src="assets/images/projects/fyp/response.webp" alt="Measured pitch response" loading="lazy" /></figure>
-      <figure class="exp-slide" data-slide="4"><img src="assets/images/projects/fyp/d2p.webp" alt="Elevator-doublet response" loading="lazy" /></figure>
-      <figure class="exp-slide" data-slide="5"><img src="assets/images/projects/fyp/d2.webp" alt="Elevator-doublet response" loading="lazy" /></figure>
-      <figure class="exp-slide" data-slide="6"><img src="assets/images/projects/fyp/data_2.webp" alt="Recorded flight data" loading="lazy" /></figure>
-    </div>
-    <button class="exp-slide-nav previous" type="button" data-slide-prev aria-label="Previous image">&#8592;</button>
-    <button class="exp-slide-nav next" type="button" data-slide-next aria-label="Next image">&#8594;</button>
-    <div class="exp-slide-dots" role="tablist">
-      <button class="exp-dot is-active" type="button" data-slide-to="0" role="tab" aria-label="Image 1 of 7"></button>
-      <button class="exp-dot" type="button" data-slide-to="1" role="tab" aria-label="Image 2 of 7"></button>
-      <button class="exp-dot" type="button" data-slide-to="2" role="tab" aria-label="Image 3 of 7"></button>
-      <button class="exp-dot" type="button" data-slide-to="3" role="tab" aria-label="Image 4 of 7"></button>
-      <button class="exp-dot" type="button" data-slide-to="4" role="tab" aria-label="Image 5 of 7"></button>
-      <button class="exp-dot" type="button" data-slide-to="5" role="tab" aria-label="Image 6 of 7"></button>
-      <button class="exp-dot" type="button" data-slide-to="6" role="tab" aria-label="Image 7 of 7"></button>
-    </div>
+</section>
+
+<section class="experience-section-card experience-poster-card">
+  <h2>Project Poster, Report and Publication</h2>
+  <p>
+    The research poster below summarises the framework, the sensitivity study, the fabricated aircraft, and the
+    experimental modal-identification results on a single sheet. Full-resolution versions of the poster and the
+    complete final report are available to download.
+  </p>
+  <figure class="experience-poster-figure">
+    <img src="assets/images/projects/fyp/poster-full.webp" alt="Final-year project research poster" loading="lazy" />
+  </figure>
+  <div class="experience-page-cta">
+    <a class="btn btn-primary" href="assets/docs/uav-flight-dynamics-poster.pdf" target="_blank" rel="noopener">View full-resolution poster (PDF)</a>
+    <a class="btn btn-outline" href="assets/docs/uav-flight-dynamics-final-report.pdf" target="_blank" rel="noopener">View full final report (PDF)</a>
+    <a class="btn btn-outline" href="https://www.linkedin.com/in/manitha-pasandul/" target="_blank" rel="noopener noreferrer">View the project on LinkedIn</a>
   </div>
 </section>
 
@@ -485,6 +531,6 @@
     </div>
   </footer>
 
-  <script src="js/detail-page.js?v=31"></script>
+  <script src="js/detail-page.js?v=32"></script>
 </body>
 </html>

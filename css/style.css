@@ -1518,6 +1518,43 @@ h1, h2, h3, h4 {
   margin-top: 16px;
 }
 
+/* Media above the copy, spanning the card. The text is then held to a
+   readable measure rather than running the full width — at 1070px a line
+   runs to about 120 characters, well past comfortable reading. */
+.experience-section-card.media-top > .experience-media-slideshow {
+  position: static;
+  width: 100%;
+  max-width: 74ch;
+  margin: 0 0 26px;
+}
+
+.experience-section-card.media-top > p,
+.experience-section-card.media-top > h3,
+.experience-section-card.media-top > .experience-key-list,
+.experience-section-card.media-top > .experience-step-list,
+.experience-section-card.media-top > .experience-finding {
+  max-width: 74ch;
+}
+
+/* Poster card: portrait sheet shown large, with its downloads beneath. */
+.experience-poster-figure {
+  margin: 22px 0;
+  max-width: 620px;
+}
+
+.experience-poster-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-alt);
+}
+
+.experience-poster-card .experience-page-cta {
+  margin-top: 4px;
+}
+
 /* The roster poster is portrait and text-dense, so it is centred at its own
    aspect ratio rather than cropped into a slideshow frame. */
 .experience-team-figure {
