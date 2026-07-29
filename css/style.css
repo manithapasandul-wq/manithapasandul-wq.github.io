@@ -1521,19 +1521,14 @@ h1, h2, h3, h4 {
 /* Media above the copy, spanning the card. The text is then held to a
    readable measure rather than running the full width — at 1070px a line
    runs to about 120 characters, well past comfortable reading. */
+/* Centred above the copy. This must stay position: relative — the nav
+   arrows and dots are absolutely positioned against it, and switching it to
+   static resolves them against a distant ancestor instead. */
 .experience-section-card.media-top > .experience-media-slideshow {
-  position: static;
+  position: relative;
   width: 100%;
-  max-width: 74ch;
-  margin: 0 0 26px;
-}
-
-.experience-section-card.media-top > p,
-.experience-section-card.media-top > h3,
-.experience-section-card.media-top > .experience-key-list,
-.experience-section-card.media-top > .experience-step-list,
-.experience-section-card.media-top > .experience-finding {
-  max-width: 74ch;
+  max-width: 780px;
+  margin: 0 auto 26px;
 }
 
 /* Poster card: portrait sheet shown large, with its downloads beneath. */
