@@ -1107,7 +1107,8 @@ h1, h2, h3, h4 {
   margin-top: 14px;
 }
 
-.full-experience-hero.has-media > .full-experience-lead {
+.full-experience-hero.has-media > .full-experience-lead,
+.full-experience-hero-body > .full-experience-lead {
   max-width: none;
 }
 
@@ -1388,8 +1389,13 @@ h1, h2, h3, h4 {
 
 .experience-section-card.has-slideshow > h2,
 .experience-section-card.has-slideshow > p,
+.experience-section-card.has-slideshow > .experience-tag-row,
 .experience-section-card.has-slideshow > .experience-key-list {
   grid-column: 1;
+}
+
+.experience-section-card .experience-tag-row {
+  margin-top: 16px;
 }
 
 /* Cards that carry a paragraph as well as a list need the slideshow to span
