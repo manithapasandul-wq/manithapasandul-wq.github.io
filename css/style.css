@@ -1105,15 +1105,20 @@ h1, h2, h3, h4 {
   min-width: 0;
 }
 
-/* Specificity has to clear .exp-media's own position: relative. */
 .full-experience-hero.has-media > .full-experience-hero-media {
   margin: 6px 0 0;
-  position: sticky;
-  top: calc(var(--header-h) + 18px);
 }
 
 .full-experience-lead-list {
   margin: 14px 0 18px;
+}
+
+/* Opt-in justified body copy, per page. */
+.justify-copy .full-experience-lead,
+.justify-copy .experience-section-card p,
+.justify-copy .experience-key-list li {
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .full-experience-lead-list li {
@@ -1268,6 +1273,11 @@ h1, h2, h3, h4 {
   grid-template-columns: minmax(0, 1.55fr) minmax(250px, 0.65fr);
   gap: 28px;
   align-items: start;
+}
+
+/* Pages with no facts sidebar give the cards the full width. */
+.full-experience-layout.is-single-column {
+  grid-template-columns: minmax(0, 1fr);
 }
 
 .full-experience-content {
@@ -1562,8 +1572,8 @@ h1, h2, h3, h4 {
     margin-top: 18px;
   }
 
-  .full-experience-hero.has-media > .full-experience-hero-media {
-    position: relative;
+  .full-experience-layout.is-single-column {
+    grid-template-columns: 1fr;
   }
 
   .experience-media-pair img {
