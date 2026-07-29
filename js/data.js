@@ -423,6 +423,8 @@ const PORTFOLIO_DATA = {
     },
     {
       category: "Aerodynamics & CFD",
+      // Single full-width cards, matching the other project sections.
+      layout: "single",
       projects: [
         {
           id: "nrel-s809",
@@ -465,8 +467,13 @@ const PORTFOLIO_DATA = {
           title: "Four-Element Formula Student Front Wing Optimisation",
           summary:
             "CFD-driven aerodynamic design of a four-element front wing for Falcon E Racing\u2019s E2 vehicle, optimised using a Multi-Objective Genetic Algorithm.",
-          tools: ["ANSYS Fluent", "MOGA", "CAD", "Carbon Fibre"],
+          cardSummary: [
+            "Aerodynamically designed and optimised a four-element front wing for the Formula Student car using two-dimensional steady-state CFD simulations in ANSYS Fluent, developed within the regulation-defined 250 mm height limit for aerodynamic devices ahead of the front tyre. The computational domain included the front section of the tyre with a rotating-wall boundary condition, capturing the interaction between the front-wing wake, ground effect, and tyre flow field. The k\u2013\u03c9 SST turbulence model was used so the boundary layer across each slot gap was resolved rather than modelled.",
+            "A staged Multi-Objective Genetic Algorithm process optimised ground clearance and angles of attack, then the element gaps, then the overlaps, repeating until the downforce converged. The final configuration generated 227.49 N/m of downforce against 44.9 N/m of drag \u2014 an aerodynamic efficiency of C\u2097/C\u2094 = 5.066 \u2014 while directing airflow over the front tyre to reduce wake formation and tyre-induced drag.",
+          ],
+          tools: ["ANSYS Fluent", "MOGA", "k\u2013\u03c9 SST", "CAD", "Carbon Fibre"],
           image: "assets/images/projects/falcon-aero/cfd-multi-element.webp",
+          imageFit: "contain",
           detailPage: "falcon-e-racing.html#aerodynamic-design",
           detailPageLabel: "Explore the full project",
           cardLinksToPage: true,
