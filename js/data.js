@@ -634,8 +634,16 @@ const PORTFOLIO_DATA = {
           title: "Experimental and Numerical Stress Analysis of a Rectangular Wing",
           summary:
             "Strain-gauge testing and ANSYS Static Structural modelling of a rectangular wing under front- and rear-spar tip loads, used to select a landing-gear mounting location.",
-          tools: ["ANSYS Static Structural", "SolidWorks", "Strain Gauges"],
-          image: "assets/images/experience/srilankan/structural-doubler.webp",
+          cardSummary: [
+            "Investigated how the location of a concentrated landing-gear-type load affects the stress distribution within a rectangular wing structure, comparing a 133.45 N load applied at the front-spar tip against the same load at the rear-spar tip. The structural response was studied using both experimental strain measurements and finite element analysis, to compare load transfer through the spars, ribs, and skin panels.",
+            "Strain-gauge and rosette readings were processed through strain-transformation relationships and Mohr’s circle, while a simplified SolidWorks model was analysed in ANSYS Static Structural after a mesh-independence study. Moving the load aft reduced the maximum measured stress by about 16.5%, and the rear spar was recommended as the more suitable landing-gear mounting location.",
+          ],
+          tools: ["ANSYS Static Structural", "SolidWorks", "Strain Gauges", "Mohr’s Circle", "Aluminium 6061-T6"],
+          image: "assets/images/projects/wing-stress/fea-5.webp",
+          imageFit: "contain",
+          detailPage: "wing-stress-analysis.html",
+          detailPageLabel: "Explore the full project",
+          cardLinksToPage: true,
           objectives: [
             "Compare how a concentrated landing-gear-type load transfers through the spars, ribs, and skin when applied at the front- versus rear-spar tip.",
             "Validate a finite element model of the wing against experimental strain measurements.",
