@@ -21,20 +21,20 @@ const PORTFOLIO_DATA = {
   // REPLACE-ME: swap intro copy, image, and links with the real profile.
   profile: {
     name: "Manitha Pasandul",
-    title: "Final-Year Mechanical Engineering Undergraduate | Aeronautical Engineering",
+    title: "Final-Year Aeronautical Engineering Undergraduate",
     tagline:
-      "Aspiring aerospace engineer and researcher with interests in flight dynamics, aerospace propulsion, computational aerodynamics, and experimental aerospace engineering.",
+      "Aspiring aeronautical engineer and researcher with interests in aerospace propulsion, space science and engineering, hypersonic aerodynamics, aeroelasticity, flight dynamics, and computational aerodynamics.",
     intro:
       "I am a final-year Mechanical Engineering undergraduate at the University of Moratuwa, specialising in Aeronautical Engineering. My work combines simulation, experimental validation, and practical engineering design across flight dynamics, propulsion, aerodynamics, and aircraft systems.",
     location: "Sri Lanka",
-    email: "manitha.pasandul@example.com", // Replace with your current email
+    email: "manthapasandul@gmail.com",
     phone: "+94 77 000 0000", // Replace with your current phone number
     // REPLACE-ME: this still points at the sample CV carried over from the
     // source repo — drop your real CV into assets/cv/ and update this path.
     cvUrl: "assets/cv/Manitha_Pasandul_Sample_CV.pdf",
     profileImage: "assets/images/profile.jpg",
     socials: {
-      linkedin: "https://linkedin.com/in/example-profile", // Replace with your LinkedIn URL
+      linkedin: "https://www.linkedin.com/in/manitha-pasandul/",
       github: "https://github.com/manithapasandul-wq",
       twitter: "https://twitter.com/example-profile", // Replace or remove if unused
       instagram: "https://instagram.com/example-profile", // Replace or remove if unused
@@ -51,10 +51,10 @@ const PORTFOLIO_DATA = {
       "Looking ahead, I aim to build on this foundation through research in high-speed and hypersonic aerodynamics, aeroelasticity, propulsion and combustion systems, and flight dynamics and control. I am particularly interested in combining computational and experimental methods to analyse and optimise advanced aerospace systems. I am currently seeking research assistant, MSc, or PhD opportunities where I can develop this expertise at a deeper and more specialised level.",
     ],
     stats: [
-      { value: "3.8", label: "Final CGPA" },
-      { value: "6+", label: "Major Aerospace Projects" },
-      { value: "6 Months", label: "Aircraft Engineering Training" },
-      { value: "4", label: "Dean’s List Semesters" },
+      { value: "3.80/4", label: "Final CGPA" },
+      { value: "6+", label: "Major Projects" },
+      { value: "6 Months", label: "Aeronautical Engineering Training" },
+      { value: "5", label: "Dean’s List Semesters" },
     ],
   },
 
@@ -67,7 +67,7 @@ const PORTFOLIO_DATA = {
       period: "2022 — 2026",
       classification: "First Class Division | GPA: 3.8/4.00",
       highlights: [
-        "Dean’s List recognition in Semesters 2, 4, 6, and 7.",
+        "Dean’s List recognition in Semesters 2, 4, 6, 7, and 8.",
         "Final-year research focused on parametric sensitivity analysis and fine-tuning of fixed-wing UAV flight dynamics.",
         "Academic and project experience in CFD, FEA, CAD, MATLAB, flight testing, structural analysis, and propulsion systems.",
       ],
@@ -659,83 +659,6 @@ const PORTFOLIO_DATA = {
     },
   ],
 
-  // Photo gallery — every image supplied in the source image set.
-  photoGallery: [
-    { src: "assets/images/experience/srilankan/cockpit.webp", caption: "Airbus cockpit familiarisation", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/training-centre.webp", caption: "SriLankan Airlines training centre", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/training-team.webp", caption: "Engineering training team", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/hangar.webp", caption: "Wide-body base-maintenance hangar", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/engine-shop.webp", caption: "Engines under overhaul in the engine workshop", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/engine-module.webp", caption: "Beside a turbofan engine", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/engine-module-work.webp", caption: "Technicians working on an engine module", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/engine-inspection.webp", caption: "Borescope inspection of an engine", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/trent-fan-work.webp", caption: "Rolls-Royce Trent 700 fan blades removed for replacement", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/borescope.webp", caption: "Borescope inspection display", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/wheel-stand.webp", caption: "Aircraft wheel unit on the assembly stand", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/wheel-assembly.webp", caption: "Assembling the wheel hub onto the tyre", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/tyre-fitting.webp", caption: "Fitting the wheel hub into an aircraft tyre", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/wheel-hub.webp", caption: "Dismantled wheel hub with drive keys", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/bearing-grease.webp", caption: "High-temperature bearing grease application", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/tyre-store.webp", caption: "Aircraft tyres awaiting fitment", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/slide-raft.webp", caption: "Slide raft inflated for leakage inspection", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/life-jackets.webp", caption: "Life jackets folded for inspection and vacuum packing", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/safety-label.webp", caption: "Serviceable label recording part number, serial number and expiry", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/composite-repair.webp", caption: "Vacuum-bagging a composite repair", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/composite-patch.webp", caption: "Carbon-fibre repair patch bonded and taped for curing", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/structural-repair.webp", caption: "Riveted doubler repair masked for corrosion protection", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/structural-doubler.webp", caption: "Fuselage skin repair pinned out with clecos", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/sheet-metal-equipment.webp", caption: "Sheet-metal forming equipment", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/hydraulic-press.webp", caption: "Hydraulic press in the structural workshop", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/ndt-wheel.webp", caption: "Eddy-current inspection of a wheel hub", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/ndt-uv.webp", caption: "Fluorescent penetrant indications under ultraviolet light", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/penetrant-booth.webp", caption: "Wheel hub under ultraviolet examination in the penetrant booth", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/magnetic-particle.webp", caption: "Magnetic-particle inspection coil fixture", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/actuator-test-rig.webp", caption: "Rudder actuator hydraulic test rig", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/accessories-bench.webp", caption: "Line-replaceable unit test bench", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/battery-maintenance.webp", caption: "Battery charging and analysing rack", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/srilankan/battery-cells.webp", caption: "Aircraft Nickel–Cadmium battery cells", group: "SriLankan Airlines Engineering" },
-    { src: "assets/images/experience/falcon/e2-night.webp", caption: "E2 with its completed aerodynamic package", group: "Falcon E Racing" },
-    { src: "assets/images/experience/falcon/e2-track.webp", caption: "E2 during track testing", group: "Falcon E Racing" },
-    { src: "assets/images/experience/falcon/e2-rear-view.webp", caption: "Rear aerodynamic package on track", group: "Falcon E Racing" },
-    { src: "assets/images/experience/falcon/e2-display.webp", caption: "E2 on public display", group: "Falcon E Racing" },
-    { src: "assets/images/experience/falcon/vehicle-launch.webp", caption: "E2 vehicle launch — Unleashed 2G", group: "Falcon E Racing" },
-    { src: "assets/images/experience/falcon/aero-component.webp", caption: "Carbon-composite aerodynamic element", group: "Falcon E Racing" },
-    { src: "assets/images/experience/falcon/wing-assembly.webp", caption: "Multi-element wing assembly with 3D-printed ribs", group: "Falcon E Racing" },
-    { src: "assets/images/experience/falcon/carbon-body.webp", caption: "Carbon-composite body panel", group: "Falcon E Racing" },
-    { src: "assets/images/experience/falcon/mould-team.webp", caption: "Aerodynamics team with the fibreglass moulds", group: "Falcon E Racing" },
-    { src: "assets/images/experience/falcon/fibreglass-mould.webp", caption: "Prepared fibreglass mould", group: "Falcon E Racing" },
-    { src: "assets/images/experience/falcon/fibreglass-layup.webp", caption: "Fibreglass layup during mould fabrication", group: "Falcon E Racing" },
-    { src: "assets/images/projects/falcon-aero/cfd-multi-element.webp", caption: "Velocity contours around the four-element front wing", group: "Formula Student Aerodynamics" },
-    { src: "assets/images/projects/falcon-aero/cfd-wing-tyre.webp", caption: "Front-wing wake interacting with the rotating tyre", group: "Formula Student Aerodynamics" },
-    { src: "assets/images/projects/falcon-aero/cfd-wing-contour.webp", caption: "Velocity field across the wing elements", group: "Formula Student Aerodynamics" },
-    { src: "assets/images/projects/falcon-aero/cfd-tyre-domain.webp", caption: "Full computational domain with the tyre", group: "Formula Student Aerodynamics" },
-    { src: "assets/images/projects/falcon-aero/front-wing-cad.webp", caption: "Dimensioned four-element front-wing geometry", group: "Formula Student Aerodynamics" },
-    { src: "assets/images/projects/falcon-aero/moga-design-table.webp", caption: "Multi-Objective Genetic Algorithm design points", group: "Formula Student Aerodynamics" },
-    { src: "assets/images/projects/falcon-aero/downforce-convergence.webp", caption: "Downforce convergence history", group: "Formula Student Aerodynamics" },
-    { src: "assets/images/projects/fyp/uav-flight.webp", caption: "The fabricated UAV in flight", group: "Final Year Project" },
-    { src: "assets/images/projects/fyp/uav-field.webp", caption: "The completed 2.5 m span UAV before a test flight", group: "Final Year Project" },
-    { src: "assets/images/projects/fyp/uav-front.webp", caption: "UAV front view on the test field", group: "Final Year Project" },
-    { src: "assets/images/projects/fyp/wing-ribs.webp", caption: "Laser-cut plywood ribs on the carbon-fibre spar", group: "Final Year Project" },
-    { src: "assets/images/projects/fyp/printed-pod.webp", caption: "3D-printed fuselage pod", group: "Final Year Project" },
-    { src: "assets/images/projects/fyp/printed-parts.webp", caption: "3D-printed airframe components", group: "Final Year Project" },
-    { src: "assets/images/projects/fyp/blubaby-flight.webp", caption: "Blu-Baby validation aircraft in flight", group: "Final Year Project" },
-    { src: "assets/images/projects/fyp/test-flight.webp", caption: "Flight testing in progress", group: "Final Year Project" },
-    { src: "assets/images/projects/fyp/team-presentation.webp", caption: "Project presentation with the UAV", group: "Final Year Project" },
-    { src: "assets/images/projects/fyp/poster.webp", caption: "Final-year project research poster", group: "Final Year Project" },
-    { src: "assets/images/projects/cfd/velocity-contour.webp", caption: "Velocity magnitude around the NREL S809 aerofoil", group: "CFD Analysis" },
-    { src: "assets/images/projects/cfd/pressure-contour.webp", caption: "Static pressure distribution around the aerofoil", group: "CFD Analysis" },
-    { src: "assets/images/projects/cfd/velocity-contour-high-aoa.webp", caption: "Velocity field approaching stall", group: "CFD Analysis" },
-    { src: "assets/images/projects/cfd/pressure-contour-high-aoa.webp", caption: "Static pressure field approaching stall", group: "CFD Analysis" },
-    { src: "assets/images/projects/cfd/mesh-overview.webp", caption: "Structured C-type mesh around the aerofoil", group: "CFD Analysis" },
-    { src: "assets/images/projects/cfd/mesh-near-wall.webp", caption: "Near-wall mesh refinement at the aerofoil surface", group: "CFD Analysis" },
-    { src: "assets/images/projects/cfd/domain-boundary-conditions.webp", caption: "Computational domain and boundary conditions", group: "CFD Analysis" },
-    { src: "assets/images/projects/cfd/cl-convergence.webp", caption: "Lift-coefficient convergence history", group: "CFD Analysis" },
-    { src: "assets/images/projects/cfd/cd-convergence.webp", caption: "Drag-coefficient convergence history", group: "CFD Analysis" },
-    { src: "assets/images/projects/cfd/ld-convergence.webp", caption: "Lift-to-drag ratio convergence history", group: "CFD Analysis" },
-    { src: "assets/images/projects/cfd/residuals.webp", caption: "Solution residuals", group: "CFD Analysis" },
-    { src: "assets/images/projects/propeller/propeller-render.webp", caption: "SolidWorks model of the two-bladed propeller", group: "Propeller Design" },
-    { src: "assets/images/projects/propeller/propeller-hub.webp", caption: "Propeller hub and blade root geometry", group: "Propeller Design" },
-  ],
 
   awards: [
     {
@@ -750,7 +673,7 @@ const PORTFOLIO_DATA = {
       organisation: "Faculty of Engineering, University of Moratuwa",
       year: "2022 \u2014 2026",
       description:
-        "Named to the Dean\u2019s List for academic performance in Semesters 2, 4, 6, and 7.",
+        "Named to the Dean\u2019s List for academic performance in Semesters 2, 4, 6, 7, and 8.",
     },
     {
       title: "Island Rank 684 \u2014 G.C.E. Advanced Level",
@@ -776,11 +699,13 @@ const PORTFOLIO_DATA = {
   ],
 
   interests: [
-    { name: "High-Speed & Hypersonic Aerodynamics", icon: "wind" },
-    { name: "Aeroelasticity", icon: "cube" },
-    { name: "Propulsion & Combustion Systems", icon: "sun" },
-    { name: "Flight Dynamics & Control", icon: "send" },
-    { name: "Experimental Aerospace Testing", icon: "camera" },
-    { name: "Design, Fabrication & Flight Testing", icon: "printer" },
+    { name: "Computational Aerodynamics (CFD)", icon: "wind" },
+    { name: "Flight Dynamics and Control", icon: "send" },
+    { name: "Hypersonic Aerodynamics & Aerothermodynamics", icon: "hypersonic" },
+    { name: "Aeroelasticity & Fluid-Structure Interaction", icon: "aeroelastic" },
+    { name: "Aerospace Propulsion", icon: "rocket" },
+    { name: "Turbomachinery", icon: "turbine" },
+    { name: "Aeroacoustics", icon: "acoustics" },
+    { name: "Space Systems Engineering", icon: "satellite" },
   ],
 };

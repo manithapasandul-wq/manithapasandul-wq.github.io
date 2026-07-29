@@ -162,6 +162,17 @@
     $("#hero-linkedin-btn").href = profile.socials.linkedin;
     $("#contact-linkedin-btn").href = profile.socials.linkedin;
 
+    // LinkedIn and email shown as text links directly under the tagline.
+    $("#hero-contact").innerHTML = `
+      <a class="hero-contact-link" href="${profile.socials.linkedin}" target="_blank" rel="noopener noreferrer">
+        <svg class="icon" aria-hidden="true"><use href="#icon-linkedin"/></svg>
+        <span>${profile.socials.linkedin.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "")}</span>
+      </a>
+      <a class="hero-contact-link" href="mailto:${profile.email}">
+        <svg class="icon" aria-hidden="true"><use href="#icon-mail"/></svg>
+        <span>${profile.email}</span>
+      </a>`;
+
     $("#hero-email-btn").href = `mailto:${profile.email}`;
     $("#contact-email-btn").href = `mailto:${profile.email}`;
     $("#contact-email-text").textContent = profile.email;
@@ -511,113 +522,6 @@
   }
 
   /* ------------------------------------------------------------------ *
-   * RENDER: PHOTO GALLERY + LIGHTBOX
-   * ------------------------------------------------------------------ */
-  let galleryPhotos = [];
-  let lightboxIndex = 0;
-
-  function renderGallery() {
-    const grid = $("#gallery-grid");
-    const filterWrap = $("#gallery-filter");
-    if (!grid || !Array.isArray(PORTFOLIO_DATA.photoGallery)) return;
-
-    galleryPhotos = PORTFOLIO_DATA.photoGallery;
-
-    // one filter button per group, in first-seen order
-    const groups = [];
-    galleryPhotos.forEach((p) => {
-      if (p.group && !groups.includes(p.group)) groups.push(p.group);
-    });
-    groups.forEach((group) => {
-      const btn = document.createElement("button");
-      btn.className = "filter-btn";
-      btn.dataset.galleryFilter = slugify(group);
-      btn.textContent = group;
-      filterWrap.appendChild(btn);
-    });
-
-    grid.innerHTML = galleryPhotos
-      .map(
-        (photo, i) => `
-      <figure class="gallery-item reveal" data-group="${slugify(photo.group || "")}" data-index="${i}" tabindex="0" role="button" aria-label="${photo.caption}">
-        <img src="${photo.src}" alt="${photo.caption}" loading="lazy" />
-        <figcaption>${photo.caption}</figcaption>
-      </figure>`
-      )
-      .join("");
-
-    initRevealAnimations();
-
-    filterWrap.addEventListener("click", (e) => {
-      const btn = e.target.closest(".filter-btn");
-      if (!btn) return;
-      $$(".filter-btn", filterWrap).forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
-      const filter = btn.dataset.galleryFilter;
-      $$(".gallery-item", grid).forEach((item) => {
-        item.style.display = filter === "all" || item.dataset.group === filter ? "" : "none";
-      });
-    });
-
-    const open = (e) => {
-      const item = e.target.closest(".gallery-item");
-      if (!item) return;
-      openLightbox(Number(item.dataset.index));
-    };
-    grid.addEventListener("click", open);
-    grid.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        open(e);
-      }
-    });
-  }
-
-  function showLightboxPhoto(index) {
-    const photo = galleryPhotos[index];
-    if (!photo) return;
-    lightboxIndex = index;
-    $("#lightbox-img").src = photo.src;
-    $("#lightbox-img").alt = photo.caption;
-    $("#lightbox-caption").textContent = photo.caption;
-  }
-
-  function openLightbox(index) {
-    const overlay = $("#lightbox");
-    showLightboxPhoto(index);
-    overlay.classList.add("open");
-    overlay.setAttribute("aria-hidden", "false");
-    document.body.style.overflow = "hidden";
-  }
-
-  function closeLightbox() {
-    const overlay = $("#lightbox");
-    overlay.classList.remove("open");
-    overlay.setAttribute("aria-hidden", "true");
-    document.body.style.overflow = "";
-  }
-
-  function stepLightbox(delta) {
-    if (!galleryPhotos.length) return;
-    showLightboxPhoto((lightboxIndex + delta + galleryPhotos.length) % galleryPhotos.length);
-  }
-
-  function initLightbox() {
-    const overlay = $("#lightbox");
-    if (!overlay) return;
-    $("#lightbox-close").addEventListener("click", closeLightbox);
-    $("#lightbox-prev").addEventListener("click", () => stepLightbox(-1));
-    $("#lightbox-next").addEventListener("click", () => stepLightbox(1));
-    overlay.addEventListener("click", (e) => { if (e.target === overlay) closeLightbox(); });
-    document.addEventListener("keydown", (e) => {
-      if (!overlay.classList.contains("open")) return;
-      if (e.key === "Escape") closeLightbox();
-      if (e.key === "ArrowLeft") stepLightbox(-1);
-      if (e.key === "ArrowRight") stepLightbox(1);
-    });
-  }
-
-  /* ------------------------------------------------------------------ *
    * RENDER: AWARDS
    * ------------------------------------------------------------------ */
   function renderAwards() {
@@ -641,18 +545,22 @@
    * RENDER: INTERESTS
    * ------------------------------------------------------------------ */
   const interestBlurbs = {
-    "High-Speed & Hypersonic Aerodynamics":
-      "Compressible flow, shock interaction, and the aerodynamics of high-speed vehicles.",
-    Aeroelasticity:
-      "The coupling between aerodynamic loading and structural deformation in flight.",
-    "Propulsion & Combustion Systems":
-      "Gas turbine engines, combustion behaviour, and alternative aviation fuels.",
-    "Flight Dynamics & Control":
+    "Computational Aerodynamics (CFD)":
+      "Resolving flow fields numerically, and validating them against measured data.",
+    "Flight Dynamics and Control":
       "Dynamic modes, stability derivatives, and how airframe geometry shapes handling.",
-    "Experimental Aerospace Testing":
-      "Instrumentation, data acquisition, and validating simulation against measured data.",
-    "Design, Fabrication & Flight Testing":
-      "Taking a design from CAD through composite fabrication to a flying prototype.",
+    "Hypersonic Aerodynamics & Aerothermodynamics":
+      "Compressible flow, shock interaction, and the heating of high-speed vehicles.",
+    "Aeroelasticity & Fluid-Structure Interaction":
+      "The coupling between aerodynamic loading and structural deformation in flight.",
+    "Aerospace Propulsion":
+      "Gas turbine engines, combustion behaviour, and alternative aviation fuels.",
+    Turbomachinery:
+      "Compressor and turbine stages, blade aerodynamics, and stage performance.",
+    Aeroacoustics:
+      "Noise generated by flow and rotating machinery, and how it propagates.",
+    "Space Systems Engineering":
+      "Spacecraft subsystems, launch environments, and mission-level design.",
   };
 
   function renderInterests() {
@@ -719,7 +627,6 @@
     renderExperienceCards();
     renderSkills();
     renderProjects();
-    renderGallery();
     renderAwards();
     renderInterests();
     renderSocials();
@@ -733,7 +640,6 @@
     initSkillBars();
     initBackToTop();
     initModal();
-    initLightbox();
     initContactForm();
   });
 })();
