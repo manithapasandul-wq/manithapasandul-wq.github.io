@@ -431,8 +431,15 @@ const PORTFOLIO_DATA = {
           title: "CFD Analysis and Validation of the NREL S809 Aerofoil",
           summary:
             "Two-dimensional ANSYS Fluent study of the NREL S809 wind-turbine aerofoil from 0\u00b0 to 20\u00b0 angle of attack, validated against published research data.",
-          tools: ["ANSYS Fluent", "CFD", "Structured Meshing"],
-          image: "assets/images/projects/cfd/velocity-contour.webp",
+          cardSummary: [
+            "Conducted a two-dimensional CFD analysis of the NREL S809 wind-turbine aerofoil using ANSYS Fluent. A structured C-type mesh was developed, followed by grid-independence and convergence studies. The lift, drag, lift-to-drag ratio, pressure distribution, and flow-separation behaviour were evaluated from 0° to 20° angle of attack and validated against published research data.",
+          ],
+          tools: ["ANSYS Fluent", "CFD", "Structured Meshing", "k–ε Model", "Grid Independence"],
+          image: "assets/images/projects/cfd/s809-01.webp",
+          imageFit: "contain",
+          detailPage: "nrel-s809-cfd.html",
+          detailPageLabel: "Explore the full project",
+          cardLinksToPage: true,
           objectives: [
             "Establish a validated baseline CFD model of the unslotted NREL S809 aerofoil that can later be extended to passive flow-control concepts.",
             "Evaluate lift, drag, lift-to-drag ratio, pressure distribution, and flow separation from 0\u00b0 to 20\u00b0 angle of attack.",

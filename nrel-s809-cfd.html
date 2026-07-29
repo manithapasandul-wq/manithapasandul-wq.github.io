@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Two-dimensional ANSYS Fluent study of the NREL S809 wind-turbine aerofoil from 0 to 20 degrees angle of attack, with a structured C-type mesh, grid-independence study, and validation against published data." />
+  <title>CFD Analysis and Validation of the NREL S809 Aerofoil | Manitha Pasandul</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css?v=45" />
+
+  <script>
+    (function () {
+      const saved = localStorage.getItem("portfolio-theme");
+      const dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      document.documentElement.setAttribute("data-theme", saved || (dark ? "dark" : "light"));
+    })();
+  </script>
+</head>
+
+<body class="detail-page-body justify-copy">
+  <header class="detail-site-header">
+    <div class="container detail-navbar">
+      <a class="brand" href="index.html#home">Manitha<span class="brand-accent">.</span></a>
+
+      <nav class="detail-nav-links" id="detail-nav-links" aria-label="Main navigation">
+        <a class="" href="index.html#home">Home</a>
+<a class="" href="index.html#about">About</a>
+<a class="" href="index.html#experience">Experience</a>
+<a class="" href="index.html#skills">Skills</a>
+<a class="active" href="index.html#projects">Projects</a>
+<a class="" href="index.html#contact">Contact</a>
+      </nav>
+      <div class="detail-nav-actions">
+        <button class="detail-icon-button" id="detail-theme-toggle" type="button" aria-label="Toggle theme">☾</button>
+        <button class="detail-icon-button" id="detail-menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="container full-experience-main">
+    <div class="experience-breadcrumb">
+      <a href="index.html#projects">Projects</a>
+      <span>/</span>
+      <span>NREL S809 CFD Analysis</span>
+    </div>
+
+    <section class="full-experience-hero has-media">
+      <span class="full-experience-kicker">Aerodynamics &amp; CFD</span>
+      <h1 class="full-experience-title">CFD Analysis and Validation of the NREL S809 Aerofoil</h1>
+      <p class="full-experience-subtitle">Department of Mechanical Engineering &middot; University of Moratuwa</p>
+      <div class="full-experience-hero-body">
+        <p class="full-experience-lead">
+          This project replicated the baseline stage of a published study on slotted aerofoils for wind-turbine
+          applications. The work focused on the unslotted NREL S809 aerofoil to establish a validated CFD model that
+          could later be extended to investigate passive flow-control concepts.
+          A two-dimensional, steady-state, incompressible simulation was conducted in ANSYS Fluent using a
+          <strong>600 mm chord</strong> aerofoil at a Reynolds number of <strong>1 &times; 10<sup>6</sup></strong>.
+          The corresponding inlet velocity was <strong>24.34 m/s</strong>. Simulations were performed from
+          <strong>0&deg; to 20&deg;</strong> angle of attack in 2&deg; increments to evaluate lift, drag, aerodynamic
+          efficiency, pressure distribution, and the development of flow separation.
+        </p>
+        <div class="exp-media experience-media-slideshow full-experience-hero-media is-uncropped" data-slideshow>
+          <div class="exp-slides">
+            <figure class="exp-slide is-active" data-slide="0"><img src="assets/images/projects/cfd/s809-01.webp" alt="NREL S809 CFD analysis" loading="lazy" /></figure>
+            <figure class="exp-slide" data-slide="1"><img src="assets/images/projects/cfd/s809-02.webp" alt="NREL S809 CFD analysis" loading="lazy" /></figure>
+            <figure class="exp-slide" data-slide="2"><img src="assets/images/projects/cfd/s809-03.webp" alt="NREL S809 CFD analysis" loading="lazy" /></figure>
+            <figure class="exp-slide" data-slide="3"><img src="assets/images/projects/cfd/s809-04.webp" alt="NREL S809 CFD analysis" loading="lazy" /></figure>
+            <figure class="exp-slide" data-slide="4"><img src="assets/images/projects/cfd/s809-05.webp" alt="NREL S809 CFD analysis" loading="lazy" /></figure>
+            <figure class="exp-slide" data-slide="5"><img src="assets/images/projects/cfd/s809-06.webp" alt="NREL S809 CFD analysis" loading="lazy" /></figure>
+            <figure class="exp-slide" data-slide="6"><img src="assets/images/projects/cfd/s809-07.webp" alt="NREL S809 CFD analysis" loading="lazy" /></figure>
+            <figure class="exp-slide" data-slide="7"><img src="assets/images/projects/cfd/s809-08.webp" alt="NREL S809 CFD analysis" loading="lazy" /></figure>
+            <figure class="exp-slide" data-slide="8"><img src="assets/images/projects/cfd/s809-09.webp" alt="NREL S809 CFD analysis" loading="lazy" /></figure>
+            <figure class="exp-slide" data-slide="9"><img src="assets/images/projects/cfd/s809-10.webp" alt="NREL S809 CFD analysis" loading="lazy" /></figure>
+            <figure class="exp-slide" data-slide="10"><img src="assets/images/projects/cfd/s809-11.webp" alt="NREL S809 CFD analysis" loading="lazy" /></figure>
+          </div>
+          <button class="exp-slide-nav previous" type="button" data-slide-prev aria-label="Previous image">&#8592;</button>
+          <button class="exp-slide-nav next" type="button" data-slide-next aria-label="Next image">&#8594;</button>
+          <div class="exp-slide-dots" role="tablist">
+            <button class="exp-dot is-active" type="button" data-slide-to="0" role="tab" aria-label="Image 1 of 11"></button>
+            <button class="exp-dot" type="button" data-slide-to="1" role="tab" aria-label="Image 2 of 11"></button>
+            <button class="exp-dot" type="button" data-slide-to="2" role="tab" aria-label="Image 3 of 11"></button>
+            <button class="exp-dot" type="button" data-slide-to="3" role="tab" aria-label="Image 4 of 11"></button>
+            <button class="exp-dot" type="button" data-slide-to="4" role="tab" aria-label="Image 5 of 11"></button>
+            <button class="exp-dot" type="button" data-slide-to="5" role="tab" aria-label="Image 6 of 11"></button>
+            <button class="exp-dot" type="button" data-slide-to="6" role="tab" aria-label="Image 7 of 11"></button>
+            <button class="exp-dot" type="button" data-slide-to="7" role="tab" aria-label="Image 8 of 11"></button>
+            <button class="exp-dot" type="button" data-slide-to="8" role="tab" aria-label="Image 9 of 11"></button>
+            <button class="exp-dot" type="button" data-slide-to="9" role="tab" aria-label="Image 10 of 11"></button>
+            <button class="exp-dot" type="button" data-slide-to="10" role="tab" aria-label="Image 11 of 11"></button>
+          </div>
+        </div>
+      </div>
+      <div class="experience-tag-row"><span class="tag">CFD</span><span class="tag">ANSYS Fluent</span><span class="tag">NREL S809</span><span class="tag">Structured Meshing</span><span class="tag">C-Type Domain</span><span class="tag">k&ndash;&epsilon; Turbulence Model</span><span class="tag">Grid Independence</span><span class="tag">Flow Separation</span><span class="tag">Aerodynamics</span><span class="tag">Validation</span></div>
+    </section>
+    <div class="full-experience-layout is-single-column">
+      <div class="full-experience-content">
+
+<section class="experience-section-card media-top">
+  <h2>Method, Results and Validation</h2>
+  <div class="exp-media experience-media-slideshow is-uncropped" data-slideshow>
+    <div class="exp-slides">
+      <figure class="exp-slide is-active" data-slide="0"><img src="assets/images/projects/cfd/s809-01.webp" alt="NREL S809 CFD analysis" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="1"><img src="assets/images/projects/cfd/s809-02.webp" alt="NREL S809 CFD analysis" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="2"><img src="assets/images/projects/cfd/s809-03.webp" alt="NREL S809 CFD analysis" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="3"><img src="assets/images/projects/cfd/s809-04.webp" alt="NREL S809 CFD analysis" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="4"><img src="assets/images/projects/cfd/s809-05.webp" alt="NREL S809 CFD analysis" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="5"><img src="assets/images/projects/cfd/s809-06.webp" alt="NREL S809 CFD analysis" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="6"><img src="assets/images/projects/cfd/s809-07.webp" alt="NREL S809 CFD analysis" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="7"><img src="assets/images/projects/cfd/s809-08.webp" alt="NREL S809 CFD analysis" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="8"><img src="assets/images/projects/cfd/s809-09.webp" alt="NREL S809 CFD analysis" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="9"><img src="assets/images/projects/cfd/s809-10.webp" alt="NREL S809 CFD analysis" loading="lazy" /></figure>
+      <figure class="exp-slide" data-slide="10"><img src="assets/images/projects/cfd/s809-11.webp" alt="NREL S809 CFD analysis" loading="lazy" /></figure>
+    </div>
+    <button class="exp-slide-nav previous" type="button" data-slide-prev aria-label="Previous image">&#8592;</button>
+    <button class="exp-slide-nav next" type="button" data-slide-next aria-label="Next image">&#8594;</button>
+    <div class="exp-slide-dots" role="tablist">
+      <button class="exp-dot is-active" type="button" data-slide-to="0" role="tab" aria-label="Image 1 of 11"></button>
+      <button class="exp-dot" type="button" data-slide-to="1" role="tab" aria-label="Image 2 of 11"></button>
+      <button class="exp-dot" type="button" data-slide-to="2" role="tab" aria-label="Image 3 of 11"></button>
+      <button class="exp-dot" type="button" data-slide-to="3" role="tab" aria-label="Image 4 of 11"></button>
+      <button class="exp-dot" type="button" data-slide-to="4" role="tab" aria-label="Image 5 of 11"></button>
+      <button class="exp-dot" type="button" data-slide-to="5" role="tab" aria-label="Image 6 of 11"></button>
+      <button class="exp-dot" type="button" data-slide-to="6" role="tab" aria-label="Image 7 of 11"></button>
+      <button class="exp-dot" type="button" data-slide-to="7" role="tab" aria-label="Image 8 of 11"></button>
+      <button class="exp-dot" type="button" data-slide-to="8" role="tab" aria-label="Image 9 of 11"></button>
+      <button class="exp-dot" type="button" data-slide-to="9" role="tab" aria-label="Image 10 of 11"></button>
+      <button class="exp-dot" type="button" data-slide-to="10" role="tab" aria-label="Image 11 of 11"></button>
+    </div>
+  </div>
+  <h3>Computational Domain and Mesh Development</h3>
+  <p>
+    A large C-type computational domain was created around the aerofoil to reduce the influence of the external boundaries on the flow solution. A structured quadrilateral mesh was developed with concentrated refinement near the aerofoil surface and in the downstream wake region.
+  </p>
+  <p>
+    Near-wall resolution was controlled using mesh biasing to satisfy the wall-function requirements of the selected turbulence model. The final mesh contained approximately <strong>234,400 elements</strong>, with a measured first-layer height of about <strong>0.736 mm</strong>. Mesh quality was assessed using skewness, orthogonal quality, element quality, and aspect ratio.
+  </p>
+  <div class="experience-finding">
+    <p>A grid-independence analysis was conducted by systematically increasing the mesh resolution and monitoring changes in the lift and drag coefficients. The aerodynamic coefficients began to stabilise beyond approximately <strong>200,000 elements</strong>, so the selected mesh represented a practical balance between computational cost and solution independence.</p>
+  </div>
+  <h3>CFD Setup</h3>
+  <p>
+    The standard <strong>k&ndash;&epsilon; turbulence model</strong> with standard wall functions was selected to provide a computationally efficient and numerically stable representation of the external flow. The simulations used:
+  </p>
+  <ul class="experience-key-list">
+    <li>A velocity inlet and pressure outlet</li>
+    <li>A no-slip wall condition on the aerofoil</li>
+    <li>Coupled pressure&ndash;velocity solution</li>
+    <li>Second-order pressure and momentum discretisation</li>
+    <li>Least-Squares Cell-Based gradient calculation</li>
+    <li>Residual and aerodynamic-coefficient convergence criteria of 10<sup>&minus;4</sup></li>
+  </ul>
+  <p>
+    The angle of attack was changed by resolving the constant inlet velocity into horizontal and vertical components. Lift coefficient, drag coefficient, lift-to-drag ratio, and net mass-flow rate were monitored during every simulation to confirm that a converged solution had been obtained.
+  </p>
+  <h3>Results and Flow Analysis</h3>
+  <div class="experience-finding">
+    <p>The lift coefficient increased with angle of attack until reaching a maximum of approximately <strong>1.20 near 14&deg;</strong>. Beyond this point the lift began to decrease as flow separation developed and the aerofoil entered the stall region. The maximum lift-to-drag ratio occurred at approximately <strong>6&deg;</strong>, the most aerodynamically efficient operating condition within the investigated range.</p>
+  </div>
+  <p>
+    The drag coefficient increased gradually at lower angles and rose significantly as the angle of attack approached stall.
+  </p>
+  <p>
+    Velocity and pressure contours were generated for every angle of attack. These contours illustrated:
+  </p>
+  <ul class="experience-key-list">
+    <li>Flow acceleration over the upper aerofoil surface</li>
+    <li>Formation of the pressure difference responsible for lift</li>
+    <li>Growth of the low-velocity wake</li>
+    <li>Progressive movement of the separation region</li>
+    <li>Loss of lift and increased drag near stall</li>
+  </ul>
+  <p>
+    The simulated lift, drag, and lift-to-drag trends were then compared with the published reference data. <strong>The lift predictions showed good agreement across most of the tested range</strong>, while larger drag deviations occurred at some intermediate and high angles of attack. These differences were associated mainly with mesh distribution, near-wall treatment, turbulence modelling, and the limitations of using a steady-state model close to stall.
+  </p>
+  <h3>Difficulties and Improvements</h3>
+  <p>
+    The main difficulty was obtaining stable convergence at higher angles of attack, where separated flow becomes highly unsteady. More iterations were required near stall, and a steady-state solver could not fully represent the transient nature of the separated flow.
+  </p>
+  <p>
+    Developing the structured near-wall mesh was also challenging because the required <em>y</em><sup>+</sup> condition had to be balanced against mesh skewness and orthogonality. Several bias factors were tested before achieving an acceptable first-layer height and overall mesh quality.
+  </p>
+  <div class="experience-finding">
+    <p>The analysis indicated that future accuracy could be improved by using the <strong>k&ndash;&omega; SST</strong> turbulence model with a finer near-wall mesh and a <em>y</em><sup>+</sup> value close to one. Rotating the aerofoil geometry instead of changing the inlet-velocity direction would also provide a more physically consistent boundary-condition arrangement for different angles of attack.</p>
+  </div>
+</section>
+
+<section class="experience-section-card experience-poster-card">
+  <h2>Full Project Report</h2>
+  <p>
+    The complete report covers the domain and mesh construction, the grid-independence study, the solver settings,
+    the full set of velocity and pressure contours, and the comparison against the published reference data.
+  </p>
+  <div class="experience-page-cta">
+    <a class="btn btn-primary" href="assets/docs/nrel-s809-cfd-report.pdf" target="_blank" rel="noopener">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7.5A2.5 2.5 0 0 0 5 5.5v13A2.5 2.5 0 0 0 7.5 21h9a2.5 2.5 0 0 0 2.5-2.5V8z" stroke-linejoin="round"/><polyline points="14,3 14,8 19,8" stroke-linejoin="round"/><line x1="8.8" y1="13" x2="15.2" y2="13" stroke-linecap="round"/><line x1="8.8" y1="16.6" x2="13" y2="16.6" stroke-linecap="round"/></svg>
+      View Full Report (PDF)
+    </a>
+    <a class="btn btn-outline" href="https://www.linkedin.com/in/manitha-pasandul/" target="_blank" rel="noopener noreferrer">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><line x1="7.5" y1="10" x2="7.5" y2="17" stroke-linecap="round"/><circle cx="7.5" cy="6.7" r="0.7" fill="currentColor" stroke="none"/><path d="M11.5 17v-4.2c0-1.6 1-2.6 2.4-2.6s2.1 1 2.1 2.6V17" stroke-linecap="round" stroke-linejoin="round"/><line x1="11.5" y1="10" x2="11.5" y2="17" stroke-linecap="round"/></svg>
+      View the project on LinkedIn
+    </a>
+  </div>
+</section>
+
+<section class="experience-section-card experience-navigate-card">
+  <h2>Navigate</h2>
+  <div class="experience-page-cta">
+    <a class="btn btn-primary" href="index.html#projects">Back to Projects</a>
+    <a class="btn btn-outline" href="index.html#contact">Contact Me</a>
+  </div>
+</section>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="full-experience-footer">
+    <div class="container full-experience-footer-inner">
+      <p>Manitha Pasandul</p>
+      <p>Final year project detail page</p>
+    </div>
+  </footer>
+
+  <script src="js/detail-page.js?v=45"></script>
+</body>
+</html>
