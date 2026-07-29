@@ -1323,6 +1323,19 @@ h1, h2, h3, h4 {
   border-radius: var(--radius-sm);
 }
 
+/* Workshop slideshows reuse the .exp-media component from the experience
+   cards, so only the framing inside a section card is set here. */
+.experience-media-slideshow {
+  margin: 20px 0 4px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+.experience-media-slideshow .exp-slide-nav {
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
 .experience-workshop-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

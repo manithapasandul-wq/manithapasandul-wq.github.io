@@ -87,10 +87,52 @@
     });
   }
 
+  // Mirrors the experience-card slideshows on the home page.
+  function initialiseSlideshows() {
+    $$("[data-slideshow]").forEach((wrap) => {
+      const slides = $$(".exp-slide", wrap);
+      const dots = $$(".exp-dot", wrap);
+      if (slides.length < 2) return;
+
+      let index = 0;
+      let timer = null;
+
+      const show = (next) => {
+        index = (next + slides.length) % slides.length;
+        slides.forEach((slide, i) => slide.classList.toggle("is-active", i === index));
+        dots.forEach((dot, i) => dot.classList.toggle("is-active", i === index));
+      };
+
+      const stop = () => {
+        if (timer) clearInterval(timer);
+        timer = null;
+      };
+      const start = () => {
+        stop();
+        timer = setInterval(() => show(index + 1), 4500);
+      };
+
+      $("[data-slide-prev]", wrap)?.addEventListener("click", () => { show(index - 1); start(); });
+      $("[data-slide-next]", wrap)?.addEventListener("click", () => { show(index + 1); start(); });
+      dots.forEach((dot, i) => dot.addEventListener("click", () => { show(i); start(); }));
+
+      wrap.addEventListener("mouseenter", stop);
+      wrap.addEventListener("mouseleave", start);
+
+      // only run while the card is on screen
+      const observer = new IntersectionObserver(
+        (entries) => entries.forEach((entry) => (entry.isIntersecting ? start() : stop())),
+        { threshold: 0.25 }
+      );
+      observer.observe(wrap);
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
     initialiseTheme();
     initialiseHeader();
     initialiseMobileNavigation();
     initialiseGalleries();
+    initialiseSlideshows();
   });
 })();
