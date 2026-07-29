@@ -1105,7 +1105,8 @@ h1, h2, h3, h4 {
   min-width: 0;
 }
 
-.full-experience-hero-media {
+/* Specificity has to clear .exp-media's own position: relative. */
+.full-experience-hero.has-media > .full-experience-hero-media {
   margin: 6px 0 0;
   position: sticky;
   top: calc(var(--header-h) + 18px);
@@ -1561,8 +1562,8 @@ h1, h2, h3, h4 {
     margin-top: 18px;
   }
 
-  .full-experience-hero-media {
-    position: static;
+  .full-experience-hero.has-media > .full-experience-hero-media {
+    position: relative;
   }
 
   .experience-media-pair img {
