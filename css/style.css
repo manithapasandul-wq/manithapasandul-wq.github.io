@@ -1378,6 +1378,18 @@ h1, h2, h3, h4 {
   border-radius: var(--radius-sm);
 }
 
+/* CAD renders, CFD contours and charts are wide and carry detail to their
+   edges, so they are fitted whole rather than cropped to the 4:3 frame —
+   cover was cutting 18-44% off each one, by a different amount per slide. */
+.experience-media-slideshow.is-diagram {
+  aspect-ratio: 16 / 9;
+  background: var(--bg-alt);
+}
+
+.experience-media-slideshow.is-diagram .exp-slide img {
+  object-fit: contain;
+}
+
 /* Slideshow sits to the right of the workshop text rather than below it, so
    the photographs stay in view while the bullet list is read. */
 .experience-section-card.has-slideshow {
