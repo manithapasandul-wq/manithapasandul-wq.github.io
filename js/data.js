@@ -29,9 +29,7 @@ const PORTFOLIO_DATA = {
     location: "Sri Lanka",
     email: "manthapasandul@gmail.com",
     phone: "+94 77 000 0000", // Replace with your current phone number
-    // REPLACE-ME: this still points at the sample CV carried over from the
-    // source repo — drop your real CV into assets/cv/ and update this path.
-    cvUrl: "assets/cv/Manitha_Pasandul_Sample_CV.pdf",
+    cvUrl: "assets/cv/Manitha_CV.pdf",
     profileImage: "assets/images/profile.jpg",
     socials: {
       linkedin: "https://www.linkedin.com/in/manitha-pasandul/",

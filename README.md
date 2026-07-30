@@ -47,7 +47,7 @@ Every spot that needs real data is marked with a `REPLACE-ME` comment. The main 
 | What | Where |
 |---|---|
 | Profile photo | `assets/images/profile-placeholder.svg` — replace the file (e.g. `profile.jpg`) and update `profile.profileImage` in `js/data.js` |
-| CV / resume | `assets/cv/Manitha_Pasandul_Sample_CV.pdf` — replace the file and update `profile.cvUrl` in `js/data.js` |
+| CV / resume | `assets/cv/Manitha_CV.pdf` — replace the file and update `profile.cvUrl` in `js/data.js` |
 | Email / phone / location | `profile` object in `js/data.js` |
 | Social links (LinkedIn, GitHub, Twitter/X, Instagram) | `profile.socials` in `js/data.js` |
 | Education, experience, skills, awards, interests | Corresponding arrays in `js/data.js` |
