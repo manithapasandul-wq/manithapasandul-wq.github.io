@@ -509,6 +509,21 @@ const PORTFOLIO_DATA = {
             "assets/images/experience/falcon/wing-assembly.webp",
           ],
         },
+        {
+          id: "2m-glider",
+          title: "2m Glider Project",
+          summary:
+            "Design and fabrication of a powered RC glider that climbs on a tractor-propeller system before transitioning into efficient controlled flight, sized in MATLAB and XFLR5 around the NACA 6415 aerofoil.",
+          cardSummary: [
+            "Designed and fabricated a powered RC glider capable of climbing using a tractor-propeller system and transitioning into efficient controlled flight. MATLAB and XFLR5 were used for lift estimation, aerofoil comparison, finite-wing analysis, and performance calculations, leading to the selection of the NACA 6415 aerofoil, an aspect ratio of 13, and a taper ratio of 0.6. The aircraft was built using KT board, laser-cut balsa ribs, carbon-fibre spars, and heat-shrink covering, with a four-channel control system and brushless electric propulsion.",
+          ],
+          tools: ["MATLAB", "XFLR5", "NACA 6415", "RC Aircraft Design", "Flight Testing"],
+          image: "assets/images/projects/2m-glider/2mg.webp",
+          imageFit: "contain",
+          detailPage: "2m-glider.html",
+          detailPageLabel: "Explore the full project",
+          cardLinksToPage: true,
+        },
       ],
     },
     {

@@ -1200,6 +1200,18 @@ h1, h2, h3, h4 {
   margin: 4px 0 0;
 }
 
+/* Some pages read better with the slideshow ahead of the lead paragraph.
+   Guarded to widths above the hero-body single-column breakpoint (680px)
+   so the explicit column swap never fights the mobile stack. */
+@media (min-width: 681px) {
+  .full-experience-hero-body.media-left > .full-experience-lead {
+    grid-column: 2;
+  }
+  .full-experience-hero-body.media-left > .full-experience-hero-media {
+    grid-column: 1;
+  }
+}
+
 .full-experience-lead-list {
   margin: 14px 0 18px;
 }
