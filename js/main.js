@@ -598,19 +598,6 @@
   }
 
   /* ------------------------------------------------------------------ *
-   * CONTACT FORM (non-functional demo)
-   * ------------------------------------------------------------------ */
-  function initContactForm() {
-    const form = $("#contact-form");
-    const note = $("#form-note");
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      note.textContent = "Thanks for the message! (Demo form — no data was actually sent.)";
-      form.reset();
-    });
-  }
-
-  /* ------------------------------------------------------------------ *
    * MISC
    * ------------------------------------------------------------------ */
   function initFooterYear() {
@@ -640,6 +627,5 @@
     initSkillBars();
     initBackToTop();
     initModal();
-    initContactForm();
   });
 })();
