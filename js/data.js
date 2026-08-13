@@ -21,7 +21,7 @@ const PORTFOLIO_DATA = {
   // REPLACE-ME: swap intro copy, image, and links with the real profile.
   profile: {
     name: "Manitha Pasandul",
-    title: "Final-Year Aeronautical Engineering Undergraduate",
+    title: "Mechanical engineer, specialized in Aeronautical Stream",
     tagline:
       "Aspiring aeronautical engineer and researcher with interests in aerospace propulsion, space science and engineering, hypersonic aerodynamics, aeroelasticity, flight dynamics, and computational aerodynamics.",
     intro:
@@ -41,6 +41,7 @@ const PORTFOLIO_DATA = {
 
   about: {
     paragraphs: [
+      "I am a Mechanical Engineering undergraduate, specialised in the <strong>Aeronautical stream</strong>.",
       "I am a final-year Mechanical Engineering undergraduate at the University of Moratuwa, one of Sri Lanka’s leading engineering universities, specialising in Aeronautical Engineering. My interests lie in flight dynamics, aerospace propulsion, computational aerodynamics, and experimental aerospace engineering.",
       "My primary research is my final-year project on fixed-wing UAV flight dynamics, which combines aerodynamic modelling, dynamic stability analysis, simulation, and flight-test data to evaluate and fine-tune UAV behaviour. As part of the research framework developed through this project, I designed, fabricated, instrumented, and flight-tested a complete fixed-wing UAV, enabling simulation results to be validated against actual flight performance.",
       "My other major projects include propeller design and performance analysis using Blade Element Theory, the analytical structural design of a sailplane wing, and the FEA modelling and experimental validation of an aircraft wing structure using a dedicated test apparatus. I also served as an aerodynamics engineer for Sri Lanka’s first Formula Student car project, leading the aerodynamic package development for the team’s second vehicle, E2.",
