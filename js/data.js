@@ -61,7 +61,7 @@ const PORTFOLIO_DATA = {
     {
       level: "English Proficiency",
       institution: "IDP IELTS",
-      program: "IELTS — Overall Band 7.5",
+      program: "IELTS Academic — Overall Band 7.5",
       period: "September 2026",
       classification: "Overall Band Score: 7.5",
       highlights: [
