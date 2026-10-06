@@ -59,6 +59,19 @@ const PORTFOLIO_DATA = {
   // Vertical timeline data — university + school education.
   education: [
     {
+      level: "English Proficiency",
+      institution: "IDP IELTS",
+      program: "IELTS — Overall Band 7.5",
+      period: "September 2026",
+      classification: "Overall Band Score: 7.5",
+      highlights: [
+        "Listening: 8.5",
+        "Reading: 8.0",
+        "Writing: 7.0",
+        "Speaking: 6.5",
+      ],
+    },
+    {
       level: "University",
       institution: "University of Moratuwa, Sri Lanka",
       program: "BSc (Hons) Mechanical Engineering — Aeronautical Engineering Specialisation",
