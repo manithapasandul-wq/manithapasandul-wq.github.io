@@ -59,6 +59,18 @@ const PORTFOLIO_DATA = {
   // Vertical timeline data — university + school education.
   education: [
     {
+      level: "University",
+      institution: "University of Moratuwa, Sri Lanka",
+      program: "BSc (Hons) Mechanical Engineering — Aeronautical Engineering Specialisation",
+      period: "2022 — 2026",
+      classification: "First Class Division | GPA: 3.8/4.00",
+      highlights: [
+        "Dean’s List recognition in Semesters 2, 4, 6, 7, and 8.",
+        "Final-year research focused on parametric sensitivity analysis and fine-tuning of fixed-wing UAV flight dynamics.",
+        "Academic and project experience in CFD, FEA, CAD, MATLAB, flight testing, structural analysis, and propulsion systems.",
+      ],
+    },
+    {
       level: "English Proficiency",
       institution: "IDP IELTS",
       program: "IELTS Academic — Overall Band 7.5",
@@ -69,18 +81,6 @@ const PORTFOLIO_DATA = {
         "Reading: 8.0",
         "Writing: 7.0",
         "Speaking: 6.5",
-      ],
-    },
-    {
-      level: "University",
-      institution: "University of Moratuwa, Sri Lanka",
-      program: "BSc (Hons) Mechanical Engineering — Aeronautical Engineering Specialisation",
-      period: "2022 — 2026",
-      classification: "First Class Division | GPA: 3.8/4.00",
-      highlights: [
-        "Dean’s List recognition in Semesters 2, 4, 6, 7, and 8.",
-        "Final-year research focused on parametric sensitivity analysis and fine-tuning of fixed-wing UAV flight dynamics.",
-        "Academic and project experience in CFD, FEA, CAD, MATLAB, flight testing, structural analysis, and propulsion systems.",
       ],
     },
     {
