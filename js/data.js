@@ -29,7 +29,7 @@ const PORTFOLIO_DATA = {
     location: "Sri Lanka",
     email: "manthapasandul@gmail.com",
     phone: "+94 77 000 0000", // Replace with your current phone number
-    cvUrl: "assets/cv/Manitha_CV.pdf",
+    cvUrl: "assets/cv/Manitha_CV.pdf?v=2",
     profileImage: "assets/images/profile.jpg",
     socials: {
       linkedin: "https://www.linkedin.com/in/manitha-pasandul/",
