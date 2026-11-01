@@ -390,7 +390,7 @@ h1, h2, h3, h4 {
   gap: 40px;
   margin-bottom: 80px;
 }
-.about-text p { color: var(--text-muted); margin-bottom: 16px; font-size: 1.02rem; }
+.about-text p { color: var(--text-muted); margin-bottom: 16px; font-size: 1.02rem; text-align: justify; text-justify: inter-word; }
 .about-text p:last-child { margin-bottom: 0; }
 
 .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-content: start; }
