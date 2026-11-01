@@ -23,7 +23,7 @@ const PORTFOLIO_DATA = {
     name: "Manitha Pasandul",
     title: "Mechanical engineer, specialized in Aeronautical Stream",
     tagline:
-      "Aspiring mechanical engineering undergraduate specialized in aeronautical stream and researcher with interests in aerospace propulsion, space science and engineering, hypersonic aerodynamics, aeroelasticity, flight dynamics, and computational aerodynamics.",
+      "Mechanical Engineering graduate, specialized in the Aeronautical stream from the University of Moratuwa, Sri Lanka, with First Class Honours. Experienced in flight-dynamics modelling, aerodynamic design, CFD, structural analysis, and experimental flight testing through undergraduate research, Formula Student, and industrial training. As a prospective PhD student, I am interested in spacecraft and flight dynamics, aerospace propulsion, hypersonic aerodynamics, and experimental aerodynamics, particularly research combining computational modelling with experimental validation.",
     intro:
       "I am a final-year Mechanical Engineering undergraduate at the University of Moratuwa, specialising in Aeronautical Engineering. My work combines simulation, experimental validation, and practical engineering design across flight dynamics, propulsion, aerodynamics, and aircraft systems.",
     location: "Sri Lanka",
